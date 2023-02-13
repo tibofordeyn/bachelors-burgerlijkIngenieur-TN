@@ -1,0 +1,32 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{\numberline {1}Fundamentele kennis, perfecct vanbuiten kennen voor examen}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Herhaling middelbaar}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Materie, fundamenele begrippen en definities}{3}{section.2.1}%
+\contentsline {subsubsection}{Fasetoestanden}{4}{section*.2}%
+\contentsline {section}{\numberline {2.2}Het periodiek systeem van de elementen}{4}{section.2.2}%
+\contentsline {subsubsection}{Belangrijke groepen in het pse}{4}{section*.3}%
+\contentsline {section}{\numberline {2.3}De atomaire visie op materie}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}De hedendaagse atoomtheorie}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Chemische verbindingen en chemische formules}{5}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}ionaire bindingen}{5}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}covalente bindingen}{5}{subsection.2.5.2}%
+\contentsline {subsubsection}{Moleculen}{6}{section*.4}%
+\contentsline {subsubsection}{Experimenteel bepalen van massas}{6}{section*.5}%
+\contentsline {chapter}{\numberline {3}Mengsels en oplossingen}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Samenstellingen en mengsels}{7}{section.3.1}%
+\contentsline {subsubsection}{massa mengesel}{7}{section*.6}%
+\contentsline {section}{\numberline {3.2}Gasmengsels}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}toestandswijzigingen}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}NPGE 1}{8}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Chemische reacties}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Wat betekent een chemische reactievergelijking}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Soorten reacties}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Neerslagreacties}{10}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Redoxreacties}{10}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}titratie}{11}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Zuur-base titratie}{11}{section.4.4}%
+\contentsline {section}{\numberline {4.5}NPGE2}{11}{section.4.5}%
+\contentsline {chapter}{\numberline {5}atoomstructuur}{12}{chapter.5}%
+\contentsline {section}{\numberline {5.1}atoomstraal}{12}{section.5.1}%
+\contentsline {section}{\numberline {5.2}ionisatie energie}{12}{section.5.2}%
+\contentsfinish 

@@ -1,0 +1,27 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{\numberline {1}Relaties en functies}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Relaties en functies}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Aftelbaarheid}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Functies, bijkomende definities voor functies}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}equivalentierelaties}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Modulorekenen}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Zeef van Eratosthenes}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Modulorekenen basisprincipes}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Eenvoudige vergelijking }{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Lineaire congruenties}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}stelsels van lineaire congruenties}{9}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Algebra"ische structuren}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Binaire bewerkingen}{12}{section.3.1}%
+\contentsline {subsubsection}{eigenschappen van bewerkingen}{12}{section*.2}%
+\contentsline {section}{\numberline {3.2}Groepen}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}één binaire bewerking}{13}{subsection.3.2.1}%
+\contentsline {subsubsection}{Semi-groep, groep, abelse groep}{13}{section*.3}%
+\contentsline {subsubsection}{eigenschappen}{13}{section*.4}%
+\contentsline {subsubsection}{deelgroepen of subgroepen}{14}{section*.5}%
+\contentsline {subsubsection}{morfismen}{15}{section*.6}%
+\contentsline {subsubsection}{cyclische groepen}{15}{section*.7}%
+\contentsline {subsubsection}{verband tussen cyclische groepen en isomorfismen}{15}{section*.8}%
+\contentsline {subsubsection}{direct product van groepen}{15}{section*.9}%
+\contentsline {subsubsection}{Permutatiegroepen}{16}{section*.10}%
+\contentsline {subsection}{\numberline {3.2.2}twee binaire gewerkingen}{16}{subsection.3.2.2}%
+\contentsfinish 

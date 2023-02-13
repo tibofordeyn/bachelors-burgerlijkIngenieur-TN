@@ -1,0 +1,286 @@
+\documentclass{report}
+
+\input{~/school/textemplates/notestemplate/afkortingen/preamble.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/macros.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/letterfonts.tex}
+
+\title{\Huge{Onze resultaten}\\Project eerste semester}
+\author{\huge{Fordeyn Tibo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+Dit is mijn klad voor het deel van dit deel van het eindverslag.
+\chapter{Ons eindresultaat}
+Uiteindelijk is de stappenteller met degelijke UI afgewerkt. De grootste gemeten foutmarge is 6 procent. Hoe accuraat de detector is hangt af van de manier waarop men de GSM bijhoudt, zoals te zien in de data hieronder.
+\\ (voer data gsm in broekzak in en gsm in hand, geef dan aan dat er ook verschillen op te merken zijn bij gsm in achterzak en jaszak)
+\\ Met onze UI kunnen doelen ingessteld worden en aan de hand van de progress bar kan de gebruiker direct nagaan in hoeverre dit doel is bereikt. Het gebruikte kleurenschema is niet te lastig voor de ogen, en leesbaar. 
+\\ voeg foto UI toe indien die er nog niet is in een ander deel van het verslag.
+
+\\ We vergeleken onze stappenteller met de meest gedownloadde op de app store, en vonden dat die van ons beter presteerde (zie onderstaande data), natuurlijk zijn er relatief weinig datapunten, waardoor niet met stellige zekerheid gezegd kan wordt welke beter is.
+
+
+
+
+\chapter{Statistische bevindingen voor de verschillende draagmethoden}
+
+\section{GSM in broekzak}
+\subsection{Tabel met data}
+
+\begin{tabular}{ |p{4cm}||p{4cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{2}{|c|}{Tabel 1: Lijst met data gsm in broekzak voor beide detectors} \\
+ \hline
+ Dynamische detector& Statische detector \\
+ \hline
+ 52   & 46   \\
+ 51&   48  \\
+ 49 &45 \\
+ 48&45 \\
+ \hline
+\end{tabular}
+
+\subsection{Het rekenkudig gemiddelde}
+\[
+\text{AM} &= \frac{1}{n} \sum_{i=1}^{n} a_{i} &= \frac{a_{1} + a_{2} +\ldots+a_{n} }{n}   
+.\] 
+\begin{itemize}
+	\item Toegepast op de dynamische detector: 50
+	\item Toegepast op de statische detector: 46
+\end{itemize}
+
+\subsection{Gemiddelde fout}
+\subsubsection{dynamische detector}%
+\label{ssub:dynamische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+	E&= \sqrt{2,5}  
+.\] 
+
+\subsubsection{statische detector}%
+\label{ssub:statische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= \sqrt{17,5}  
+.\] 
+
+ \section{GSM in hand}
+ \subsection{Tabel met data}
+ \begin{tabular}{ |p{4cm}||p{4cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{2}{|c|}{Tabel 1: Gsm in de hand} \\
+ \hline
+ Dynamische detector& Statische detector\\
+ \hline
+ 47   & 4   \\
+ 50&   2  \\
+ 48 &2 \\
+ 49    & 2\\
+ \hline
+ \end{tabular}
+ 
+\subsection{Het rekenkudig gemiddelde}
+\[
+\text{AM} &= \frac{1}{n} \sum_{i=1}^{n} a_{i} &= \frac{a_{1} + a_{2} +\ldots+a_{n} }{n}   
+.\] 
+\begin{itemize}
+	\item Toegepast op de dynamische detector: 47,5
+	\item Toegepast op de statische detector: 2,5
+\end{itemize}
+
+\subsection{Gemiddelde fout}
+\subsubsection{dynamische detector}%
+\label{ssub:dynamische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= \sqrt{3,5}  
+.\] 
+
+\subsubsection{statische detector}%
+\label{ssub:statische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= 95  
+.\] 
+ \section{GSM in jaszak}
+\subsection{Tabel met data}
+\begin{tabular}{ |p{4cm}||p{4cm}|p{3cm}|p{3cm}|  }
+\hline
+\multicolumn{2}{|c|}{Tabel 1: GSM in jaszak} \\
+\hline
+Dybamische detector& Statische detector\\
+\hline
+52   & 26   \\
+50&   25  \\
+49 &23 \\
+48    & 27\\
+\hline
+\end{tabular}
+
+\subsection{Het rekenkudig gemiddelde}
+\[
+\text{AM} &= \frac{1}{n} \sum_{i=1}^{n} a_{i} &= \frac{a_{1} + a_{2} +\ldots+a_{n} }{n}   
+.\] 
+\begin{itemize}
+	\item Toegepast op de dynamische detector: 49,75
+	\item Toegepast op de statische detector: 45,25
+\end{itemize}
+
+\subsection{Gemiddelde fout}
+\subsubsection{dynamische detector}%
+\label{ssub:dynamische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+	E&= \sqrt{2,25}  
+.\] 
+
+\subsubsection{statische detector}%
+\label{ssub:statische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= \sqrt{614,75}  
+.\] 
+\section{GSM in achterzak}
+\subsection{Tabel met data}
+\begin{tabular}{ |p{4cm}||p{4cm}|p{3cm}|p{3cm}|  }
+\hline
+\multicolumn{2}{|c|}{Tabel 1: GSM in achterzak} \\
+\hline
+Dynamische detector& Statische detector\\
+\hline
+52   & 51   \\
+52&   50  \\
+52 &52 \\
+51    & 49 \\
+\hline
+\end{tabular}
+
+\subsection{Het rekenkudig gemiddelde}
+\[
+\text{AM} &= \frac{1}{n} \sum_{i=1}^{n} a_{i} &= \frac{a_{1} + a_{2} +\ldots+a_{n} }{n}   
+.\] 
+\begin{itemize}
+	\item Toegepast op de dynamische detector: 51,75
+	\item Toegepast op de statische detector:50,5
+\end{itemize}
+
+
+\subsection{Gemiddelde fout}
+\subsubsection{dynamische detector}%
+\label{ssub:dynamische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+	E&= \sqrt{3,25}  
+.\] 
+
+\subsubsection{statische detector}%
+\label{ssub:statische detector}
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= \sqrt{1,5}  
+.\] 
+
+
+
+\chapter{Vergelijking mt professionele app}
+ We hebben de stappenteller van ons vergeleken met een betalende uit de app store; StepsApp.
+ Ik koos deze app aangezien hij bovenaan stond in de app store, en meer dan 20 miljoen downloads heeft. De app is in principe betalend, dus ik startte een free trial.
+ We vergeleken deze met onze dynamische detector, dit is namelijk overduidelijk de betere. 
+ Dit met de GSM in de hand, aangezien dat de moeilijkste test is met het meeste fouten.
+
+ Hier zijn onze resultaten, gsm in de hand.
+ \section{Tabel met data}
+ \begin{tabular}{ |p{4cm}||p{4cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{2}{|c|}{Tabel 1: Vergelijking StepsApp met gsm onze dynamische detector, gsm in de hand.} \\
+ \hline
+ StepsApp resultaten& Onze dynamische detector resultaten.\\
+ \hline
+57    &   47 \\
+50 &  50   \\
+ 48 & 51\\
+  54   & 49\\
+ \hline
+ \end{tabular}
+
+\section{Het rekenkudig gemiddelde}
+\[
+\text{AM} &= \frac{1}{n} \sum_{i=1}^{n} a_{i} &= \frac{a_{1} + a_{2} +\ldots+a_{n} }{n}   
+.\] 
+\begin{itemize}
+	\item Toegepast op de StepsApp: 53
+	\item Toegepast op de onze detector: 49,25
+\end{itemize}
+
+
+\subsection{Gemiddelde fout}
+\subsubsection{StepsApp}%
+\label{ssub:StepsApp}
+
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+	E&= \sqrt{69}  
+.\] 
+
+\subsubsection{dynamische detector}%
+\label{ssub:dynamische detector}
+
+
+\[
+\text{Root mean squared error} \iff E &= \sqrt{\frac{1}{n} \sum_{i=1}^{n} (\hat{\theta}_{i} - \theta _{i}   )^2} 
+.\] 
+Met $\hat{\theta}_{i}   $ het aantal gemeten stappen, en $\theta _{i}  $ het aantal stappen effectief gezet.
+\[
+E &= \sqrt{2,75}  
+.\] 
+
+
+
+\end{document}
+Footer
+

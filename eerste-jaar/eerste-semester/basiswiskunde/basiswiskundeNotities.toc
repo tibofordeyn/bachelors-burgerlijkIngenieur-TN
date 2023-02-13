@@ -1,0 +1,21 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{\numberline {1}Analyse}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Limieten}{2}{section.1.1}%
+\contentsline {subsubsection}{Sandwich rule}{2}{section*.2}%
+\contentsline {subsubsection}{Cauchy}{4}{section*.3}%
+\contentsline {section}{\numberline {1.2}Continu"iteit}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Afgeleiden}{5}{section.1.3}%
+\contentsline {subsubsection}{Regels}{5}{section*.4}%
+\contentsline {subsubsection}{Afgeleiden van functies}{5}{section*.5}%
+\contentsline {subsubsection}{Voor de rest}{6}{section*.6}%
+\contentsline {section}{\numberline {1.4}Integralen}{6}{section.1.4}%
+\contentsline {subsubsection}{Rekenregels}{6}{section*.7}%
+\contentsline {subsubsection}{fundamentele}{7}{section*.8}%
+\contentsline {section}{\numberline {1.5}NPGE 2 VOORBEELDVRAGEN}{8}{section.1.5}%
+\contentsline {subsubsection}{DEELVRAAG 1: bepaal het domein en eventuele asymptoten van deze functie}{8}{section*.9}%
+\contentsline {subsubsection}{afgeleiden}{9}{section*.10}%
+\contentsline {chapter}{\numberline {2}Complexe getallen}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Machtsverheffing van complexe getallen}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}machtsworteltrekken}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Vraag complexe getallen}{10}{section.2.3}%
+\contentsfinish 

@@ -1,0 +1,3506 @@
+\documentclass{report}
+
+\input{~/school/textemplates/notestemplate/afkortingen/preamble.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/macros.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/letterfonts.tex}
+
+\title{\Huge{Wiskundige analyse}\\Eerste semester}
+\author{\huge{Fordeyn Tibo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Gewone differentiaalvergelijkingen}
+
+Een oplossing van een gewone differentiaalvergelijking is een functie $y &= \Phi(t) \\$ zodat
+\[
+\Phi^{(n)}&= f(t,\Phi,\Phi',\Phi'',\ldots,\Phi^{(n-1)}) \\
+.\] 
+De algemene oplossing van een DV bevat alle lineair onafhankelijke functies die een oplossing zijn van deze DV. (vermenigvuldigd met een constante, die gegeven zijn in een beginwaardeprobleem.)
+
+\section{Lineaire gewone differentiaalvergelijkingen}
+Algemene vorm van een lineaire differentiaalvergelijking: 
+\[
+\Phi^{(n)}+p_{1}(x)\cdot \Phi^{(n-1)} +\ldots + p_{n}(x)\cdot \Phi &= g(x) \\ \\
+.\] 
+Een DV is lineair wanneer y en zijn afgeleiden niet in een andere functie voorkomen. Ze mogen wel vermenigvuldigd worden door een functie.
+Zo is $y'''+\sin{(x^{3})}y''+\ln{(x^2)}y'+ xy &= 0 \\$ een lineaire DV, in tegenstelling tot bijvoorbeeld $x^2(y''')^{2}+\cos{y'}&= 0 \\$ 
+Methodes voor het oplossen van lineaire differentiaalvergelijkingen zijn over het algemeen een stuk eenvoudiger.
+
+\subsection{Lineaire gewone differentiaalvergelijkingen van de eerste orde}
+
+\subsubsection{Scheiding der variabelen}%
+\label{ssub:Scheiding der variabelen}
+
+\ex{}{
+	Beschouw deze eenvoudige differentiaalvergelijking die exponentiele groei modelleert:
+	\[
+	\frac{dy}{dt}&= ky \\
+	.\] 
+	Een algemene oplossing kunnen we vinden met een techniek genaamd scheiding der variabelen.
+}
+
+\begin{enumerate}
+	\item Eerst verplaatsen we alle functies y naar 1 kant van de vergelijking. De constante k blijft over aan de andere kant.
+		
+\[
+\frac{1}{y} \frac{dy}{dt}&= k \\
+.\] 
+\item Vervolgens integreren we langs beide kanten
+\[
+	\int_{}^{} \frac{1}{y} \cdot \frac{dy}{dt}dt &= \int_{ }^{ } \frac{ }{} k dt  \\  
+.\] 
+\item We definieren $\frac{dy}{dt}\cdot dt$ als $dy$ 
+	\[
+	\int_{ }^{ } \frac{1}{y}dy&= \int_{ }^{ } kdt  \\ 
+	.\] 
+\item We krijgen de volgende oplossing
+	\[
+	\ln{|y|} &= kt + C \\ 
+	.\] 
+\item Wordt omgevord naar:
+	\[
+	y &= \overline{C}  \cdot e^{kt} \\
+	.\] 
+	Met $\overline{C} \neq C$. Je kunt $\overline{C}$ vinden door de omverming te bekijken $e^{C}&= \overline{C} \\$ 
+\end{enumerate}
+
+\ex{}{
+	Nu deze methode toegepast op een algemene homogene dv van de eerste orde
+	\[
+	y'+p(x)y&= 0 \\
+	.\] 
+
+}
+We kunnen dit omvormen (het is niet echt van belang deze omvorming te kennen trouwens):
+\[
+y'+p(x)y&= 0 \\
+\iff \frac{1}{y} \cdot \frac{dy}{dt} &= -p(x) \\
+\iff \int_{ }^{ } \frac{1}{y} \cdot  \frac{dy}{dt} dt &= \int_{ }^{ } -p(x) dt \\  
+\iff \int_{ }^{ } \frac{1}{y}dy&= - \int_{}^{} p(x)  \\ 
+.\] 
+Dan krijg je
+\[
+y = \overline{C} \cdot \exp{(-P(x))} \, \,\,\,\, \, |\,\,\, \overline{C}&= e^{C} \\
+.\] 
+
+\thm{$\overline{C}\in \mathbb{R}$}{
+	Vergeet niet dat $\overline{C}$ niet perse positief is, $\overline{C} \in \mathbb{R}_{0}^{-}$ kan ook het geval zijn.
+}
+
+Dus in conclusie wanneer je een dv krijgt van de vorm $y'+p(x)y&= 0 \\$ 
+\begin{enumerate}
+	\item Integreer p(x)
+	\item bereken $\overline{C}$ indien nodig
+	\item Je oplossing y is $\overline{C}\cdot e^{-P(x)}$
+\end{enumerate}
+
+\clm{$y\neq 0$}{}{
+	Vergeet niet dat nul als oplossing hier genegeerd wordt.
+}
+
+\ex{}{
+	Nu deze methode toegepast op een niet-homogene dv van de eerste orde
+	\[
+	y'+p(x)y&= q(x) \\
+	.\] 
+}
+In eenvoudige stappen:
+\begin{enumerate}
+	\item Stel \[
+	I(x)&= e^{\int_{ }^{ } p(x)dx } \\
+	.\] 
+\item dan \[
+y &= \frac{1}{I(x)} \cdot \int_{ }^{ } I(x)\cdot q(x)dx  \\ 
+.\] 
+\end{enumerate}
+
+\thm{Omzetten naar standaardvorm}{
+	Soms staat een dv die in deze vorm kan geschreven worden eerst niet in standaardvorm, dan moet je deze natuurlijk gewoon eerst omvormen.
+}
+
+
+\ex{}{
+	\thm{non lineair, en je moet dit niet kennen}{
+		Deze is non lineair, maar ik zet het er hier al bij er informatie omdat het hier past.
+	}
+	
+	Stel je krijgt een dv van de volgende vorm: \[
+	\frac{dy}{dt}&= f(t)\cdot g(y) \\
+	.\] 
+	We kunnen wederom scheiding der variabelen methode gebruiken.
+}
+In eenvoudige stappen
+\begin{enumerate}
+	\item Deel y' door $g(y)$
+	\item integreer langs beide kanten 
+	\item Omvormen naar y
+\end{enumerate}
+\qs{}{
+\[
+\frac{dy}{dx}&= \frac{x\cdot y}{y^2+1} \\
+.\] 
+\[
+\iff \frac{y^2+1}{y}\cdot dy&=xdx  \\
+.\] 
+\[
+\iff \int_{ }^{ } ydy + \int_{ }^{ } \frac{1}{y}dy &= \int_{ }^{ } xdx  \\  
+.\] 
+\[
+\iff \frac{y^2}{2}+\ln{y}&= \frac{x^2}{2} +C\\
+.\] 
+\[
+\iff y^2 + 2 \ln{y} &= x^2+C \\ 
+.\] 
+Dit is een impliciete oplossing; er is egeen oplossing y = ... zoals bij bv. $\frac{dy}{dx}&= ky \\$
+}
+\subsubsection*{Beginwaardeprobleem }
+\label{ssub:Beginwaardeprobleem }
+\ex{}{
+
+beschouw Newton's afkoelingswet
+\[
+\frac{dT}{dt}&= -k \cdot (T-A) \\
+.\] 
+T is de temperatuur van een object, t is tijd, A is de omgevingstemperatuur. Die - staat voor k omdat T naar A neigt, anders was het omgekeerd.
+}
+Belangrijk om te onthouden is dat je eerst een algemene oplossing vindt en daarna pas terugkijkt naar de initiele waarden.
+
+\begin{enumerate}
+	\item Ik vorm om: \[
+	\frac{1}{T-A} dT &= -kdt \\
+	.\] 
+\item Integreer langs beide kanten:
+	\[
+	\int_{ }^{ } \frac{1}{T-A}dT &= \int_{ }^{ } -kdt  \\ 
+	.\] 
+\item We bekomen:
+	\[
+	\ln{T-A}&= -kt + C \\
+	.\] 
+	\[
+	\iff T-A &= \overline{C}\cdot e^{-kt} \\
+	.\] 
+\item Je zult A gegeven krijgen, de temperatuur van de omgeving. T(0) moet je ook gegeven krijgen, aan de hand daarvan kun je $\overline{C}$ berekenen. 
+	Je moet de temperatuur ook op een ander tijdstip gegeven krijgen. Aan de hand daarvan kun je makkelijk k vinden. 
+
+Zo los je een beginwaardeprobleem op, niets heel moeilijks.	
+\end{enumerate}
+
+\subsubsection*{Uniciteit en existentie voor eerste orde}
+\label{ssub:Uniciteit}
+\ex{}{
+	
+Beschouw \[
+xy' &= 1 \\
+.\] 
+\[
+y(0)&= 0 \\
+.\] 
+}
+We zien onmiddellijk dat $y = \ln{x}+C$ een algemene oplossing is.
+En als $y(0)&= 0 \\$ dan bestaat er geen oplossing voor dit beginwaardeprobleem, want $\ln{0}$ is niet gedefinieerd.
+\ex{}{
+	Beschouw deze non-lineaire:
+	\[
+	y'&= y^{\frac{1}{3}} \\
+	.\] 
+	\[
+	y(0)&= 0 \\
+	.\] 
+}
+We zien dat de nuloplossing geldt.
+We kunnen ook de methode van scheiding der variabelen toepassen om andere oplossingen te vinden.
+\[
+\int_{ }^{ } y^{-\frac{1}{3}}dy&= \int_{ }^{ } dx  \\ 
+.\] 
+Dan krijg je \[
+\frac{3}{2}y^{\frac{2}{3}}&= x + C \\
+.\] 
+Verder omgevormd:
+\[
+	y &= \pm (\frac{2x}{3})^{\frac{3}{2}} \\
+.\] 
+Er zijn dus 3 oplossingen voor dit beginwaardeprobleem. 
+
+	
+
+\dfn{ existentie en uniciteit }{
+	
+\begin{enumerate}
+ 	\item 
+ Als f en $\frac{\partial f}{\partial y} $continu zijn in $(x_{0} y_{0} )$ dan is er een unieke oplossing in $\alpha \ll x_{0} \ll \beta$ voor het beginwaardeprobleem.
+\item 
+ Als f continu is, maar de partiele afgeleide tov y niet, dan is er minstens één oplossing, dus die is niet perse uniek. 
+\item Als f niet continu is in dit punt, dan is er geen oplossing. 
+ \end{enumerate}
+}
+\\ 
+
+\subsection{Lineaire onafhankelijkheid controleren, de wronkiaanse determinant}
+Het is belangrijk te kunnen nagaan dat gevonden oplossingen lineair onafhankelijk zijn. 
+Daarvoor maken we gebruik van de wronkiaanse determinant:
+\[
+W &= \begin{vmatrix}
+	y_{1}  & y_{2}  & y_{3} \\ 
+	y'_{1}  & y'_{2}  & y'_{3} \\
+	y''_{1}  & y'_{2}  & y''_{3}  
+\end{vmatrix}  \\
+.\] 
+Door een matrix op te stellen met functies, in dit geval zijn dat er 3, kunnen kunnen we makkelijk hun lineaire afhankelijkheid nagaan. 
+
+Je kunt het ook anders schrijven trouwens, de determinant van de getransporteerde matrix kun je ook nagaan.
+
+
+\subsection{Lineaire gewone differrentiaalvergelijkingen van de tweede orde}
+
+\thm{Hoeveelheid oplossingen}{
+	Een 2e orde dv heeft ALTIJD precies 2 lineair onafhankelijke functies die aan de differentiaalvergelijking voldoen. 
+	\\ De algemene oplossing van een 2e orde dv is $y&= C_{1} y_{1} + C_{2} y_{2}  $ met $y_{1} $ en $y_{2}$ als lineair onafhankelijke functies die voldoen. 
+	\\ Je hebt dus een algemene oplossing gevonden vanaf je 2 lineair onafhankelijke hebt.
+	
+}
+\subsubsection{Constante coefficienten, homogeen}%
+\label{ssub:Constante coefficienten, homogeen}
+
+
+\ex{}{
+Eerst de methode om een 2e orde met constante coefficienten op te lossen voor een homogene.
+	\[
+	ay''+by'+c&= 0 \\
+	.\] 
+Deze oplossen is echt redelijk makkelijk en leuk. \\ 
+
+}
+
+\begin{enumerate}
+	\item Stel de karakteristieke vergelijking op:
+		\\ Niet te veel nadenken over waar dit vandaan komt, want dat boeit niet - is ook niet zo moeilijk ofzo - en niemand gaat dat ooit vragen, maar maak de volgende vergelijking:
+		\[
+		ar^{2}+br+c= 0 \\
+		.\] 
+	\item Bereken de discriminant. \\ 
+		Er zullen dus 3 verschillende scenario's zijn, de discriminant kan positief, nul of negatief zijn. In elk van deze scenario's krijgen we een lichtjes andere oplossingsmethode.
+	\item Los de differentiaalvergelijking op.
+\begin{itemize}
+	\item De discriminant is \textbf{positief}
+		\[
+\frac{-b \pm \sqrt{b^2-4ac} }{2a} > 0
+		.\] 
+		\[
+		\implies r_{1,2} &=  \\ \frac{-b \pm \sqrt{b^2-4ac} }{2a}\
+		.\] 
+		Nadat je dit gevonden hebt, heb je onmiiddellijk de algemene oplossing van de differentiaalvergelijking, namelijk:
+		\[
+		y&= C_{1} e^{r_{1} t}+C_{2} e^{r_{2} t} \\
+		.\] 
+			\item De discriminant is \textbf{nul} 
+\[
+	\sqrt{b^2-4ac} &= 0 \\
+.\] 
+\[
+	r&= \frac{-b}{2a} \\
+.\] 
+De oplossing van de differentiaavergelijking is:
+\[
+y&= C_{1} e^{rt}+C_{2} re^{rt} \\
+.\] 
+\item De discriminant is \textbf{kleiner dan 0} 
+				
+		\end{itemize}
+
+		\[
+\frac{-b \pm \sqrt{b^2-4ac} }{2a} < 0
+		.\] 
+		Je zult 2 complexe oplossingen vinden die elkaars toegevoegden zijn. 
+stel:
+\[
+z_{1} &= \alpha + \beta i \\
+.\] 
+en 
+\[
+z_{2}&= \overline{z_{1} } \\ 
+.\] 
+Je schrijft de oplossing eerst als
+\[
+	y&= C_{1} e^{z_{1} t} + C_{2} e^{\overline{z_{1}}t }\\
+.\] 
+Vergeet echter deze formule van Euler niet!!
+
+\[
+e^{i\Theta}&= r(\cos{\Theta}+i \sin{\Theta}) \\
+.\] 
+Dus we kunnen hier nog iets dieper op ingaan. Ik neem $y_{1} $ als voorbeeld, maar je moet het dus met beide lineair onafhankelijke functies doen.
+\[
+y_{1} &= e^{(\alpha + i \beta)t}&= e^{\alpha t} e^{i \beta t}\\
+.\] 
+dit is equivalent met
+\[
+y_{1} &= e^{\alpha t}(\cos{\beta t}+i\cdot \sin{\beta t}) \\
+.\] 
+Dus de algemene oplossing kan worden herschreven als:
+\[
+y &= C_{1} e^{\alpha t}(\cos{\beta t}+ i \cdot \sin{\beta t} ) + C_{2} e^{\alpha t}(cos \beta t- i\cdot \sin{\beta t})\\
+.\] 
+Merk echter op dat we met differentiaalvergelijking vaak echte fysieke fenomenen beschrijven, en deze oplossing deels complex is. Dat willen we niet perse.
+\\ $\frac{y_{1}+y_{2}  }{2}$ moet een oplossing zijn, volgend uit het feit dat alle lineaire combinaties van een oplossing eveneens oplossingen zijn.
+En die uitdrukking is gelijk aan:
+\[
+e^{\alpha t}\cos{\beta t}
+.\] 
+Een oplossing zonder complexe delen.
+\\ Ook $\frac{y_{1} -y_{2} }{2i}$moet een oplossing zijn. wanneer we dit ingeven krijgen we:
+\[
+e^{\alpha t}\sin{\beta t}
+.\] 
+Wederom een niet-complexe oplossing.
+\\ Nu hebben we dus een nieuwe algemene oplossing zonder imaginaire delen:
+\[
+y &= C_{1} e^{\alpha t} \cos{\beta t}+C_{2} e^{\alpha t} \sin{\beta t} \\
+.\] 
+
+\end{itemize}
+\end{enumerate}
+
+\thm{beginwaardeprobleem}{
+	Voor een beginwaardeprobleem vind je eerst de algemene, dan voer je gewoon de beginwaarden in, je krijgt een stelsel voor $c_{1} $ en $c_{2} $ dan heb je je oplossing voor het beginwaardeprobleem.	
+}
+\qs{}{
+	\[
+	y''-y'-6y&= 0 \,\,\,\,\,\, |\,\,\, y(0)&=  1, y'(0)&= 2 \\
+	.\] 
+	De karakteristieke vergelijking: 
+	\[
+	r^{2}-r-6&= 0 \\
+	.\] 
+	\[
+	D &= 25 \iff r_{1,2} &= \frac{1\pm 5}{2} \\
+	.\] 
+	\[
+	\implies r_{1} &= -2, r_{2} &= 3 \\
+	.\] 
+	Hieruit leiden we onmiddellijk de algemene oplossing van onze differentiaalvergelijking af, deze was dus enorm eenvoudig.
+	\[
+	y &= C_{1} e^{-2t}+C_{2} e^{3t} \\
+	.\] 
+	Vervolgens lossen we het beginwaardeprobleem op:
+	\[
+	1 &= C_{1} + C_{2}  \\
+	.\] 
+	\[
+	2 &= -2C_{1} + 3C_{2}  \\
+	.\] 
+	Dit lossen we op en we vinden dat $C_{1} &= \frac{1}{5}$ en $C_{2} &= \frac{4}{5}$
+	De oplossing voor het beginwaardeprobleem wordt:
+	\[
+	y &= \frac{e^{-2t}+4e^{3t}}{5} \\
+	.\] 
+}
+
+\subsubsection{Constante coefficienten, niet homogeen, opgelost met methode van onbepaalde coefficienten.}%
+\label{ssub:Constante coefficienten, niet homogeen, opgelost met methode van onbepaalde coefficienten.}
+
+\ex{}{
+Beschouw het volgende voorbeeld:	
+\[
+y''-2y'-3y&= 3e^{2t} \\
+.\] 
+
+We zullen een algemene oplossing $y_{h}$ moeten vinden die de homogene oplost, en vervolgens een \textbf{particuliere $y_{p} $} die ook geldt.
+}
+We lossen eerst de homogene op, zoals uitgelegd in 1.1.2.1 hierboven.
+\[
+	r^{2} - 2r - 3&= 0 \iff r_{0}&=-1, r_{1} &= 3 \\
+.\] 
+\[
+y_{h}  &= C_{1} e^{-t}+C_{2} e^{3t} \\
+.\] 
+Vervolgens moet je 'gokken' voor de particuliere.
+In dit geval zien we een macht van e als rechterlid, dus moet je gokken dat het antwoord
+\[
+y_{p}&=  Ae^{2t}
+.\] 
+zal zijn. Dat kan natuurlijk niet anders.
+Straks een tabel met wat je moet gokken voor verschilende functies in het rechterlid.
+Het is ook hierdoor dat het de 'onbepaalde coefficienten' methode noemt.
+\\ Je geeft de gok in:
+\[
+4Ae^{2t}-4ae^{2t}-3Ae^{2t}&= 3e^{2t} \\
+.\] 
+\[
+-3Ae^{2t}&= 3e^{2t} \\
+.\] 
+\[
+\implies A &= -1 \\
+.\] 
+En dus
+\[
+y_{p} &= -e^{2t} \\
+.\] 
+
+We voegen de nieuwgevonden particuliere oplossing toe. De algemene wordt:
+\[
+y &= y_{h} + y_{p}  \\
+.\] 
+\[
+y &= C_{1} e^{-t}+C_{2} e^{3t}-e^{2t} \\
+.\] 
+\thm{Wat als jouw gok in de algemene staat?}{
+	Merk op dat als de vergelijking $y''-2y'-3y&= e^{-t} $ kreeg, we moeilijk konden gokken, omdat die oplossing al in de homogene staat en dan zou de particuliere niet lineair onafhankelijk zijn. 
+	\\ In dat geval, gok $Ate^{-t}$, voeg dus gewoon een term toe.
+}
+\begin{table}[htpb]
+	\centering
+	\caption{Gokken}
+	\label{tab:}
+
+	\begin{tabular}{|c|c|}
+		\hline
+		f(x) & Gok \\ 
+		\hline
+		$e^{rt}$ & $Ae ^{rt}$ \\ 
+		$\sin{rt}$ of $\cos{rt} $ & $A\sin{rt}+B\cos{rt}$ \\ 
+	nde graad veelterm & $A_{0} +A_{1} t + \ldots + A_{n} t^{n}$ \\ 
+		\hline
+	\end{tabular}
+\end{table}
+\clm{beginwaardeproblemen voor niet-homogene}{}{
+
+	Vergeet niet dat je eerst de algemene moet vinden, $y_{h} +y_{p} $ voor je het beginwaardeprobleem oplost. Maar eens je de algemene hebt gevonden kun je oplossen zoals normaal.
+	
+}
+\thm{Over gokken bij sinussen en cosinussen}{
+	Je moet dus al als er één cos of sinus in de algemene staat, $A \cos{rt}+B\sin{rt}$ gokken. Vergis je niet.
+	
+}
+\qs{}{
+	Stel je krijgt \[
+	y'' -2y' -3y&= t^2 +3e^{-t}\cdot \cos{4t} \\
+	.\] 
+	Denk dan eens na over wat je moet gokken. 
+
+	De juiste gok zou zijn:
+	\[
+	(A + Bt + Ct^2) + D(e^{-t}\cos{(4t)} ) + E(e^{-t}\sin{4t})
+	.\] 
+ Als je zou beginnen rekenen zou je zien dat de homogene van deze vergelijking een term $c_{1} e^{-t} $ bevat. Alsnog moet je geen extra t aan de gok toevoegen, want het wordt vermenigvuldigd met die goniometrische functie dus dat is niet hetzelfde.	
+}
+Onbepaalde coefficienten methode zoals hierboven uitgelegd werkt alleen met de functies in de tabel. Als een functie krijgt zoals $\tan{x} $ dan moet je de methode uit het volgende stuk gebruiken.
+
+\subsubsection{Constante coefficienten, niet homogeen, methode van variation of parameters}
+\label{ssub:Geen constante coefficienten, niet homogeen}
+\ex{}{
+	De vorige methode werkt niet voor functies waarbij je de goktabel niet kunt gebruiken. 
+	\[
+	y''+y &= \sec{x} \\
+	.\] 
+}
+\begin{enumerate}
+	\item We lossen de homogene op:
+		\[
+		y_{h} &= C_{1} \sin{x}+C_{2} \cos{x} \\
+		.\] 
+	\item We zullen de coefficienten als functies $u_{1}    u_{2}  $ zien, en zeggen dat de particuliere oplossingen gelijk zijn aan:
+		\[
+		y_{p} &= u_{1} y_{1} + u_{2} y_{2}  \\
+		.\] 
+	\item we leiden de particuliere af
+		\[
+		y'_{p} &= u'_{1} \cos{x}-u_{1} \sin{x} + u'_{2} \sin{x} + u_{2} \cos{x} \\
+		.\] 
+		We mogen een initiele conditie kiezen die ons toelaat $u'_{1} \cos{x}+u'_{2} \sin{x}$
+		 gelijk te stellen aan 0. We krijgen:
+		 \[
+		 y'_{p} &= u_{2} \cos{x}-u_{1} \sin{x} \\
+		 .\] 
+\item we zoeken de 2e afgeleide:
+		
+	\[
+	y_{p} '' &= u'_{2} \cos{x} - u_{2} \sin{x} -u'_{1} \sin{x} -u_{1} \cos{x} \\
+	.\] 
+\item We voeren dit in in de vergelijking, ik vereenvoudig onmiddellijk een beetje, want als je kijkt zie je dat er veel wegvalt. We krijgen:
+	\[
+	u'_{2} \cos{x} -u'_{1} \sin{x} &= \sec{x} \\
+	.\] 
+
+\item We moeten nu dus $u'_{1}  $ en $u'_{2}  $ vinden.
+	Je kunt dit doen door de voorwaarde $u'_{1} \cos{x} +u'_{2} \sin{x} &= 0 $ te vermenigvuldigen met $\sin{(x)}$
+	 en de ingevoerde functie te vermenigvuldigen met $\cos{x}$
+
+	 De twee verkregen expressies zijn:
+	 \[
+	 \begin{cases}
+	 	u'_{1} \cos{x} \sin{x} +u'_{2} \sin^{2}{x} &= 0 \\
+		-u'_{1} \cos{x} \sin{x} + u'_{2} \cos^{2}{x} &= 1 \\
+	 \end{cases}
+	 .\] 
+ \item tel de twee verkregen expressies met elkaar op.
+	 \[
+	 u'_{2} (\sin^{2}{x}+\cos^{2}{x}) &= 1 \\
+	 .\] 
+	 \[
+	 \implies u_{2} &= x \\
+	 .\] 
+Op die manier vinden we ook $u_{1} $
+ \[
+ u'_{1} \cos{x}&= -\sin{x} \\
+ .\] 
+ \[
+\implies u'_{1} &= - \tan{x} \\
+ .\] 
+ \[
+ u_{1} &= \int_{ }^{ } -\tan{(x)}dx  \\
+ .\] 
+ \[
+ \implies u_{1} &= \ln{(\cos{x})} \\
+ .\] 
+
+\item We geven $u_{1} $ en $u_{2}  $ in in de homogene en vinden de particuliere
+	\[
+	y_{p}  &= \ln{(\cos{x})  } \cos{x} + x \sin{x} \\
+	.\] 
+
+\item we voegen homogene en particuliere oplossingen aan elkaar toe en vinden een algemene oplossing.
+	\[
+	y_{a}  &= C_{1} \cos{x} + C_{2} \sin{x} +  \ln{(\cos{x})  } \cos{x} + x \sin{x} \\\
+	.\] 
+	Vereenvoudigd:
+	\[
+	y &= \cos{x} (C_{1} +\ln{(\cos{x})}) + \sin{x} (C_{2} + x) \\
+	.\] 
+	 
+	 
+\end{enumerate}
+
+
+\ex{}{
+	Nu los ik een vergelijking  op door de wronskiaanse determinant te gebruiken
+	\[
+	y''-9y &= \frac{x}{e^{3x}} \\
+	.\] 
+}
+\begin{enumerate}
+	\item de homogene:
+		\[
+		z^{2}-9&= 0 \\
+		.\] 
+		\[
+			\begin{cases}
+				z_{0} &= 3 \\
+				z_{1} &= -3 \\
+			\end{cases}
+		.\] 
+		\[
+		\implies y_{h} &= C_{1} e^{3x} + C_{2} e^{-3x} \\ 
+		.\] 
+	\item de particuliere
+		\\ Je weet al dat:
+		\[
+		y_{p} &= u_{1} y_{1} + u_{2} y_{2}  \\
+		.\] 
+		We kunnen iets anders doen dan in voorbeeld 1.1.10 en de wronskiaanse determinant gebruiken om de afgeleiden van $u_{1}  $ en $u_{2} $ te vinden.
+		\[
+		u'_{1} &= \frac{W_{1} }{W} \\
+		.\] 
+		\[
+		u'_{2} &= \frac{W_{2} }{W} \\
+		.\] 
+		Daarbij is W de wonkiaanse determinant zoals gezien in 1.1.2 en 
+		\[
+		W_{1} &= \begin{vmatrix}
+			0 & y_{2}  \\ 
+			g(x) & y'_{2} \\
+		\end{vmatrix}  \\
+		.\] 
+		\[
+		W_{2} &= \begin{vmatrix}
+			y_{1}  & 0\\ 
+			y'_{1}  & g(x)
+		\end{vmatrix}  \\
+		.\] 
+	Met $g(x) $ is het rechterlid van de vergelijking in dit geval dus $\frac{x}{e^{3x}}$ 	
+		\\  Als je dit volledig zou uitrekenen zou je de volgende algemene moeten bekomen:
+		\[
+		y&= C_{1} e^{3x}+C_{2} e^{-3x} -\frac{1}{36} xe^{-3x} -\frac{1}{12}x^2e^{-3x} \\
+		.\] 
+\end{enumerate}
+
+
+
+
+\subsubsection{Functies als coefficienten, homogeen, Eulerse differentiaalvergelijkingen }%
+\label{ssub:Functies als coefficienten, niet homogeen, methode van variation of parameters}
+\ex{}{
+	Lineaire differentiaalvergelijking van Euler:
+	\[
+	x^{n}y^{(n)} + a_{1} x^{n-1}y^{(n-1)} + \ldots + a_{n-1} xy'+ a_{n} y &= 0 \\
+	.\] 
+	Deze kunnen opgelost worden in $\mathbb{R}_{0}^{-}$ of $\mathbb{R}_{0}^{+}$ door de substitutie $t&= \ln{x} $ door te voeren.
+	We bekijken hoe dit werkt door de eulerse differentiaalvergelijking van de tweede graad op te lossen:
+	\[
+	x^2y''+xy'+y&= 0 \\
+	.\] 
+}
+\begin{enumerate}
+	\item We voeren de substitie $t &= \ln{(x)}  $ door.
+		Dit betekent dus ook dat $x&= e^{t} \\$
+	\item Stel $\Phi(t)&= y(x(t)) \\$
+	\item  We bekijken de afgeleiden van $\Phi(t)$
+
+	 \[
+	 \Phi(t) &= y(x(t)) \\
+	 .\] 
+	 \[
+	 \Phi'(t) &= xy' \\
+	 .\] 
+	 \[
+	 \Phi''(t) &= x^2y''+xy' \\
+	 .\] 
+
+ \item We herschrijven de opgave met onze nieuwe functie phi van t.
+	 \[
+		 \Phi''(t)+\Phi(t) &=0\\
+	 .\] 
+ \item Dit is makkelijk op te lossen.
+	\[
+\Phi(t ) &= C_{1} \sin{t} + C_{2} \cos{t} \\ 
+	.\] 
+	Dus:
+	\[
+	y &= C_{1} \sin{(\ln{(x)})}+C_{2} \cos{(\ln{(xx)})} \\
+	.\] 
+
+\end{enumerate}
+
+\ex{}{
+	Soms moet je de oplossing $x^{\alpha}$ voorop stellen om $\alpha$ te bepalen op basis van de coefficienten. 
+	Beschouw de algemene vorm:
+	\[
+	c_{1} x^2y''+c_{2} xy'+c_{3} y&= 0 \\
+	.\] 
+}
+
+Denk hierover na:
+\[
+y &= x^{4} \\
+.\] 
+\[
+	x(y'&= 4x^{3}) \implies xy' &= 4x^{4} \\
+.\] 
+\[
+	x^2(y''&=12x^2) \implies x^2y'' &=  12x^{4} \\
+.\] 
+
+We besluiten dat de oplossing altijd van de vorm $x^{\alpha}$ zal zijn.
+\\ Stel:
+\[
+	y &= x^{\alpha} \iff y'&= \alpha x^{\alpha-1} \iff y''&=(\alpha^2-\alpha) x^{\alpha-2} \\
+.\] 
+We geven dit in in de originele vergelijking:
+\[
+c_{1} (\alpha^2-\alpha)x^{\alpha} + c_{2} \alpha x^{\alpha} +c_{3} x^{\alpha} &= 0 \\
+.\] 
+We zonderen $x^{\alpha}$ af:
+\[
+x^{\alpha} (c_{1} (\alpha^2 -\alpha)+c_{2} \alpha + c_{3}  ) &= 0 \\
+.\] 
+Hier zien we iets zeer interessant, namelijk dat wanneer de expressie binnen de haakjes
+\[
+c_{1} \alpha^2 - c_{1} \alpha +c_{2} \alpha + c_{3} \\
+.\] 
+gelijk is aan 0, dat een oplossing is voor de differentiaalvergelijking. 
+Ik hervorm even om duidelijk te maken dat het een kwadratische is:
+\[
+c_{1} \alpha^2 + (c_{2} -c_{1}) \alpha +c_{3} &= 0 \\
+.\] 
+Het jammere is dat we dus bijgevolg met 3 verschillende antwoorden zullen zitten afhankelijk van de waarde van de discriminant.
+
+De discriminant is:
+\[
+D&= (c_{2} -c_{1})^2 - 4c_{1} c_{3} \\ 
+.\] 
+\begin{enumerate}
+	\item \textbf{De discriminant is positief:} \\ 
+We hebben $\alpha_{1} , \alpha_{2} \in \mathbb{R}$ en $\alpha_{1} \neq \alpha_{2} $ die een oplossing zijn van de kwadratische.
+\\ Hopelijk heb je door dat dat gewoon betekent dat 
+\[
+x^{\alpha_{1}  }, x^{\alpha_{2}  } 
+.\] 
+Oplossingen zijn van de differentiaalvergelijking. 
+\item \textbf{De discriminant is nul} \\ 
+	Stel $\alpha_{1}  $ voldoet aan de kwadratische vergelijking, dan zijn
+	\[
+	x^{\alpha_{1} }, \ln{(x)} x^{\alpha_{1} }
+	.\] 
+	oplossingen.
+	Lijkt een beetje raar om die $\ln{(x)} $ daar te zetten, en ik kan het niet helemaal uitwerken, maar neem het gewoon over.
+\item \textbf{De discriminant is negatief:} \\ 
+	Ik maak het zo eenvoudig mogelijk:
+\[
+\alpha_{0,1} &= \alpha \pm \beta i \\
+.\] 
+Oplossingen zijn:
+\[
+x^{\alpha} x^{\beta i} , x^{\alpha} x^{-\beta i}
+.\] 
+We willen geen complexe exponent laten staan, zeker niet met een grondtal x. We werken verder uit voor de eerste oplossing:
+\[
+x^{\alpha} e^{\beta i \ln{(x)}}
+.\] 
+En dan pas je de formule van euler toe:
+\[
+x^{\alpha} (\cos{\beta \ln{(x)}  } + i \sin{\beta \ln{(x)}})
+.\]  
+Uiteindelijk als je de 2 oplossingen bekijkt en de imaginaire delen weggooit, dan bekom je 2 oplossingen:
+\[
+x^{\alpha} \cos{\beta\ln{(x)}}, x^{\alpha} \sin{\beta\ln{(x)}}
+.\] 
+\end{enumerate}
+
+
+
+\subsubsection{Functies als coefficienten, Harmonische oscillator }%
+\label{ssub:Functies als coefficienten, Harmonische oscillator }
+\cor{basisinformatieover dit stuk}{
+	
+We beschouwen een veer die verticaal hangt, en door een massa m onder invloed van de zwaartekracht wordt uitgerekt over een afstand l. De wet van Hooke stelt dat het uiteinde van een dergelijke uitgerekte veer wordt teruggeroepen met een kracht die evenredig is met de uitrekking. De evenredigheidsfactor is k, de veerconstante $k>0$
+\\ In rust geldt $mg&= kl \\$
+k hangt eigenlijk veel af van het materiaal. \\ 
+$u(t) $ is de uitrekking in functie van tijd, ten opzichte van een evenwichtsstand.
+
+Volgens de wet van Newton geldt op elk ogenblik t:
+\[
+mu'' &= F(t), t\in \mathbb{R}^{+} \\
+.\] 
+We zeggen dat er een wrijving $\gamma$ is, tegengesteld gericht aan de beweging:
+ \[
+-\gamma u'(t)
+.\] 
+En ten slotte een uitweindige kracht $F_{ext} (t)  $ die op het massadeeltje inwerkt.
+We krijgen:
+\[
+mu''+\gamma u' +ku &= F_{ext} (t) \\
+.\] 
+Uiteindelijke beweging wordt bepaald door de begincondities:
+\[
+\begin{cases}
+	u(0) &= u_{0}  \\
+	u'(0)&= u_{1}  \\
+\end{cases}
+.\] 
+	
+}
+In de verschillende gevallen, zullen we met of zonder wrijving en uitwendige kracht  bekijken.
+\ex{}{
+ Beschouw het geval zonder wrijving en zonder uitwendige krach:
+ \[
+	 \begin{cases}	
+ u''(t)+ \omega _{0} ^2 u = 0 \\ 
+ u(0) = u_{0}  \\ 
+ u'(0) = u_{1}  
+	 \end{cases}
+ .\] 
+	
+	Realiseer je dat de massa in de $\omega _{0} ^2 $ verwerkt zit. En dus $\omega _{0} ^2 &= \frac{k}{m} $
+}
+We stellen de karakteristieke vergelijking op (gevonden door $e^{rt} $ als een oplossing te gokken). 
+
+\[
+r^2+ \omega _{0} ^2&= 0 
+.\] 
+\[
+r &= \pm \sqrt{-\omega _{0} ^2} &= \pm i \omega _{0}  
+.\] 
+\clm{wat te doen bij complexe wortels van de karakteristieke}{}{
+Algemene oplossing:
+\[
+	C_{1} e^{\alpha t} \cos{\beta t} + C_{2} e^{\alpha t} \sin{\beta t}
+.\] 
+}
+\[
+u(t)&= C_{1} \cos{(\omega _{0} t) } + C_{2} \sin{(\omega _{0} t)} 
+.\] 
+We passen de eerste beginconditie toe:
+\[
+u_{0} &= C_{1}  
+.\] 
+Om de tweede beginconditie toe te passen leid ik $u(t)$ af.
+\[
+u'(t)&= -u_{0} \omega _{0} \sin{(\omega _{0} t) } + C_{2} \omega _{0} \cos{(\omega _{0} t)} 
+.\] 
+
+\[
+u'(0) &= u_{1} &=  C_{2} \omega _{0} \implies C_{2} &= \frac{u_{1} }{\omega _{0} }   
+.\] 
+
+We vinden uiteindelijk als unieke oplossing:
+\[
+u(t)&= u_{0} \cos{(\omega _{0} t)} + \frac{u_{1} }{\omega _{0}  } \sin{(\omega _{0} t)} 
+.\] 
+\cor{interva}{
+	vergeet niet dat we dit bekijken in een interval $\mathbb{R}^{+}$
+}
+We kunnen nu nog $u_{1} \texttt{ en } u_{2} 	 	 	$ iets substitueren en dan krijgen we een fysisch beter te interpreteren antwoord. Je begrijpt dat een optelling van sinussen en cosinussn laten staan niet altijd ideaal is.
+\[
+\begin{cases}
+	u_{0} &= A \cos{(\rho)} \\ 
+	u_{1} &= A \omega _{0} \sin{(\rho)} 
+\end{cases}
+.\] 
+zie A als de amplitude
+We krijgen:
+\[
+u(t)&= A\cos{(\omega t - \rho)} , t \in \mathbb{R}^{+} 
+.\] 
+
+\ex{}{
+	Geen wrijving, oscillerende uitwendige kracht en initi"ele rust:
+	\[
+	\begin{cases}
+u'' + \omega ^2_{0} u = a \sin{(\rho t)}, t \in \mathbb{R} ^{+} \\   
+u(0)= 0 \\ 
+u'(0)= 0 
+	\end{cases}
+	.\] 
+}
+We kennen reeds de oplossing van de homogene, zie voorbeeld 1.1.14:
+\[
+u(t)&= A \cos{(\omega _{0} t - \rho)} 
+.\] 
+
+
+
+
+
+
+\subsection{Lineaire gewone differentiaalvergelijkingen van hogere orde }%
+\label{ssub:Lineaire gewone differentiaalvergelijkingen van hogere orde }
+
+\thm{NIET KENNEN SEM 1}{
+	Je moet geen differentiaalvergelijkingen kennen van een graad hoger dan 2 voor dit examen. 
+}
+
+\thm{Hoeveelheid oplossingen}{
+	DV van de nde orde heeft n lineair onafhankelijke oplossingen.
+}
+
+\subsubsection{Constante coefficienten, homogeen}%
+\label{ssub:Constante coefficienten, homogeen}
+
+\ex{}{
+	We starten met kijken naar hogere orde gdvs met constante coefficienten die homogeen zijn. Beschouw de meest algemene vorm van zo'n diffferentiaalvergelijking:
+	\[
+	a_{1} y^{(n)}+a_{2} y^{(n-1)}+\ldots+a_{n} y'+a_{n+1} y &= 0 \\
+	.\] 
+}
+We lossen deze op met een karakteristieke vergelijking. Dat eigenlijk altijd bij constante coefficienten denk ik. dus:
+\[
+a_{1} r^{n}+a_{2} r^{n-1}+\ldots+a_{n} r + a_{n+1} &= 0 \\
+.\] 
+Natuurlijk is er vanaf de 5de graad niet altijd een oplossing. Je zult vaak horner moeten gebruiken. Dat maakt deze differentiaalvergelijkingen vaak lastig om op te lossen.
+Voor 3e en 4e graad is er trouwens wel altijd een oplossing.
+
+Als je kunt ontbinden is het eigenlijk echt heel simpel;
+\begin{itemize}
+	\item Je lost de karakteristieke vergelijking op.
+	\item Alle enkele reele oplossingen schrijf je op als $C_{1} e^{rt}$ met r als die oplossing.
+	\item Alle dubbele of drievoudige of ... schrijf je telkens opnieuw op vermenigvuldigd met een extra term t ervoor. Stel een deel van de ontbonden karakteristieke is $(r-5)^{3}$ dan schrijf je voor dat deel van de oplossing het volgende in je algemene:
+		\[
+		C_{a} e^{5t}+C_{b} t e^{5t} + C_{c} t^{2}e^{5t}.\] 
+	\item Alle complexe oplossingen schrijf je op als (complexe oplossingen komen altijd in paren):
+		\[
+		C_{a} e^{\alpha t}cos\beta t+C_{b} e^{\alpha t}\sin{\beta t} .\] 
+\end{itemize}
+
+\subsubsection{Constante coefficienten, niet homogeen, methode van variation of parameters (ook wel Lagrange methode genoemd) }%
+\label{ssub:Constante coefficienten, niet homogeen, methode van variation of parameters (ook wel Lagrange methode genoemd) }
+
+\ex{}{
+	Beschouw de algemene vorm:
+	\[
+	y^{(n)} + a_{1} (x) y^{(n-1)} +\ldots+a_{n} y&= g(x) \\
+	.\]  
+}
+We vinden de algmene gereduceede oplossing:
+\[
+y_{a} &= C_{1} y_{1} + C_{2} y_{2} +\ldots+C_{n} y_{n} \\
+.\] 
+
+We zeggen dat
+\[
+y_{p} &= u_{1} y_{1} +u_{2} y_{2} +\ldots+u_{n} y_{n}  \\
+.\] 
+Een voorwaarde voor functies u is dat ze voldoen aan de differentiaalvergelijking. We mogen voor een nde graad, n voorwaarden kiezen, voor elke keer dat we afleiden kiezen we een voorwaarde: 
+\[
+u'_{1} y_{1} +u'_{2}y_{2} +\ldots+u'_{n} y_{n}  &= 0 \\
+.\] 
+Dit is de tweede voorwaarde die je stelt na 1 keer afleiden.
+We halen dat dan weg uit de vergelijking en leiden de rest af. Je moet natuurlijk n keer afleiden trouwens. Dan kun je het ingeven in de differentiaalvergelijking. 
+\\ Voor de derde voorwaarde kiezen we: 
+\[
+u'_{1} y'_{1} +u'_{2} y'_{2} +\ldots+u'_{n} y'_{n} &= 0 \\
+.\] 
+Dus ik hoop dat je het systeem doorhebt;
+\\ Hetgeen dat vermenigvuldigd wordt met $u'$ moet altijd gelijk gesteld worden aan nul na elke keer dat je afleidt. Je wilt geen afgeleiden van de onbekende functie in je vergelijking. 
+\\ Dus je schrijft de afgeleiden van je particuliere op en stelt telkens dit deel gelijk aan nul.
+\thm{nde afgeleide}{
+	Je had nog maar n-1 voorwaarden toen je eiste dat de particuliere moest voldoen aan de gereduceerde: DUS de nde afgeleide moet je aanvaarden zoals hij is, geen termen die vermenigvuldigd worden met $u'$ gelijkstellen aan 0.
+}
+We voeren alles in in de differentiaalvergelijking, en ik vorm het om zodat de verschillende functies u afgezonderd zijn:
+\[
+g(x)&= u'_{1} y_{1} ^{(n-1)}+u'_{2} y_{2} ^{(n-1)} + \ldots + u'_{n} y_{n} ^{(n-1)} 
+
+    \\ + u_{1} (y_{1} ^{(n)}+a_{1} (x)y_{1} ^{(n-1)}+\ldots+a_{n} (x)y_{1} )\\
+
+    \\ + u_{2} (y_{2} ^{(n)}+a_{1} (x)y_{2} ^{(n-1)}+\ldots+a_{n} (x)y_{2} )\\
+
+
++\ldots
+
+\\ + u_{n} (y_{n} ^{(n)}+a_{1} (x)y_{n} ^{(n-1)}+\ldots+a_{n} (x)y_{n} )\\
+.\] 
+
+Merk op dat alles binnen die haakjes nul zal zijn, omdat die functies $y_{1} $ tot $y_{n}  $ oplossingen zijn van de dv. Het enige dat overblijft zijn die afgeleiden gelijk aan $g(x)$
+ Los het stelsel op en vindt de afgeleiden van u.
+
+
+
+
+
+
+\section{Non-lineaire gewone differentiaalvergelijkingen}
+In 1.1.1 Heb ik al een voorbeeld van een non-lineaire gegeven omdat het daar goed paste, herbekijk dat als je wilt.
+\thm{Niet veel kennen}{
+	Voor dit examen moet je bijna niets weten over non-lineaire. De theorie in de cursus is welgeteld 5 pagina's lang. Dit stuk is een lichte uitbreiding op wat eigenlijk gekend moet zijn. Je moet voor zover ik weet eigenlijk niet eens kunnen oplossen, ekel wat theorie over uniciteit en existentie kennen.
+}
+
+Non-lineaire differentiaalvergelijkingen zijn algemeen moeilijker, en soms onmogelijk, op te lossen. 
+Een DV is niet lineair wanneer er een functie inwerkt op y of een afgeleide van y.
+Bijvoorbeeld:
+\[
+\sin{(y^{(5)})}+x^2(y'')^{2}&= \ln{y} \\
+.\] 
+Je kunt non-lineaire dvs ook opdelen in graad. Graad is de hoogste macht in de dv.
+\subsection{Non-lineaire gewone differentiaalvergelijkingen van de eerste orde}
+\subsubsection*{Bernoulli Equation}%
+\label{ssub:Bernoulli Equation}
+\ex{}{
+	Beschouw:
+\[
+	y'+p(x)y &= q(x)y^{n} \\
+.\] 
+Als $n&= 1$ dan is dit gewoon een lineaire, dus laten we veronderstellen dat $n \neq 1$, anders is dit overbodig.
+}
+We willen dat n=1 want dan kunnen we dit makkelijk oplossen, dus we gaan een substitutie uitvoeren
+stel $u &= y^{1-n} \\$
+ Dit zal deze vergelijking tot een lineaire omvormen.
+ \[
+ u &= y^{1-n} \implies u'&=  (1-n)y^{-n} y'\\
+ .\] 
+ \begin{enumerate}
+ 	\item We delen de originele vergelijking door $y^{n}$ 
+		\[
+		y^{-n}y'+p_{1} (x)y^{1-n}&= q(x) \\
+		.\] 
+	\item Als je nu de substitutie doorvoert
+		\[
+		\frac{1}{1-n}u'+p_{1} (x)u&= q(x) \\
+		.\] 
+ \end{enumerate}
+
+ \qs{}{
+ 	
+ 	Nu een voorbeeld van een non-lineaire Bernoulli Equation
+	\[
+y'-5y&= \frac{-5}{2}xy^{3} \\	
+	.\] 
+
+\[
+u &= y^{-2}, u' &=  -2y^{-3}y'
+.\] 
+Ik deel de $y^{3}$
+ weg.
+\[
+y'y^{-3} - 5y^{-2}&= \frac{-5}{2}x \\
+.\] 
+\[
+\frac{u'}{-2}-5u&= \frac{-5x}{2} \\
+.\] 
+\[
+u'+10u&= 5x \\ .\] 
+Vervolgens gewoon de eerste orde DV oplossen en van u naar y omzetten.  }
+
+\section{Besluit van deel 1}
+ 
+\begin{Besluit}
+	\begin{itemize}
+		\begin{enumerate}
+			\item Lineair eerste orde
+				\begin{itemize}
+					\item Scheiding der variabelen
+					\item Voor $y'+p(x)y&= q(x) $ doe je:
+						\[
+						I(x) &= e^{\int_{ }^{ } p(x)dx } \\
+						.\] 
+						\[
+							y &= \frac{1}{I(x)}\int_{ }^{ } I(x) q(x) dx  \\
+						.\] 
+				\end{itemize}
+			\item Wronkiaanse determinant
+				\begin{itemize}
+					\item Controleert lineaire onafhankelijkheid.
+					\item Je hebt dit nodig voor methode van variatie van parameters.
+				\end{itemize}
+			\item Lineair tweede orde
+\begin{itemize}
+	\item Constante coefficienten:
+		\begin{itemize}
+			\item Stel de karakteristieke op en bepaal de discriminant
+			\item Stel $D>0$
+				 \[
+				y &= C_{1} e^{r_{1} t } + C_{2} e^{r_{2} t} \\
+				.\] 
+			\item Stel $D&=0$
+				\[
+				y &= C_{1} e^{rt} + C_{2} te^{rt}\\
+				.\] 
+				
+			\item Stel $D<0$
+				 \[
+				y&= C_{1} e^{\alpha t} \cos{\beta t} + C_{2} e^{\alpha t} \sin{\beta t} \\
+				.\] 
+		\end{itemize}
+	\item Onbepaalde coefficienten methode
+	\begin{itemize}
+		\item methode werkt enkel als het rechterlid van een bepaalde vorm is.
+		\item Bereken de homogene
+		\item  raadpleeg de tabel om te gokken, vindt de onbekenden en schrijf de algemene op.
+	\end{itemize}
+\item Variation of parameters (methode van Lagrange)	
+\begin{itemize}
+	\item Vind de gereduceerde
+	\item Stel de coefficienten gelijk aan functies u
+	\item bereken de wronkiaanse determinant en de andere determinanten $W, W_{1} , W_{2}   $ 
+	\item reken gewoon uit wetende dat:
+		\[
+			u'_{1} &= \frac{W_{1} }{W}, u'_{2} &= \frac{W_{2} }{W} \\
+		.\] 
+		en vorm om
+
+\end{itemize}
+\item Eulerse differentiaalvergelijking
+	\begin{itemize}
+		\item Stel $x^{r}$ voorop als oplossing en de rest is kinderspel.
+		\item Als $D<0$ onthoud dan
+			\[
+			y &= C_{1} x^{\alpha} \cos{\beta \ln{(t)}} + C_{2} x^{\alpha} \sin{\beta \ln{(t)}} \\
+			.\] 
+	\end{itemize}
+\end{itemize}
+
+			\item Lineair hogere ordes (wordt normaal niet gevraagd op examen)
+				\begin{itemize}
+					\item Constante coefficienten
+						\begin{itemize}
+							\item Eigenlijk gewoon hetzelfde als bij 2e gaad.
+						\end{itemize}
+					\item Varation of parameters (methode van Lagrange)
+						\begin{itemize}
+							 
+	\item Vind de gereduceerde
+	\item  Stel coefficienten gelijk aan functies u
+	\item bereken de afgeleiden zodat je kunt ingeven in de dv
+	\item voor elke afgeleide stel je 
+		\[
+		u'_{iets} \cdot y^{(iets)}_{iets} 
+		.\] 
+	termen optelling gelijk aan nul.
+\item Voer in in de differentiaalvergelijking en stel het stesel op om u te vinden en opnieuw op te vormen naar y. 
+						\end{itemize}
+				\end{itemize}
+			\item Non lineaire eerste orde
+			\begin{itemize}
+				\item Je moet vooral kijken naar uniciteit en existentie, want dat is je moet kennen voor het examen.
+				\item Bernoulli equations
+					\begin{itemize}
+						\item Stel $u&= y^{1-n}$ en $u' &= (1-n)y^{-n}y'$
+						\item deel $y^{n}$ weg.
+						\item voer de substituie door, de rest is makkelijk. Moeilijkste stuk daarna is de integraal die je onvermijdelijk zal krijgen om u te bekomen.
+					\end{itemize}
+			\end{itemize}
+
+		\end{enumerate}
+	\end{itemize}
+\end{Besluit}
+
+
+\chapter{Rijen en reeksen}
+\section{Rijen, Numerieke reeksen en algemene functiesreeksen}
+
+\subsection{Rijen (herhaling)} 
+\subsubsection{Basis}%
+\label{ssub:basis}
+
+Een rij $a_{n}  $ convergeert naar $\alpha$
+\[
+(a_{n}  ) \to  \alpha
+.\] 
+Ook geschreven als
+\[
+\lim_{n \to + \infty}  a_{n} &= \alpha \\
+.\] 
+
+\clm{epsilon delta definitie voor convergeren}{}{
+	\[
+	(\forall \epsilon > 0) (\exists n \in \mathbb{N}) (\exists N \in \mathbb{N}) (n \ge N \implies |\alpha-\alpha_{n} | < \epsilon)
+	.\] 
+	Maw je kunt zo dicht bij de limiet $\alpha$ komen als je wilt, maakt niet uit hoe dicht je kiest, je zult altijd dichter kunnen blijven gaan bij dat specifieke getal $\alpha$
+
+Aan de verzameling $\{a_{n} : n \in \mathbb{N}\} $ kun je zien of een rij naar convergeert, en of dat dan een convergentie naar boven of beneden is.
+Stel $(a_{n}  ) \to \alpha $ en $\epsilon&= 1 $, dan bestaat er een getal $N(\epsilon) \in  \mathbb{N} $ waarvoor geldt $(a_{n} - \alpha)<\epsilon$
+vanaf $n > N(\epsilon)$
+}
+
+ \subsubsection{Enkele definities}%
+ \label{ssub:}
+
+ \dfn{ basis rekenregels }{
+ 	
+	
+	sstel: \[
+	(a_{n} ) \to \alpha, (b_{n}  ) \to \beta, (c_{n} ) \to \gamma
+	.\] 
+
+\begin{enumerate}
+ 	\item 
+		\[
+		(\lambda a_{n} + \mu b_{n}   )  &= \lambda\alpha + \mu \beta \\
+		.\] 
+
+	\item \[
+	(a_{n} b_{n}   ) &= \alpha \beta \\
+	.\]  
+	
+
+
+\item 
+	\[
+	(\frac{a_{n} }{c_{n} }) \to  \frac{\alpha}{\gamma} \,\,\,\,\,\, |\,\,\, c_{n} \neq 0, \gamma \neq 0, n \in \mathbb{N} 
+	.\] 
+ \end{enumerate}
+ }
+ 
+
+
+\subsection{Rijen van reele getallen}
+\subsubsection{stijgen en dalen van rijen}%
+\label{ssub:stijgen en dalen van rijen}
+\ex{}{
+	Beschouw:
+	\[
+	\left( a_{n} :&= (1+\frac{1}{n})^{n} \right) 	_{n \in \mathbb{N}} 
+	.\] 
+	We tonen aan dat deze rij stijgend is.
+}
+\clm{Binonium van Newton}{}{
+	\[
+	(a+b)^{n} &= \sum_{k=1}^{n} {n \choose k} a^{n-k}\cdot b^{k} \\
+	.\] 
+}
+
+\[
+a_{n} &= \left( 1+\frac{1}{n} \right) ^{n} &= 1+\frac{n}{1!} *\frac{1}{n} + \frac{n(n-1)}{2!} \cdot \frac{1}{n^2} +\ldots+\frac{n(n-1)\cdot \cdot \cdot 2*1}{n!} * \frac{1}{n^{n}} \\ \\
+.\] 
+\[
+	a_{n+1} &= 1+1+\frac{1}{2!} \left( 1-\frac{1}{n+1} \right) 	+\ldots+\frac{1}{n!} \left( 1-\frac{1}{n+1} \right) \cdot \cdot \cdot  \left( 1- \frac{n-1}{n+1} \right) + \frac{1}{(n+1)! } \left( 1 - \frac{1}{n+1} \right) \cdot \cdot \cdot \left( 1-\frac{n}{n+1} \right)  \\
+.\] 
+Merk op dat alle termen $a_{n+1}  $ de termen $a_{n}  $ overtreffen.
+En $a_{n+1}  $ telt een positieve term meer, dus $a_{n} < a_{n+1} $
+
+\\ 
+\subsubsection{Deelrijen}%
+\label{ssub:Deelrijen}
+
+\ex{}{
+	
+\thm{Deelrijen, nieuw begrip}{
+	
+Gegeven een numerieke rij, dan is \textbf{een deelrij} hiervan elke rij die bekomen wordt door uit $a_{n}  $ een willekeurig aantal termen weg te laten.
+}
+Beschouw deze rij:
+\[
+	\left( a_{n} &= (-1) ^{n+1} \right)_{n\in \mathbb{N}}  
+.\] 
+En deze deelrij:
+\[
+\left( a_{2n'+1}  \right)_{n'\in \mathbb{N}}  
+.\] 
+($n'$ wijst erop dat er een verschi is tussen $n$ en $n'$ )
+}
+
+$a_{n}  $ is duidelijk divergent.
+\\ 
+$
+\left( a_{2n'+1}  \right)_{n'\in \mathbb{N}}  
+$
+Daaraantegen convergeert duidelijk naar 1 (het is een constante rij).
+
+
+\subsubsection{Twee nieuwe noties van een limiet van een rij}%
+\label{ssub:Twee nieuwe noties van een limiet van een rij}
+\clm{Een begrensde rij}{}{
+Een begrensde rij is een rij die altijd tussen 2 waarden ligt.	
+}
+
+\ex{}{
+	Beschouw een rij $a_{n}  $ die begrensd is.
+	Hiermee associeer je vanaf nu 2 deelrijen: \[
+	\left( u_{n} :&= \sup\{ a_{k}  : k\ge n \}    \\ \right) 
+	.\] 
+	en \[
+\left( v_{n} :&= \inf\{ a_{k} : k\ge n \}  \\ \right) 	
+	.\] 
+}
+Stel we passen dit toe op $a_{n} &= (-1)^{n+1} $ 
+\[
+	\limsup_{n \to + \infty} \left( a_{n}  \right) &= 1 \\ 
+.\] 
+\[
+	\liminf_{n \to + \infty} \left( a_{n}  \right) &= -1 \\
+.\] 
+\thm{Over rijen}{
+	Een begrensde rij van reele getallen heeft steeds een convergente deelrij.
+}
+\subsection{Numerieke reeksen}
+Een numerieke reeks is een rij van de vorm  \[
+	\left( s_{n} &= \sum_{k=1}^{n} a_{k}   \right) 
+.\] 
+In dit geval is $s_{n}  $ een partieelsom.
+Wanneer de limiet van de aprtieelsom $n \to + \infty$ een getal L, de reekssom, lijt te benaderen, dan spreken we over convergentie van de reeks.
+
+\subsubsection{Meetkundige reeksen}%
+\label{ssub:Meetkundige reeksen}
+\ex{}{
+	Meetkundige reeksen hebben een ratio (in dit geval r) vermenigvuldigd met een constante met een exponent. Beschouw:
+	\[
+	\sum_{n=1}^{+ \infty} ar^{n-1} 
+	.\] 
+	We schrijven de nde partieelsom:
+	\[
+		s_{n} &= a+ar+ar^2+\ldots+ar^{n-1} 
+	.\] 
+	Nu kijken we naar de partieelsom vermenigvuldigd met r
+	 \[
+		 rs_{n}  &= ar+ar^2+ar^3+\ldots+ar^{n} 
+	 .\] 
+	 Alles wordt eigenlijk een term vervroegd.
+}
+Laten we nu kijken naar $s_{n}-rs_{n}   $ 
+\[
+	s_{n} - rs_{n} &= a - ar^{n} 
+.\] 
+want echt bijna alles valt weg.
+\[
+	s_{n} (1-r)&= a-ar^{n} 
+.\] 
+Als we kijken naar het geval waar $r\neq 1$
+\[
+	s_{n} &=\frac{a-ar^{n} }{{1-r}}
+.\] 
+Nu willen we weten of deze reks convergeert. Laten we kijken naar:
+\[
+\lim_{n \to \infty} \frac{a-ar^{n} }{1-r} 
+.\] 
+Merk op dat als $r>1$ dan is r zo groot dat de partieelsom duidelijk divergeert.
+Als r echter kleiner is dan 1, dan zien we dat de reeks convergeert, meer specifiek:
+\[
+&= \begin{cases}
+	|r| > 1, \text{ divergeert }  \\ 
+	|r| < 1, \frac{a}{1-r}
+\end{cases}
+.\] 
+
+Dat merk je duidelijk als je goed kijkt naar de limiet.
+	\\ Nu moeten we enkel nog kijken naar wat er gebeurt als $r&=1$
+	Als je daar 2 seconden over nadenk zie je dat het divergeert, je krijgt gewoon  $a+a+\ldots$
+	Dus nu kunnen we zelfs zeggen: \[
+		\lim_{n \to \infty} s_{n} &= \begin{cases}
+			\text{divergeert } \,\,\,\,\,\, |\,\,\, |r| \ge 1 \\ 
+			\frac{a}{1-r} \,\,\,\,\,\, |\,\,\, |r| <1
+		\end{cases}
+	.\] 
+
+	\qs{}{
+		\[
+		\sum_{n=1}^{\infty} \left( \frac{1}{2} \right) ^{n} 
+		.\] 
+		Merk op dat de indexering niet n-1, zoals we willen om de formule toe te passen, is, maar gewoon n. We passen dit aan:
+		\[
+		\sum_{n=1}^{\infty} \left( \frac{1}{2} \right) \left( \frac{1}{2} \right) ^{n-1} 
+		.\] 
+		We passen de theorie toe:
+		\[
+
+			\sum_{n=1}^{\infty} \left( \frac{1}{2} \right) \left( \frac{1}{2} \right) ^{n-1} &= \frac{\frac{1}{2}}{\frac{1}{2}} &= 1
+		.\] 
+		\\ 
+		 Dus we weten dat in de limiet als we alle termen van deze reeks optellen, dat we 1 zullen krijgen.
+	}
+\clm{r}{}{
+	dat getal r in een meetkundige reeks niet perse een element van R. $r \in \mathbb{R}$ of $r \in \mathbb{C}$
+}
+
+\subsubsection{Harmonische reeksen}%
+\label{ssub:Harmonische reeksen}
+
+\ex{}{
+	Beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{1}{n}
+	.\] 
+
+Harmonische reeksen divergeren, echter enorm traag.
+}
+Om deze reeks naar 100 op te tellen heb je al $10^{43} $ termen nodig.
+\subsubsection{hyperharmonische reeks}%
+\label{ssub:hyperharmonische reeks}
+\ex{}{
+Een hyperharmonische reeks is een reeks van de vorm
+\[
+\sum_{n\ge 1}^{ } \frac{1}{n^{p} }
+.\] 
+We spreken over een hyperharmonische reeks met parameter p, ook p-reeks genoemd.
+\textbf{Dit als $p>0$}
+}
+\begin{enumerate}
+	\item  $p=1$ de reeks is gewoon harmonisch en divergeert.
+	\item $0<p<1$ merk op dat $n^{p} < n, n \in \mathbb{N}$ Bijgevolg zal deze reeks sneller stijgen en sneller divergeren.
+	\item $p>1$ is convergent. Op voorwaarde:
+		\thm{ voorwaarde voor convergentie}{
+ Als de reeks $\sum_{n\ge 1}^{ } a_{n}   $ convergeert, dan moet haar algemene term naar nul gaan voor n naar oneindig.\[
+ (a_{n}  ) \to 0
+ .\] 
+
+		}
+ Stel nu $f(x)&= \frac{1}{x^{p} } \\$
+  \[
+  \int_{1}^{+ \infty} \frac{1}{x^{p}  } dx&= \frac{1}{1-p} \\ 
+  .\] 
+			
+		
+\end{enumerate}
+
+
+\subsubsection{Integraal test}%
+\label{ssub:Integraal test}
+\ex{}{
+	Beschouw de functie:
+	\[
+		f(x) &= \frac{3}{\sqrt{x} }
+	.\] 
+	En deze rij
+	\[
+		\left( a_{n} &= \frac{3}{\sqrt{x}} \right) _{n\in \mathbb{N}} 
+	.\] 
+}
+
+	Stel je wilt de integraal nemen, maar met $dx =1$ als je snapt wat ik bedoel. (Integreren is allemaal rechthoeken sommeren met een breedte dx, zeer klein, en in dit geval is die breedte 1)
+	Dan kun je dat doen door \[
+	\sum_{n=1}^{\infty} a_{n} 
+	.\] 
+De echte integraal is:
+\[
+\int_{1}^{+ \infty} f(x)dx 
+.\] 
+Maar merk op als je over de grafiek denkt in je hoofd, dat de vierkanten bij de sommatie altijd groter zijn.
+
+	Hieruit volgt natuurlijk dat wanneer de integraal divergeert, deze reeks ook zal divergeren.
+	Dit als we enkele assumpties maken:
+	\begin{enumerate}
+		\item de functie is positief
+		\item de functie is continu
+		\item de functie daalt
+	\end{enumerate}
+	\[
+	\int_{1}^{+ \infty} f(x)dx 
+	.\] 
+	convergeert, dan
+	\[
+	\sum_{n=1}^{+ \infty} a_{n} 
+	.\] 
+	convergeert
+\thm{Voorwaarden}{
+	Die voorwaarden zijn heel belangrijk om de context te bepalen, anders kan de ongelijkheid die ik straks opstel anders zijn.
+}
+	
+	
+Stel we nemen het eerste vierkant weg, en we nemen dus de rechthoeken onder de grafiek, we gebruiken de reeks:
+\[
+\sum_{n=2}^{\infty} a_{n} 
+.\] 
+Merk op dat dit zeker klein moet zijn dan de effectieve integraal.
+
+
+\dfn{ De integraal test }{
+	voor
+	\begin{enumerate}
+		\item f(x) is positief
+		\item f(x) daalt
+		\item f(x) is continu
+		\item $f(n)&= a_{n} $
+	\end{enumerate}
+	
+
+	geldt:
+	\\ als \[
+	\int_{1}^{\infty} f(x)dx 
+	.\] 
+	convergeert, dan
+	\[
+	\sum_{n=1}^{\infty} a_{n} 
+	.\] 
+	convergeet.
+	En het omgekeerde geldt ook wanneer we het hebben over divergeren.
+}
+\subsubsection{absolute en betrekkelijke convergentie}%
+\label{ssub:absolute en betrekkelijke convergentie}
+
+\thm{Betrekkelijke en absolute convergentie}{
+	Dit komt pas straks terug, maar ik schrijf het nu al:
+	\begin{enumerate}
+		\item Een reeks $\sum_{n\ge 1}^{ } a_{n} $convergeert absoluut als de reeks van de moduli convergeert.
+			\[
+		\sum_{n\ge 1}^{ } |a_{n} | 	
+			.\] 
+			convergeert $\to $ de reeks convergeert absoluut.
+			Er wordt geen uitspraak gedaan over convergentie van de reeks zelf, want als een reeks absoluut convergeert dan convergeert ze.
+		\item Een reeks $\sum_{n\ge 1}^{ } a_{n} $ convergeert betrekkelijk als de reeks zelf convergeert, maar de reeks van de moduli divergeert.
+	\end{enumerate}
+}
+
+\subsubsection{De rest van een reeks}%
+\label{ssub:De rest van een reeks}
+\ex{}{
+	Ik los een voorbeeld op om te verduidelijken.
+	beschouw:
+	\[
+	\sum_{i=1}^{\infty} a_{i} &= a_{1} +a_{2} +\ldots+a_{n} + a_{n+1} +\ldots \\
+	.\] 
+	We noemen de som tot $a_{n}  $ de partiele som $s_{n} $
+	 We geven alles dat na $s_{n}  $ komt een naam, en noemen het de rest van de reeks, $R_{n} $.
+	 Anders geschreven:
+	 \[
+		 \sum_{i=1}^{\infty} a_{i} &= \sum_{i=1}^{n} a_{i} + \sum_{i=n+1}^{\infty} a_{i} 
+	 .\] 
+	 die $\sum_{i=n+1}^{\infty} a_{i}   $ is $R_{n} $
+}
+\[
+R_{n} &= \left( \sum_{i=1}^{\infty} a_{i}  \right) - s_{n}  \\
+.\] 
+\cor{context}{
+	De bedoeling van dit stuk is dus om te kijken hoe groot die term $R_{n} $ is wanneer we een partieelsom hebben tot n.
+}
+We passen de integraal test toe.
+\[
+R_{n} &= \sum_{i=n+1}^{\infty} a_{i} \le \int_{n}^{\infty} f(x)dx  \\
+.\] 
+\clm{voorwaarden}{}{
+	Vergeet niet dat we hier, zoals bij de integraal test, praten over een functie die continu is, daalt, positief is ...
+}
+
+\[
+R_{n} &= \sum_{i=n}^{\infty} a_{i} \ge \int_{n}^{\infty} f(x)dx  \\
+.\] 
+
+\[
+	\implies \int_{n+1}^{\infty} f(x)dx \le R_{n} &= \sum_{i=n+1}^{\infty} a_{i} \le \int_{n}^{\infty} f(x)dx  
+.\] 
+Dit geeft een interval voor $R_{n} $
+
+
+\ex{}{
+	Beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{1}{n^3} 
+	.\] 
+	Dit convergeert want
+	\[
+	\int_{1}^{\infty} \frac{1}{x^3}dx 
+	.\] 
+	convergeert.
+	We weten echter nog steeds niet naar welke waarde.
+}
+met een rekenmachine zou je vinden dat
+\[
+s_{10} &= 1.196 \\
+.\] 
+Daaruit volgt:
+\[
+R_{10}  \le \int_{10}^{\infty} \frac{1}{x^3}dx 
+.\] 
+\[
+\iff \lim_{t \to \infty} \int_{10}^{t} \frac{1}{x^3}dx 
+.\] 
+\[
+\iff \lim_{t \to + \infty} \frac{-1}{2x^2} \big| ^{t} _{10} 
+.\] 
+\[
+	\iff \lim_{t \to \infty} \left( -\frac{1}{2x^2}+\frac{1}{200} \right) 
+.\] 
+\[
+\implies \frac{1}{200}
+.\] 
+
+Nu weten we:
+\[
+R_{10} \le \frac{1}{200} = 0.005
+.\] 
+
+\[
+\implies \sum_{n=1}^{\infty} \frac{1}{n^3} \le 1.196 +0.005
+.\] 
+\thm{R}{
+	Hoe precies je R moet weten hangt af van waar je het voor nodig hebt. Indien je het meer precies nodig hebt kun je de partieelsom voor $s_{100} $ of meer berekenen.
+}
+Dus dat is hoe je de rest berekent.
+
+\subsubsection{vergelijkingstest voor reeksen}%
+\label{ssub:vergelijkingstest voor reeksen}
+\ex{}{
+	Veronderstel:
+	\[
+	0 \le a_{n} \le b_{n} 
+	.\] 
+	We zullen de convergentie of divergentie van $a_{n}  $ en $b_{n}  $ vergerlijken.
+	Op basis van de ene bevinding kunnen we conclusies trekken omtrent de anderen.
+	\\ Beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{n-1}{2n^3+n^2}
+	.\] 
+	\cor{doel en voorwaarden}{
+		Deze methode kun controleert enkel de convergentie of divergentie, reekssom heeft hier niets mee te maken.
+		\textbf{Werkt enkel voor 
+\begin{enumerate}
+	\item $b_{n}  $ convergeert
+	\item $a_{n} $ divergeert
+\end{enumerate}
+		}
+	}
+}
+\[
+a_{n} &= \frac{n-1}{2n^3+n^2} < \frac{n}{2n^3+n^2} \\
+.\] 
+Dan volgt logischerwijs:
+\[
+	a_{n} &= \frac{n-1}{2n^3+n^2} < \frac{n}{2n^3} &= b_{n} \\
+.\] 
+\clm{$b_{n} $}{}{
+	
+van $b_{n}  $ weten we dat het convergeert, want het is een harmonische reeks, zie 2.1.3.2.
+}
+
+Wat we krijgen als gevolg dat $a_{n}  $ ook convergeert.
+
+\thm{$a_{n}  $ en $b_{n}  $ zijn beide positief}{
+	We eisten dat deze positief zijn, anders kon het gebeuren dat de grotere functie convergeert, maar de kleinere niet.
+	$a_{n} $ zal niet lager dan nul gaan.
+}
+
+\subsubsection{limiet vergelijkingstest voor reeksen}%
+\label{ssub:limiet vergelijkingstest voor reeksen}
+\ex{}{
+\clm{over vorige methode}{}{
+	
+	Vorige test werkt enkel als $a_{n}  $ divergeert of als $b_{n} $ convergeert.  
+	Vandaar deze methode
+}
+	
+	beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{n+1}{2n^3-n^2}
+	.\] 
+	Als we hetzelfde proberen te doen als in het vorige voorbeeld zien we dat de ongelijkheid omdraait.
+	\[
+		a_{n} &= \frac{n+1}{2n^3-n^2} > \frac{1}{2n^2}
+	.\] 
+}
+We bekijken $\lim_{n \to + \infty} \frac{a_{n} }{b_{n} }$
+
+\[
+ \lim_{n \to + \infty} \frac{a_{n} }{b_{n} } \iff \lim_{n \to + \infty} \frac{\frac{n+1}{2n^3-n^2}}{\frac{1}{2n^2}}
+.\] 
+\[
+\iff \lim_{n \to + \infty} \frac{2n^3+2}{2n^3-n^2}
+.\] 
+\[
+\implies 1
+.\] 
+Wat we nu weten is dat, omdat de partieelsommen in de limiet naar hetzelfde getal blijken te gaan, ze allebei convergeren.
+Dus
+\[
+\sum_{n=1}^{\infty} \frac{1}{2n^2}
+.\] 
+Convergeert, dan convergeert ook
+\[
+\sum_{n=1}^{\infty} \frac{n+1}{2n^3-n^2}
+.\] 
+
+\dfn{ Limiet vergelijkingstest }{
+	voor $\sum_{n=1}^{\infty} a_{n}  $ en $\sum_{n=1}^{\infty} b_{n}  $ met positieve termen geldt:
+	als 
+	\[
+	\lim_{n \to + \infty} \frac{a_{n} }{b_{n} } &= c > 0 \\
+	.\] 
+	Dan zullen ze allebei convergeren of divergeren.
+}
+
+
+\subsubsection{worteltest}%
+\label{ssub:worteltest}
+
+\ex{}{
+	Beschouw $\sum_{n\ge 1}^{ } a_{n} $:
+	\begin{enumerate}
+		\item Als vanaf een bepaalde rang N geldt
+			\[
+			|a_{n} | ^{\frac{1}{n}} \le r < 1, n\ge N
+			.\] 
+			Dan convergeert deze reeks absoluut.
+		\item  Als voor een zekere rang N geldt \[
+		|a_{n} | ^{\frac{1}{n}}  \ge 1, n\ge N
+		.\] 
+		Dan divergeert de reeks.
+
+	\end{enumerate}
+
+}
+		\\ Als 
+		\[
+		\left( |a_{n} | ^{\frac{1}{n}}  \right) \to  r
+		.\] 
+		dan is de reeks absoluut convergent bij r<1 en divergent bij r>1.
+
+
+	\subsubsection{d'Alembert}%
+	\label{ssub:d'Alembert}
+	
+	\ex{}{
+reeks $\sum_{n\ge 1}^{ }  a_{n} $ is absoluut convergent als
+vanaf een zekere rang N geldt:
+\[
+\left( \frac{a_{n+1} }{a_{n} } \right) \le r, 0<r<1, n\ge N
+.\] 
+Dan is de reeks absoluut convergent.
+\\ Als vanaf een zekere rang N geldt:
+\[
+\left( |\frac{a_{n+1} }{a_{n} }|  \right) \ge 1, n \ge N
+.\] 
+dan is de reeks divergent.
+
+	}
+
+
+	\subsubsection{wisselreeksen}%
+	\label{ssub:wisselreeksen}
+	\ex{}{
+beschouw:
+\[
+\sum_{n=1}^{\infty} \frac{(-1)^{n-1} }{n}
+.\] 
+
+Een wisselreeks is een reeks waarbij positieve en negatieve termen elkaar opvolgen.
+In wat volgt bespreek ik hoe je de convergentie bepaalt.
+
+
+	}
+	\dfn{ convergentie van een wisselreeks bepalen }{
+	voor
+	\[
+	\sum_{n=1}^{\infty} (-1)^{n-1} b_{n}  
+	.\] 
+	met 
+	\begin{enumerate}
+		\item $b_{n} $ daalt
+		\item $b_{n} $ is positief
+		\item $\lim_{n \to + \infty} b_{n} &= 0 \\$
+	\end{enumerate}
+	dan convergeert de reeks.
+	}
+\clm{test voor divergeren}{}{
+	Er was een test voor divergeren hierboven die stelt dat:
+	\[
+	\lim_{n \to + \infty} a_{n} \neq 0 \implies \sum_{n=1}^{\infty} a_{n} \text{ divergeert}
+	.\] 
+	en dat klopt, maar dat wil niet zeggen dat als de limiet 0 is, de reeks altijd convergeert.
+
+	Ik zeg dit nu nog eens om dit te verduidelijken:
+	\begin{itemize}
+		\item Als de limiet niet nul is dan divergeert de reeks
+		\item als de limiet wel nul is en alle voorwaarden zijn voldaan dan convergeert de reeks
+		\item als de limiet wel nul is maar niet alle voorwaarden zijn voldaan dan weet je NIETS.
+	\end{itemize}
+}
+\subsubsection{rest van een wisselreeks}%
+\label{ssub:rest van een wisselreeks}
+\ex{}{
+beschouw:
+\[
+\sum_{n=1}^{\infty} \frac{(-1)^{n-1} }{n^3}
+.\] 
+Hoeveel termen hebben we nodig om tot op 0.001 precies de waarde van deze reeks te kennen?
+}
+\[
+	R_{n} \le b_{n+1} &=  \frac{1}{(n+1)^3 } \le \frac{1}{1000}
+.\] 
+\[
+n \ge 9
+.\] 
+
+\qs{}{
+\[
+\sum_{n=1}^{\infty} \frac{2^{n} }{n!}
+.\] 	
+\clm{limiet vergelijkingstest}{}{
+	
+reeks $\sum_{n\ge 1}^{ }  a_{n} $ is absoluut convergent als
+vanaf een zekere rang N geldt:
+\[
+\left( \frac{a_{n+1} }{a_{n} } \right) \le r, 0<r<1, n\ge N
+.\] 
+Dan is de reeks absoluut convergent.
+\\ Als vanaf een zekere rang N geldt:
+\[
+\left( |\frac{a_{n+1} }{a_{n} }|  \right) \ge 1, n \ge N
+.\] 
+dan is de reeks divergent.
+}
+\[
+	\left| \frac{\frac{2^{n+1} }{(n+1)!}}{ \frac{2^{n} }{n!} }\right| 
+.\] 
+\[
+\implies \left| \frac{2^{n+1} n!}{2^{n} (n+1)!} \right|  
+.\] 
+\[
+\iff \left| \frac{2^{n+1} }{n\cdot 2^{n} *2^{n}  } \right| 
+.\] 
+\[
+\implies \left| \frac{2}{n+1} \right| 
+.\] 
+en 
+\[
+\lim_{n \to + \infty} \left| \frac{2}{n+1} \right| &= 0 <1 \\
+.\] 
+\textbf{De reeks convergeert!}
+}
+\qs{}{
+	Nu één waarbij die test niet werkt:
+	\[
+	\sum_{n=1}^{\infty} \frac{1}{n^2}
+	.\] 
+	en als je de test probeert te doen:
+	\[
+		\lim_{n \to + \infty} \left| \frac{a_{n+1} }{a_{n} } \right| &= \lim_{n \to + \infty} \left| \frac{n^2}{n^2+2n+1} \right| &= 1 \\
+	.\] 
+	Dus dat zegt je niets over de reeks.
+	\clm{de worteltest}{}{
+		
+	Beschouw $\sum_{n\ge 1}^{ } a_{n} $:
+	\begin{enumerate}
+		\item Als vanaf een bepaalde rang N geldt
+			\[
+			|a_{n} | ^{\frac{1}{n}} \le r < 1, n\ge N
+			.\] 
+			Dan convergeert deze reeks absoluut.
+		\item  Als voor een zekere rang N geldt \[
+		|a_{n} | ^{\frac{1}{n}}  \ge 1, n\ge N
+		.\] 
+		Dan divergeert de reeks.
+
+	\end{enumerate}
+	
+	}
+	en:
+	\[
+	\lim_{n \to + \infty} \left( n^{-\frac{2}{n}}  \right) \le r 
+	.\] 
+	dus deze reeks convergeert absoluut.
+	
+}
+\subsubsection{8 extra voorbeelden omdat ik het nog niet duidelijk genoeg vind}%
+\label{ssub:8 extra voorbeelden omdat ik het nog niet duidelijk genoeg vind}
+
+\qs{}{
+	Laten we nog eens een meetkundige reeks bekijken.
+	\clm{meetkundige reeks}{}{
+		\[
+		\sum_{n=1}^{\infty} ar^{n-1} &= \begin{cases}
+			\frac{a}{1-r}, |r| <1 \\ 
+			\text{divergeert} , |r| \ge 1
+		\end{cases} \\
+		.\] 
+
+	}
+	Beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{2^{n-1} }{5^{n+1} } \iff \sum_{n=1}^{\infty} \frac{1}{25} \cdot \left( \frac{2}{5} \right) ^{n-1} 
+	.\] 
+	dus $a&=\frac{1}{25}$ en $r&=\frac{2}{5}$.
+	Omdat r 2/5 is weten we dat het convergeert.
+	 \\ We vinden:
+	 \[
+	 \frac{a}{1-r} \iff \frac{-1}{5}
+	 .\] 
+	
+}
+\qs{}{
+	Nu een integraal test
+	\clm{integraal test}{}{
+		\[
+		\sum_{n=1}^{\infty} a_{n} \text{ convergeert als } \int_{1}^{+ \infty} f(x)dx \text{ convergeert.}  
+		.\] 
+		
+	}
+	Beschouw:
+	\[
+	\sum_{n=1}^{\infty} ne^{-n^2} 
+	.\] 
+	en we zullen dus kijken naar de integraal:
+	\[
+	\int_{1}^{+ \infty} xe^{-x^2} dx 
+	.\] 
+	Dit is niet de leukste integraal om uit te rekenen, ik veronderstel dat je hem gewoon met maple zou doen, of met technieken die je herhaalt voor bawi.
+	je krijgt:
+	
+}
+\qs{}{
+	Wisselreeks test
+	\\ ga eerst na of de 3 voorwaarden voldaan zijn.
+	\clm{wisselreeksen test}{}{
+		
+	voor
+	\[
+	\sum_{n=1}^{\infty} (-1)^{n-1} b_{n}  
+	.\] 
+	met 
+	\begin{enumerate}
+		\item $b_{n} $ daalt
+		\item $b_{n} $ is positief
+		\item $\lim_{n \to + \infty} b_{n} &= 0 \\$
+	\end{enumerate}
+	dan convergeert de reeks.
+	\\ Als de limiet niet nul is dan divergeert de reeks.
+	\\ Als de limiet nul is maar de voorwaarden zijn niet voldaan weet je niets.
+	}
+	dit is de duidelijkste als in wanneer te gebruiken.
+Beschouw:
+\[
+\sum_{n=1}^{\infty} (-1)^{n} \ln{(n)}
+.\] 
+Deze kun je makkelijk snel oplossen:
+\[
+	\lim_{n \to + \infty} \ln{(n) } &= + \infty
+.\] 
+$\implies$ de reeks divergeert.
+}
+\qs{}{
+Nu een vergelijkingstest
+\clm{Vergelijkingstest}{}{
+	
+	\[
+	0 \le a_{n} \le b_{n} 
+	.\] 
+	We zullen de convergentie of divergentie van $a_{n}  $ en $b_{n}  $ vergerlijken.
+	Op basis van de ene bevinding kunnen we conclusies trekken omtrent de anderen.
+	Werkt enkel als:
+	\begin{itemize}
+		\item $a_{n} $ divergeert
+		\item $b_{n} $ convergeert
+	\end{itemize}
+}
+Beschouw het voorbeeld:
+\[
+\sum_{n=1}^{\infty} \frac{n}{n^3+1}
+.\] 
+We kiezen dit als $a_{n}  $ beschouw nu deze reeks die \textbf{altijd} groter is $b_{n} $:
+\[
+	b_{n} &= \frac{n}{n^3} &= \frac{1}{n^2} \\
+.\] 
+Je ziet onmiddellijk dat:
+\[
+\lim_{n \to + \infty} 	b_{n} &= 0
+.\] 
+daaruit volgt dat $a_{n} $ ook naar nul zal convergeren, al wist je dit eigenlijk al uit wiskunde van het 5de middelbaar denk ik, en dus convergeert de reeks.
+}
+\qs{}{
+	Nu een limiet vergelijkingstest
+	\clm{limietvergelijkingtest }{}{
+		\[
+			\lim_{n \to + \infty} \frac{a_{n} }{b_{n}  } &= c > 0
+		.\] 
+	}
+stel:
+\[
+\sum_{n=1}^{\infty} \frac{\sqrt{n^3+n} }{n^{4} -n^2}
+.\] 
+dan neem je als $b_{n} $ 
+\[
+	b_{n} &= \frac{\sqrt{n^3} }{n^{4}  } &= \frac{1}{n^{\frac{5}{2}} } \\
+.\] 
+}
+Nog niet alles zo opgeschreve als ik wil, dus check indien je dat nodig vindt het youtube filmpje nog eens voor de antwoorden en om alles op te schrijven.
+
+\subsection{Algemene functierijen en functiereeksen}
+\subsubsection{functierijen}%
+\label{ssub:functierijen}
+\dfn{ functierijen en puntsgewijs convergeren }{
+	Een functierij $(f_{n} )_{n\in \mathbb{N}}  $ in A, neemt voor elk punt $x \in A$ de functiewaarden van alle functies $f_{n} $. Zo krijg je een numerieke rij van reele of complexe getallen. Als de rijen voor ieder punt $x\in A$ convergeren, dan zeggen we dat de functierij puntsgewijs convergeert in A.
+	
+	puntsgewijze convergentie:
+	\[
+\left( f_{n}  \right) \text{ convergeert puntsgewijs naar }  f \iff \forall \epsilon > 0: \forall x \in A: \exists N \in \mathbb{N} , \forall n >N: |f_{n} (x)-f(x)| &= 0 \\	
+	.\] 
+	\cor{afhankelijk van x}{
+		Merk op dat deze definitie afhankelijk is van x, kijk anders nog eens naar dat youtube filmpje hierover.
+	}
+}
+Denk dus over dat gebied A als het convergentie-interval
+\ex{}{
+	Kort inleidend voorbeeld:
+	\[
+	f_{n} (x) &= x^{n}  \\
+	.\] 
+	
+}
+Als we een test zouden doen zou je al vinden dat het tussen -1 en 1 convergeert.
+Dan op 1 krijg je 1 en op -1 vind je divergentie. Het antwoord is dus de limietfunctie:
+\[
+\lim_{n \to + \infty} f(x) :&= \begin{cases}
+	0, x \in ]-1;1[ \\ 
+	1, x= 1 \\
+\end{cases} \\
+.\] 
+\ex{}{
+	beschouw:
+	\[
+	g_{n} : \mathbb{R} \to \mathbb{R}: x \to \frac{1}{n} \sin{(nx+n)} \,\,\,\,\,\, |\,\,\, n\in \mathbb{N}
+	.\] 
+}
+Merk op dat deze functierij puntsgewijs convergeert in gans $\mathbb{R}$, deze functierij zal namelijk altijd naar nul gaan.
+\dfn{ uniforme convergentie }{
+\[
+f_{n} \text{ convergeert uniform naar } f \iff \forall \epsilon > 0: \forall N_{\epsilon} \in \mathbb{N}, n \ge N: |f_{n} (x)-f(x)| < \epsilon, \forall x \in A
+.\] 	
+\cor{niet afhankelijk van x}{
+	deze definitie is niet afhankelijk van x.
+}
+}
+
+%\subsubsection{integreren van de limietfunctie}%
+%\label{ssub:integreren van de limietfunctie}
+ 
+
+%\subsubsection{functiereeksen}%
+%\label{ssub:functiereeksen}
+
+\section{Reekssommen bepalen}
+Reeksommen van meetkundige reeksen kwamen daarnet aan bod. Daarnet realiseerde ik me dat volgens die formule:
+\[
+\sum_{n=1}^{\infty} ar^{n-1} &= \frac{a}{1-r} 
+.\] 
+dus geldt:
+\[
+\sum_{n=0}^{  \infty } 2^{n} &= -1 
+.\] 
+Wat absoluut nergens op slaat.
+\\ allesinds
+\cor{Omvormen naar meetkundige reeks}{
+	Van een meetkundige reeks kennen we de som, daarom moet je om reekssommen te bepalen altijd de reeks omvormen naar de standaardvorm van een meetkundige \[
+	\sum_{n=1}^{\infty} ar^{n-1} 
+	.\] 
+	zodat je \[
+	\frac{a}{1-r}
+	.\] 
+	De reekssom kunt noemen.
+	\\ Dit doe je door af te leiden, te primietiveren en termen buiten de som te zetten op een slimme manier.
+}
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= \sum_{n=1}^{\infty} (-1)^{n} (2n-1)x^{2n-2}  
+	.\] 
+	We willen de reekssom bepalen, gegeven dat de functie convergeert voor
+	\[
+	x \in  \left] -1;1 \right[ 
+	.\] 
+	en anders divergeert.
+}
+integreer beide kanten
+\[
+	\int_{ }^{ } f(x)dx&=  \sum_{n=1}^{\infty} (-1)^{n} x^{2n-1}    +C
+.\] 
+\[
+\iff \frac{1}{x}\sum_{n=1}^{\infty} (-1)^{n} x^{2n}  +C
+.\] 
+\[
+\iff \frac{1}{x}\sum_{n=1}^{\infty} \left( -x^2 \right) ^{n} +C
+.\] 
+enige dat nu ontbreekt is de nulde term. We voegen hem toe en halen het dan ook weer weg.
+(je vermenigvuldigd de reekssom met de nulde term blijkbaar.)
+\[
+	\iff \frac{1}{x}\left( \sum_{n=1}^{\infty} \left( -x^2 \right) ^{n} +1-1 \right) +C
+.\] 
+\[
+\iff -\frac{1}{x} +\frac{1}{x}\cdot \frac{1}{1+x^2} +C
+.\] 
+\[
+\iff \frac{1}{x+x^3} -\frac{1}{x}+C
+.\] 
+\[
+\iff \frac{1- (1+x^2)}{x+x^3} +C
+.\] 
+1-1 valt weg en dan beide kanten delen door 0
+\[
+\iff \frac{-x}{1+x^2} +C
+.\] 
+Dus:
+\[
+f(x)&= \left[ \frac{-x}{1+x^2} \right] ' 
+.\] 
+\[
+	\iff \frac{-1+x^2}{(1+x^2)^2} \,\,\,\,\,\, |\,\,\, x \in ]-1;1[
+.\] 
+\section{Positieve en negatieve machtreeksen}
+machtreeksen zijn een bijzonder geval van functiereeksen.
+
+\\ algemene vorm:
+\[
+\sum_{n=0}^{\infty} c_{n} (x-a)^{n} 
+.\] 
+
+en $c_{n} $ is een rij.
+Dat is voor een positive machtreeks.
+Negatieve machtreeks:
+\[
+\sum_{n=1}^{\infty} c_{n} (x-c)^{-n} 
+.\] 
+We zeggen dat de machtreeks zich ontwikkelt rond c.
+Het doel is dus om een convergentie interval te vinden.
+
+\subsubsection{convergentieinterval vinden, voorbeeld positieve machtreeks}%
+\label{ssub:convergentieinterval vinden}
+
+\ex{}{
+	Beschouw:
+	\[
+	\sum_{n=1}^{\infty} \frac{(x-2)^{n} }{n}
+	.\] 
+	het centrum c is 2.
+	Om dit zoals de standaardvorm te schrijven:
+	\[
+	\sum_{n=1}^{\infty} n^{-1}  (x-2)^{n} 
+	.\] 
+
+}
+We doen een vergelijkigstest:
+\[
+\lim_{n \to + \infty} \left| \frac{a_{n+1} }{a_{n} } \right| &= \lim_{n \to + \infty} \left| x-2  \right|  \\
+.\] 
+\clm{vergelijkingstest}{}{
+	$L < 1$ dan is het absoluut convergent, $L>1$ dan divergeert het, L = 1 dan zegt het niets. 
+}
+\[
+\implies \text{ als }  1<x<3 \text{ convergeert eht sowieso.} 
+.\] 
+We kijken naar $|x-2| &= 1$ 
+Laten we eerst kijken voor $x&=1$
+\[
+\sum_{n=1}^{\infty} \frac{(-1)^{n} }{n}
+.\] 
+Dit convergeert na toepassen van de wisselreeks test.
+\\ Nu voor $x&+ 3$
+ \[
+\sum_{n=1}^{\infty} \frac{(1)^{n} }{n}
+.\] 
+dit divergeert, harmonische reeks.
+
+\\ Het convergentie-interval is:
+\[
+	[1;3[
+.\] 
+\dfn{ Straal van convergentie}{
+	We zeggen dat de straal R van deze reeks 1 is, want dat is de intervallengte gedeeld door 2.
+}
+
+
+
+
+
+\subsubsection{een posietieve machtreeks}%
+\label{ssub:een posietieve machtreeks}
+een PMR is een functiereeks van de vorm:
+\[
+\sum_{n\ge 1}^{ } a_{n} (z - c )^{n} 
+.\] 
+
+
+\ex{}{
+	Laten we een algemene (positeieve) machtreeks bekijken:
+	\[
+	\sum_{n=1}^{\infty} a_{n} (x-c)^{n} 
+	.\] 
+}
+We voeren de vergelijkingstest uit.
+\begin{enumerate}
+	\item  Stel $\lim_{n \to + \infty} \left| \frac{a_{n+1} }{a_{n} } \right| &=0$
+		\\ Dan zal de reeks voor elke waarde x convergeren.
+		$\implies R &= + \infty \\$ 
+	\item stel je kijgt als antwoord op de test iets ls \[
+	\frac{1}{x} |x-c| <1 \implies |x-c| < r
+	.\] 
+	\\ dus $|x-c| <r $ is waar de reeks convergeert.
+	\[
+	-r+c<x<r+c
+	.\] 
+\end{enumerate}
+
+\subsubsection{negatieve machtreeksen}%
+\label{ssub:negatieve machtreeksen}
+Algemene vorm van een negatieve machtreeks:
+\[
+\sum_{n=1}^{\infty} a_n(x-c)^{-n} 
+.\] 
+
+
+
+\section{Formules van Taylor}
+\subsection{Algemeen: Taylor reeksen van functies maken}
+
+Beschouw de algemene vorm:
+\[
+\sum_{n=0}^{\infty} \frac{f^{(n)} (a)}{n!} (x-a)^{n}  
+.\] 
+
+Dus stel nu we willen de algemene taylor reeks voor $e^{x}  $ rond het punt $x&= 0 \\$
+\[
+\sum_{n=0}^{\infty} \frac{e^{0} (x-0)^{n} }{n!} \iff \sum_{n=0}^{\infty} \frac{x^{n} }{n!} 
+.\] 
+\ex{}{
+	We kijken naar de cosinus functie rond 0:
+	\[
+	\sum_{n=0}^{\infty} \frac{f^{(n)} (0)}{n!} \cdot x^{n} 
+	.\] 
+}
+Redelijk eenvoudig, dus je rekent telkens de 0 in de afgeleide functies uit en krijgt de term. In het geval van cosinus is de vierde afgeleide gelijk aan zichzelf, dus je krijgt:
+\[
+\sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} x^{n} &= 1 + 0 - \frac{x^2}{2} + 0 + \frac{x^{4} }{24} + \ldots\\
+.\] 
+\[
+\implies 1 - \frac{x^2}{2} + \frac{x^{4} }{24} - \frac{x^{6} }{725} + \ldots + \frac{x^{n} }{n!} 
+.\] 
+
+\subsubsection{laten we $a\neq 0$ bekijken}%
+\label{ssub:laten we $a\neq 0$ bekijken}
+
+\ex{}{	
+	Stel we bekijken de taylor reeks van cosinus op $\pi$
+	\[
+	\sum_{n=0}^{\infty} \frac{\cos{^{(n)} (\pi)}}{n!} (x-\pi)^{n}  
+	.\] 
+}
+\[
+\sum_{n=0}^{\infty} \frac{\cos{^{(n)}(\pi)}}{n!} (x-a)^{n}  &= -1+\frac{x^2}{2} + \frac{x^{4} }{24} - \frac{x^{6} }{725} + \ldots \\
+.\] 
+
+
+\subsection{integralen evalueren met taylor reeksen}
+
+\ex{}{
+	Beschouw:
+	\[
+		\int_{ }^{ } e^{-x^2}  
+	.\] 
+	\clm{taylor reeks van $e^{x} $}{}{
+		\[
+		e^{x} &= \sum_{n=0}^{\infty} \frac{x^{n} }{n!} \\
+		.\] 
+	}
+	
+}
+
+	Blijkbaar lukt substitutie met u niet, er is geen goede manier om it te integreren met de methoden die we eerst hadden.
+	Dit is echter wel belangrijk, want deze integraal komt de hele tijd voor in statistiek.
+\[
+	e^{x} &= \sum_{n=0}^{\infty} \frac{x^{n} }{n!} \\
+.\] 
+\[
+\iff e^{-x^2} &= \sum_{n=0}^{\infty} \frac{-x^{2n} }{n!} \\
+.\] 
+\[
+\iff \int_{ }^{  } e^{-x^2}dx &= \int_{ }^{ } \sum_{n=0}^{\infty} \frac{-x^{2n} }{n!}dx  \\ 
+.\] 
+
+Ik haal de - weg en maak er ee wisselreeks van ofzo
+\[
+\iff \int_{ }^{ } \sum_{n=0}^{\infty} \frac{(-1)^{n} x^{2n} }{n!} dx 
+.\] 
+We integreren (ik was echt verbaasd door hoe makkelijk dit eigenlijk gaat)
+\[
+\iff \sum_{n=0}^{\infty} \frac{(-1)^{n} x^{2n+1} }{n! \cdot (2n+1)} +C
+.\] 
+\cor{Wat doe je hiermee}{
+Lijkt nu best raar, maar dit is een aanvaardbaar antwoord voor de onbepaalde integraal. Dus als je berekeningen wilt doen dan geef je maar je grenswaarden in en reken je uit zoals je altijd zou doen.
+Je kunt het zo precies berekenen als je maar wilt.
+}
+
+
+
+
+\subsubsection{limieten evalueren}%
+\label{ssub:limieten evalueren}
+\ex{}{
+	Beschouw:
+	\[
+	\lim_{x \to 0} \frac{x^2e^{x} }{\cos{(x)}-1}
+	.\] 
+	Slimme mensen zouden L'hopital toepassen
+}
+
+\[
+\iff \lim_{x \to 0} \frac{x^2\left( 1+x+\frac{x^2}{2} +\frac{x^{3} }{6} +\ldots \right)  }{\left( -\frac{x^2}{2} + \frac{x^{4} }{24} - \frac{x^{6} }{720} \right) }
+.\] 
+
+Nu merk je dat alle termen naar 0 gaan, maar de hogere termen gaan sneller naar 0 dan de eerste term.
+dus als je nu kijkt naar de eerste termen die het laatst naar 0 gaan, blijft over:
+\[
+\implies -2
+.\] 
+Opzich ongeveer even snel als L'hopital.
+
+\subsubsection{reeksen evalueren}%
+\label{ssub:reeksen evalueren}
+
+\ex{}{
+	stel nu je krijgt een reeks:
+	\[
+	\frac{1}{0!} - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} +\ldots
+	.\] 
+	Je zou met een test kunnen zeggen dat dit divergeert, nu kunnen we ook de waarde waar de reeks naar convergeert bepalen.
+}
+Dit is de taylor reeks voor $e^{x} $ rond het punt -1.
+\\ We vinden dat deze reeks convergeert naar $\frac{1}{e}$.
+
+
+\subsection{de rest van een taylor reeks}
+
+Het is pas nuttig als de rest zeer klein is, dus dit is belangrijk.
+
+\[
+T_{n} (x) + R_{n} (x) &= \sum_{i=0}^{n} \frac{f^{(i)}(x)\cdot (x-a)^{i} }{i!} + \sum_{i=n+1}^{\infty} \frac{f^{(i)}(x)\cdot (x-a)^{i} }{i!} \\
+.\] 
+
+De rest is vooral klein wanneer je het rond a bekijkt, anders kan het groter zijn.
+\[
+R_{n} (x)&= \frac{(x-a)^{n} }{n!} f^{(n)} (\zeta)
+.\] 
+
+
+\section{Fourier reeksen}
+ een verschil tussen furier reeksen en taylor reeksen is dat fourier reeksen ook functie kunnen beschrijven die niet overal continu of afleidbaar zijn.
+
+\\ er zijn voorwaarden om als en fourier reeks gerepresenteerd te kunne owrden, dit worden de Dirichlet voorwaarden genoemd:
+\begin{itemize}
+	\item de functie moet periodiek zijn.
+	\item Het moet max 1 y-waarde per punt hebben en mag slechts een eindig aantal discontinuiteiten hebben.
+	\item Er moet een eindig aantal minima en maxima zijn binnen één periode.
+	\item De integraal over 1 periode $f(t) $ moet convergeren.
+\end{itemize}
+\subsection{Algemeen}
+Een algemene vorm fourier reeks:
+\[
+	f(t)&= \frac{a_{0} }{2} + \sum_{n=1}^{+ \infty} a_n\cos{(nt)  } + \sum_{n=1}^{+ \infty} b_n\sin{(nt)} 
+.\] 
+Het idee is dat je functies kunt beschrijven als cosinussen en sinussen. Daar kun je makkelijk mee werekn.
+
+	\cor{Bedenk}{
+		
+	\[ \int_{0}^{2\pi} \sin{(mt)} \sin{(nt)} &= \begin{cases}
+	0, m\neq n\\ 
+	\pi, m=n
+	\end{cases} 
+	.\] 
+	\[
+	\int_{0}^{2\pi} \cos{(mt)} \cos{(nt)} &= \begin{cases}
+	0, m\neq n\\ 
+	\pi, m=n
+	\end{cases} 
+	.\] 
+	\[
+	\int_{0}^{2\pi} \cos{(mt) } \sin{(nt)} &= 0  
+	.\] 
+	}
+	Dit  is het hele idee waar fourier reeksen op steunen.
+\ex{}{
+	Het algemene idee. 
+	\\ Beschouw:
+	\[
+	f(t)&= \frac{a_{0} }{2} +\sum_{n=1}^{+ \infty} a_n\cos{nt} + \sum_{n=1}^{+ \infty} b_n\sin{nt} 
+	.\] 
+	We willen dit uiteindelijk gebruiken voor de stapfunctie van 0 tot $2\pi$ in het eerste voorbeeld.
+
+}
+Integreer beide kanten 0 tot 2 pi en vermenigvuldig met sinus mt:
+\[
+	\int_{0}^{2\pi} \left( f(t) \right) \sin{mt}dt &= \int_{0}^{2\pi}    \left( \frac{a_{n} }{2} +\sum_{n=1}^{+ \infty} a_n\sin{(nt)}+\sum_{n=1}^{+ \infty} b_{0} \cos{(nt)}\right) \sin{(mt)}dt
+.\] 
+
+merk op dat de term $a_{0}  $ en alle dcosinussen wegvallen. 
+Het enige dat overblijft is het specifieke geval waar $n=m$
+Wat overblijft:
+\[
+\iff \int_{0}^{2\pi} b_{m} \sin{(mt)} \sin{(mt)} dt &= b_{m} \pi 
+.\] 
+
+Nu een belangrijke conclusie:
+\[
+b_{m} &= \frac{1}{\pi} \int_{0}^{2\pi}   f(t)\sin{(mt)}dt
+.\] 
+
+Besef wat dit je vertelt, nu heb je al die coefficienten van de sinussen.
+\\ Nu vind je de andere rijen door met cosinus mt te vermenigvuldigen.
+Wat je uiteindelijk krijgt en moet onthouden:
+\thm{Onthouden}{
+	\[
+	a_{0} &= \frac{1}{\pi} \int_{0}^{2\pi} f(t)dt  
+	.\] 
+	\[
+	a_{m} &= \frac{1}{\pi} \int_{0}^{2\pi} f(t)\cos{(mt)}dt  
+	.\] 
+	\[
+	b_{m} &= \frac{1}{\pi} \int_{0}^{2\pi} f(t)\sin{(mt)}dt  
+	.\] 
+}
+
+	\subsection{Eerste voorbeeld}
+\ex{}{
+	Beschouw:
+	\[
+	f(t)&= \begin{cases}
+		1, 0<x<\pi\\ 
+		0, \pi<x<2\pi
+	\end{cases} 
+	.\] 
+}
+\[
+f(t)&= \frac{a_{0} }{2} + \sum_{n=1}^{+ \infty} a_n\sin{(nt)} \sum_{n=1}^{+ \infty} b_{n} \cos{(nt)} 
+.\] 
+\hline
+\[
+a_{0} &= \frac{1}{\pi} \int_{0}^{2\pi} f(t)dt &= \frac{1}{\pi}\int_{0}^{\pi} f(t ) dt    
+.\] 
+Want x is toch 0 tussen pi en 2 pi.
+\[
+\iff \int_{0}^{\pi} dt &= t \big|^{\pi} _{0}   &= \pi 
+.\] 
+dus
+\[
+a_{0} &= 1 
+.\] 
+\hline
+\[
+a_{m} &= \frac{1}{\pi} \int_{0}^{2\pi} f(t)\sin{(mt)}   
+.\] 
+\[
+\iff \frac{1}{\pi} \int_{0}^{\pi} \sin{(mt)} dt
+.\] 
+Dus:
+\[
+a_{m} &=  \frac{1}{\pi} \cdot \frac{1}{m}\cdot -\cos{(mt)} \big|^{\pi} _{0} 
+.\] 
+\[
+a_{m} &= -\frac{1}{\pi m}\left[ \cos{(m\pi) } -1 \right]  
+.\] 
+\[
+a_{m} &= -\frac{1}{\pi m} \left[ (-1)^{m} -1 \right]  
+.\] 
+\hline
+\[
+b_{m} &= \frac{1}{\pi}\int_{0}^{\pi} \cos{(mt)}dt  
+.\] 
+\[
+\iff \frac{1}{\pi}\cdot \frac{1}{m}\cdot \sin{(mt) } \big|^{\pi} _{0} 
+.\] 
+\[
+\iff 0
+.\] 
+\hline
+\\ 
+hieruit vinden we f(t)
+\[
+f(t)&= \frac{1}{2}+\sum_{n=1}^{+\infty} -\frac{1}{\pi n} \left[ (-1)^{n} -1 \right] \cdot \sin{nt} 
+.\] 
+\[
+	\equiv f(t)&= \frac{1}{2}+\sum_{n=1,3,5,\ldots}^{+\infty} \frac{2}{\pi n} \sin{nt} 
+.\] 
+\subsection{Veralgemende formules voor fourier reeksen}
+\dfn{ Fourier reeks }{
+	Als een functie aan de voorwaarden voldoen kan het in deze vorm geschreven worden:
+	\[
+	f(t) &= \frac{a_{0}}{2} +  \sum_{n=1}^{\infty} a_n\cos{\left(\frac{n\pi t}{ L }\right)} +  \sum_{n=1}^{\infty} b_n\sin{\left(\frac{n\pi t}{ L }\right)} \\ 
+	.\] 
+	Voor een periodieke functi worden de coefficienten gegeven door: 
+	\[
+		a_{0} &= \frac{2}{L}\int_{x_{0} }^{x_{0} +L } f(t)dt  
+	.\] 
+	\[
+	a_{n} &= \frac{2}{L} \int_{x_{0} }^{x_{0} +L } \cos{\left( \frac{n \pi t}{L} \right) } f(t ) dt  
+	.\] 
+	\[
+	b_{n} &= \frac{2}{L} \int_{x_{0} }^{x_{0} +L } \sin{\left( \frac{n \pi t}{L} \right) } f(t)dt  
+	.\] 
+	Je kunt ook fourier transforms doen van niet-periodieke functies, zelfs van veelermen, maar dat is nog niet voor nu.
+}
+\ex{}{
+	We make een fourier reeks van $f(t)&= t $ maar dan periodiek met een interval van $\left] -2;2 \right[ $
+	 En dan herhaalt het zich dus opnieuw. Ik zou een grafiek maken, maar mijn inkscape is nog niet goed genoeg.
+	 \\ Aangezien L 2 is, zoals we zien aan het interval, zoeken we de fourier reeks:
+	 \[
+		 f(t) &= \frac{a_{0}}{2} +  \sum_{n=1}^{\infty} a_n\cos{\left(\frac{n\pi t}{2}\right)} +  \sum_{n=1}^{\infty} b_n\sin{\left(\frac{n\pi t}{ 2 }\right)} \\ 
+	 .\] 
+}
+We zoeken eerst $a_{n} $ 
+\[
+a_{n} &=  \frac{1}{2}  \int_{-2}^{2} t \cos{\left( \frac{n \pi t}{2} \right) } dt
+.\] 
+Een even functie vermenigvuldigd met een oneven functie over een symmetrisch interval integreert altijd naar nul (blijkbaar).
+
+\[
+\implies a_{n} &= 0 
+.\] 
+We zoeken $a_{0} $
+ \[
+ a_{0} &= \frac{1}{2}\int_{-2}^{2} t dt   
+ .\] 
+ \[
+ \iff 2^{2} - (-2)^{2} &= 0 
+ .\] 
+ Maar eigenlijk is een oneven functie geintegreerd over een symmetrisch interval opnieuw gewoon duidelijk nul dus je moest niet uitrekenen.
+ \[
+ a_{0} &= 0 
+ .\] 
+ We zoeken $b_{n} $
+  \[
+  b_{n} &= \frac{1}{2} \int_{-2}^{2} t\sin{\left( \frac{n \pi t}{2} \right) } dt 
+  .\] 
+Gelukkig is sinus oneven, en een oneven functie vermenigvuldigd met een oneven functie is even. Daardoor zal dit niet nul worden.
+\[
+	\iff \int_{0}^{2} t \sin{\left( \frac{n \pi t}{2} \right) } 
+.\] 
+We moeten jammer genoeg deze integraal uitwerken :(
+\[
+\iff t \cdot \frac{-2 \cos{\frac{n \pi t}{2}}}{n \pi } \big|^{2} _{0} - \int_{0}^{2} \frac{-2t \cos{\left( \frac{n \pi t}{2} \right) }}{n \pi } dt
+.\] 
+Integraal daar gaat naar nul
+\[
+\iff \frac{-2t \cos{\left( \frac{n \pi t}{2} \right) }}{n \pi } \big|^{2} _{0} 
+.\] 
+\[
+\iff	\left( \frac{4 \cdot (-1)^{n+1}  }{n \pi}\right)  
+.\] 
+\[
+	\iff (-1)^{n+1} \left( \frac{4}{n \pi} \right) 
+.\] 
+\[
+	f(t) &=     \sum_{n=1}^{\infty} (-1)^{n+1} \left( \frac{4}{n \pi} \right) \sin{\left(\frac{n\pi t}{2}\right)} \\ 
+.\] 
+
+\newpage
+\section{Besluit deel 2}
+\begin{Besluit}
+	\begin{itemize}
+		Mijn besluit van deel II, rijen en reeksen.
+	\end{itemize}
+	\begin{enumerate}
+		\item Rijen van reele getallen
+			\begin{itemize}
+				\item Bewijs dat een rij stijgt door $a_{n}  $ en $a_{n+1}   $ te vergelijken met binonium van newton
+				\item een begrensde rij heeft steeds een convergente deelrij, we noemen de limieten van die deelrijen lim inf en lim sup. 
+					\[
+u_{n} :&= \sup \{ a_{k}  : k \ge n \}  
+					.\] 
+					\[
+v_{n} :&= \inf \{ a_{k}  : k\ge n \}  
+					.\] 
+			\end{itemize}
+		\item Numerieke reeksen 
+			\begin{itemize}
+				\item Meetkundige reeksen
+					\\ Deze zijn belangrijk want we weten waar deze naar convergeren. Meetkundige reeksen zijn van de vorm:
+					\[
+					\sum_{n=1}^{\infty} ar^{n-1} 
+					.\] 
+					en convergeren naar:
+					\[
+					\frac{a}{1-r}
+					.\] 
+					\textbf{Dit echter enkel wanneer $|r| < 1$}
+				\item Harmonische reeksen
+					\[
+					\sum_{n=1}^{\infty} \frac{1}{n}
+					.\] 
+					Een eigenschap van harmonische reeksen is dat ze altijd heel erg traag divergeren.
+				\item hyperharmonische reeksen
+					\[
+						\sum_{n=1}^{\infty} \frac{1}{n^{p} }
+					.\] 
+					Dit wordt ook een p-reeks genoemd. Hyperharmonische reeks met parameter p.
+					\begin{itemize}
+						\item voor $0<p<1$:
+							\\ reeks zal sneller divergeren.
+						\item voor $p&= 1 $:
+							\\ Je krijgt een traag divergente harmonische reeks.
+						\item voor  $p>1$:
+							\\ Dit is convergent op voorwaarde dat de algemene term naar nul gaat.
+							\[
+							\text{VUL NOG AAN}
+							.\] 
+					\end{itemize}
+			\end{itemize}
+				\item Covnergentietesten
+	\end{enumerate}
+\end{Besluit}
+
+
+
+\chapter{Addendum: oneigenlijke integralen}
+\section{Oneigenlijke Rieman integraal}
+Als de oneigenlijke integraal van de absolute waarde van f convergeert, dan convergeert de oneigenlijke integraal van f.
+\[
+\text{als } \int_{-\infty}^{+ \infty} |f(x)| dx \text{ convergeert, dan } \int_{-\infty}^{+ \infty} f(x)dx \text{ convergeert}   
+.\] 
+
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= \frac{\sin{(x)}}{x} 
+	.\] 
+	Deze functie is niet integreerbaar met de huidge technieken die we kennen. Wordt dieper op ingegaan in analyse III.
+}
+\[
+\int_{-\infty}^{+ \infty} \frac{\sin{(x)}}{x}dx 
+.\] 
+Merk op dat twee oneven functies hier vermenigvuldigd worden tot vorming van een even functie.
+\[
+\iff 2 \int_{0}^{+ \infty} \frac{\sin{(x)}}{x}dx  
+.\] 
+We passen bovenstaande stelling toe als een convergentietest.
+\[
+\int_{0}^{+ \infty} \frac{|\sin{(x)}| }{x}dx 
+.\] 
+Want nu zijn voorwaarden voldaan om effectief een test uit te voeren
+\begin{enumerate}
+	\item vast positief teken
+	\item continu
+	\item $\lim_{x \to \infty} \frac{|\sin{(x)}| }{x  }&= 0 $
+\end{enumerate}
+Dit is een voorbeeld van een functie die we kunnen vergelijken met de functie $\frac{1}{x^{\alpha} }$ 
+
+\clm{Deze vergelijkingstest }{}{
+	Herinner je de vergelijkingstest:
+	\[
+	\lim_{x \to + \infty} \big| \frac{f}{g} \big| 
+	.\] 
+}
+\[
+\lim_{x \to \infty} x^{\alpha-1} \cdot |\sin{(x)}| 
+.\] 
+De limiet zal afhankelijk zijn van alpha, groter dan, kleiner dan of gelijk aan één.
+\begin{enumerate}
+	\item $\alpha < 1$ 
+		convergent naar nul.
+	\item $\alpha&= 1 $
+		 \[
+		 \iff \lim_{x \to \infty} |\sin{x}| \to \text{ bestaat niet} 
+		 .\] 
+	 \item $\alpha>1$
+		 duidelijk convergent naar $+ \infty$
+\end{enumerate}
+\[
+\implies \text{ de convergentiestelling is onbruikbaar} 
+.\] 
+Wat we nu wel kunnen doen is de integraal ehrschrijven als een reeks van oneindig veel oplosbare integralen.
+\[
+\int_{-\infty}^{+ \infty} \frac{|\sin{(x)}| }{x}dx \equiv \sum_{n=0}^{\infty} \int_{n \pi}^{(n+1)\pi } \frac{|\sin{(x)}| }{x}dx 
+.\] 
+we voeren een substitutie $u&= x-n \pi $
+\[
+\iff \sum_{n=0}^{\infty}   \int_{0}^{\pi} \frac{|\sin{(u)}| }{u+n \pi} du
+.\] 
+en weten dat:
+\[
+u+n \pi \le (n+1)\pi \iff u \le \pi
+.\] 
+u is kleiner dan $\pi$ want $u&= x-n \pi $
+ en het interval van de integraal is x, dus dit klopt.
+
+\\ Als iets in de noemer kleiner wordt, dan wordt de integraal groter
+\[
+	\implies \sum_{n=0}^{\infty} \frac{1}{(n+1)\pi}\cdot \int_{0}^{\pi} \sin{(u)} du 
+.\] 
+\[
+\implies \sum_{n=0}^{\infty} \frac{2}{(n+1)\pi}
+.\] 
+\[
+\equiv \sum_{n=1}^{\infty} \frac{2}{n \pi}
+.\] 
+Dit is jammer genoeg een harmonsiche reeks.
+Het enige dat we nu echt weten is dat \textbf{de integraal van sinus x over x NIET ABSOLUUT convergent is.}
+We weten nog niets over de convergentie van de functie zelf.
+Het is mogelijk, dat de functie betrekkelijk convergeert.
+\\ Laten we eens terugdenken aan de harmonische wisselreeks.
+\textbf{De manier waarrop we dit gaan oplossen is door een x kwadraat in de noemer te hebben}
+\[
+\lim_{x \to \infty} \big| \frac{x^{\alpha} \sin{(x)} }{x} \big| &=   
+.\] 
+
+\qs{}{
+	Onderzoek voor $t>1$ de convergentie van de integraal:
+	\[
+	\int_{0}^{t} \frac{\ln{(x)}}{x^{\beta} (t^2-x^2)^{\gamma} } 
+	.\] 
+	In functie van de parameters $\beta \text{ en } \gamma$.
+	\\ Oplossing:
+
+Merk op dat voor $x&= 0 $ natuurlijke log x naar min oneindig maar de noemer gaat naar plus oneindig.
+\\ We splitsen de integraal op.
+	\[
+	\iff \int_{0}^{1} \frac{\ln{(x)}}{x^{\beta} (t^2-x^2)^{\gamma}    } + \int_{1}^{t} \frac{\ln{(x)}}{x^{\beta} (t^2-x^2)^{\gamma} }  
+	.\] 
+Probleempunten: $x&= 0 \text{ en } x&= t  $
+Zo zonderen we de probleempunten af en bekijken we deze gesplitste integralen in functie van beta en gamma.
+\[
+I_{1} &=  \int_{0}^{1} \frac{\ln{(x)}}{x^{\beta} (t^2-x^2)^{\gamma} } dx 
+.\] 
+Deze URI heeft dus het probleempunt $x=0$
+We bekijken de convergentie adhv f
+ \[
+f(x)&= -\frac{\ln{(x)}}{x^{\beta} (t^2-x^2)^{\gamma} }
+.\] 
+Als f convergeert zal $I_{1}  $ convergeren
+\begin{enumerate}
+	\item De functie is positief tussen 0 en 1, in 1 echter nul
+	\item Is continu in dit interval, aangezien $t>1$
+	\item $\lim_{x \to _> 0} f(x)&=  $
+\end{enumerate}
+Het idee is dat je limieten wilt nemen en convergentietesten wilt doorvoeren op de probleempunten om de convergentie te bestuderen, je weet al dat de URI convergent is op niet-probleempunten
+}
+
+
+\chapter{Integraaltransformaties}
+Voor bij het herhalen: ik denk dat je best eerst foutier integralen bekijkt, dan laplace integralen. Heb bij dit hele deel onlogisch genoteerd en ben wat in de war geraakt.
+
+\section{laplacetransformatie}
+\subsection{Inleidende voorbeelden}
+standaardvorm:
+\[
+	\mathscr{L} [f(t)] &= \int_{0}^{+\infty} f(t) \cdot \exp{(-st)} dt &= F(s)
+.\] 
+\ex{}{
+	Beschouw:
+	\[
+		\mathscr{L} [e^{at} ] &= \int_{0}^{+\infty} e^{at}  \cdot \exp{(-st)} dt 
+	.\] 
+}
+\[
+\mathscr{L} [e^{at} ] &= \int_{0}^{+ \infty} e^{(a-s)t }  dt 
+.\] 
+dus de onbepaalde integraal:
+
+\[
+	\iff F(s) &= \frac{e^{(a-s)t} }{a-s} +C
+.\] 
+dat moet je dan evalueren, hier kunnen zich verschillende dingen voordoen afhankelijk van a en s.
+\begin{enumerate}
+	\item $s>a$
+		\[
+		\implies \frac{1}{s-a}
+		.\] 
+	\item $s\le a$
+		Divergeert. Bij $s&=a$ deel je door nul en als s kleiner is divergeert het ook.
+\end{enumerate}
+
+\ex{}{
+	Stel
+	\[
+	u(t) &= \begin{cases}
+		0, t<0 \\
+		1, t\ge 0
+	\end{cases} \\
+	.\] 
+	Beschouw:
+	\[
+		\mathscr{L} [u(t-a)] &= \int_{0}^{+\infty} u(t-a) \cdot \exp{(-st)} dt 
+	.\] 
+}
+
+\[
+\iff \int_{a}^{+ \infty} e^{-st} \cdot 1dt 
+.\] 
+Je krijgt:
+\[
+\frac{e^{-sa} }{a}
+.\] 
+\subsubsection{gamma functie}%
+\label{ssub:gamma functie}
+
+\ex{}{
+	Beschouw de gamma functie
+\[
+\Gamma (x) &= \int_{0}^{+ \infty} e^{-t} \cdot t^{x-1} dt
+.\] 
+We bekijken wat er gebeurt als we het evalueren op een integer n en er 1 bij optellen:
+\[
+\Gamma (n+1) &= \int_{0}^{+ \infty} e^{-t} \cdot t^{n} dt 
+.\] 
+}
+\[
+\iff -e^{t} t^{n} \big|^{+ \infty}_{0} - \int_{0}^{+ \infty} -e^{-t} \cdot nt^{n-1} dt 
+.\] 
+merk op dat dit lijkt op de gamma functie:
+\[
+\iff n\Gamma(n)
+.\] 
+We concluderen:
+\[
+\Gamma (n+1) &= n\Gamma (n) \\
+.\] 
+Hieruit volgt iets zeer speciaal,
+\\ de gamma functie van 1 is 1, en dus nu kunnen we naar beneden blijven gaan en telkens 1 n aftrekken, waarna we n faculteit overhouden.
+\\ dus:
+\[
+n \Gamma (n) &= n! \\
+.\] 
+De gamma functie zal later nog handig van pas komen.
+\ex{}{
+	Beschouw
+	\[
+	\mathscr{L} [t^{n} ] &= \int_{0}^{+\infty} t^{n}  \cdot \exp{(-st)} dt 
+	.\] 
+}
+
+\[
+\iff \int_{0}^{+ \infty} e^{-st} \cdot t^{n} dt 
+.\] 
+stel $u&=st$
+\[
+\frac{1}{s^{n+1} } \int_{0}^{+ \infty} e^{-u} \cdot u^{n} du 
+.\] 
+Merk op dat dit wederom de gamma functie is:
+\[
+\frac{1}{s^{n+1} } \cdot \Gamma (n+1)
+.\] 
+\[
+\iff \frac{n!}{s^{n+1} }
+.\] 
+
+\subsection{Eigenschappen}
+
+\thm{translatie eigenschap}{
+	
+	\[
+	\mathscr{L} [e^{at} f(t)  ] &= \int_{0}^{+ \infty} e^{-st} e^{at} f(t)dt  
+	.\] 
+\[
+\iff \int_{0}^{+ \infty} e^{-(s-a)t } f(t)dt &= F(s-a)  
+.\] 
+}
+Dit houdt dus in dat een functie vermenigvuldigd met een exponentiele at, met a naar rechts verschoven wordt.
+\subsection{Laplace transformatie van afgeleiden en integralen}
+\subsubsection{eerste afgeleide}%
+\label{ssub:eerste afgeleide}
+
+\ex{}{
+	
+\[
+\mathscr{L} [f'(t)] &= \int_{0}^{+\infty} f'(t) \cdot \exp{(-st)} dt 
+.\] 
+We passen partiele integratie toe.
+Stel $v&= e^{-st} $ en $du&=  f'(t)$
+}
+\[
+\iff -f(0) + s \cdot \int_{0}^{+ \infty} e^{-st} f(t)dt 
+.\] 
+\cor{klein besluit}{
+	dus onthou, laplace transform van een afgeleide is min f van nul plus s keer de laplace transform van f:
+	\[
+	\iff \mathscr{L} [f'(t)] &= -f(0) + s\cdot \mathscr{L} [f(t)]  
+	.\] 
+}
+\subsubsection{tweede afgeleide}%
+\label{ssub:tweede afgeleide}
+\ex{}{
+stel $g(t)&= f'(t)   $ 	
+Dus:
+\[
+\mathscr{L} [f''(t)] &= \mathscr{L} [g'(t)]  
+.\] 
+}
+niet eens helemaal proberen omvormen, geen zin, hier is wat je krijgt:
+\[
+\iff s^2 \mathscr{L} [f(t)] - sf(0) -f'(0)
+.\] 
+en dus:
+\[
+\mathscr{L} [f''(t)] &= s^2\mathscr{L} [f(t)] -sf(0) -f'(0) 
+.\] 
+
+\subsubsection{nde afgeleide}%
+\label{ssub:nde afgeleide}
+
+\ex{}{
+	We bekijken het algemeen (dit staat nergens in de cursus, ik doe dit zelf als oefening dus de kans dat ik hier iets fout doe is groot want ik ben dom):
+	\[
+	\mathscr{L} [f^{(n)}(t) ] &= \int_{0}^{+ \infty} e^{-st} f^{(n)} (t)dt  
+	.\] 
+}
+Oplossing:
+\[
+\mathscr{L} [f^{(n)}(t)  ] &= s^{n} \mathscr{L} [f(t)]  - s^{n-1} f(0) - s^{n-2} f'(0) - \ldots - sf^{(n-2)} (t) - f^{(n-1)}(t)
+.\] 
+
+\subsubsection{integraal}%
+\label{ssub:integraal}
+	\[
+	\mathscr{L} [\int_{0}^{t} f(\tau) ] &= \frac{F(s)}{s} 
+	.\] 
+
+
+
+\subsection{toepassingen}
+\ex{}{
+	Beschouw de volgende differentiaalvergelijking:
+	\[
+		y''-y'-2y &= 0
+	.\] 
+	Met beginwaarden:
+	\[
+	y(0)&= 1, y'(0)&= 0 \\ \\
+	.\] 
+	We gebruiken de formules van Laplace om dit op te lossen.
+}
+\[
+\iff \mathscr{L} [y''] - \mathscr{L} [y'] -2 \mathscr{L} [y]  &= 0 \\
+.\] 
+dit is wat het betekent voor de laplace-transform om lineair te zijn.
+ \\ We lossen de afgeleiden op zoals gezien hierboven in 3.2.3
+ \thm{notatie}{
+ 	soms wordt de laplace transform van y ook als $Y(s)$ geschreven ipv $\mathscr{L} [y(t)]  $, en dan voor f $F(s)$, omdat die iets makkelijker is.
+ }
+ 
+ \[
+	 \iff \left( s^2Y(s)-sy(0)-y'(0) \right) - \left( sY(s)- y(0) \right) - 2Y(s) &= 0 
+ .\] 
+ \cor{Het beginwaardeprobleem is van belang}{
+ 	Indien we geen beginwaarden voor $y&= 0 $ hadden, weet ik niet of je dit kon oplossen.
+ }
+ We gebruiken het beginwaardeprobleem
+ \[
+ \iff s^2Y(s) -s - sY(s) + 1-2Y(s ) &= 0 
+ .\] 
+\[
+\iff Y(s)\left( s^2-s-2 \right) &= s-1 
+.\] 
+\[
+\iff Y(s) &= \frac{s-1}{s^2-s-2} 
+.\] 
+Nu moeten we eigenlijk de inverse laplace transform toepassen om het antwoord op de originele differentiaalvergelijking te vinden. Dit wordt uitgebreid besproken in 4.2, maar voor nu:
+\[
+	\implies Y(s)&= \frac{\frac{1}{3}}{s-2}+ \frac{\frac{2}{3}}{s+1} 
+.\] 
+met partieelbreuken
+\clm{laplacetransform $e^{at} $}{}{
+	\[
+	\mathscr{L} [e^{at} ] &= \frac{1}{s-a}\,\,\,\,\,\, |\,\,\, s>a 
+	.\] 
+}
+\[
+	\mathscr{L} [y   ]  &= \mathscr{L} [\frac{1}{3}e^2   ] + \mathscr{L} [\frac{2}{3}e^{-1} ]  
+.\] 
+en
+\[
+\mathscr{L}^{-1} \big[\mathscr{L} [y]  \big] &=  \mathscr{L}^{-1} \big[\mathscr{L} [\frac{1}{3}e^2] \big] + \mathscr{L}^{-1} \big[\mathscr{L} [\frac{2}{3}e^{-1} ] \big] &= y 
+.\] 
+\[
+	\iff y &= \frac{1}{3}e^2+\frac{2}{3} e^{-1}  
+.\] 
+en als je dit met de constante coefficienten methode zou nagaan, zou je vinden dat dit klopt. 
+
+
+\section{inverse laplace transformatie}
+\subsubsection{inleidende voorbeelden}%
+\label{ssub:inleidende voorbeelden}
+
+\clm{Translatie eigenschap}{}{
+	\[
+	\mathscr{L} [e^{at} f(t)   ] &= F(s-a) 
+	.\] 
+}
+
+\ex{}{
+	Beschouw:
+	\[
+	\mathscr{L}^{-1} \big[\frac{2}{(s+1)^3}\big] 
+	.\] 
+
+\clm{belangrijke laplace transform}{}{
+	\[
+	\mathscr{L} [t^{n} ] &= \frac{n!}{s^{n+1} } 
+	.\] 
+}
+	Merk op $a&= -1 $
+}
+\[
+	\implies e^{-t} t^2  
+.\] 
+die $e^{-t} $ komt van het feit dat die a -1 is en de translatie-eigenschap. De $t^2$ komt van de laplace transform die we kennen.
+
+\cor{npge}{
+	Dit is dus ook wat je zag op de npge. Om inverse laplace transforms uit te voeren leer je enkele laplace transforms vanbuiten om te gebruiken en onthou je de translatie-eigenschap
+}
+\ex{}{
+	\clm{sinus transform}{}{
+		\[
+		\mathscr{L} [e^{at} \sin{(kt)}] &= \frac{k}{(s-a)^2+k^2} , s>a
+		.\] 
+		\[
+		\mathscr{L} [e^{at} \cos{(kt)}] &= \frac{(s-a)}{(s-a)^2+k^2} 
+		.\] 
+	}
+	
+beschouw:
+\[
+\mathscr{L}^{-1} \big[\frac{s}{s^2-2s+5}\big] 
+.\] 
+ En merk op dat $D<0$
+}
+
+\[
+\frac{s}{s^2-2s+5}&=  \frac{s}{(s-1)^2+4 } 
+.\] 
+\[
+\iff \frac{(s-1)+1}{(s-1)^2+2^2}
+.\] 
+\[
+\iff \frac{s-1}{(s-1)^2+2^2 } + \frac{1}{(s-1)^2+2^2}
+.\] 
+\[
+	\implies e^{t} \cos{(2t)} + e^{t} \cdot \frac{1}{2} \cdot  \sin{2t}
+.\] 
+die $\frac{1}{2}$ komt van het feit dat die 1 vanboven schrijven hetzelfde is als de helft van k schrijven.
+
+\ex{}{
+	Beschouw:
+	\[
+	\mathscr{L}^{-1} \big[\frac{\lambda^2+9\lambda+2}{(\lambda -1)^2(\lambda +3)}\big] 
+	.\] 
+}
+Intimiderende problemen als deze los je gemakkelijk op door te splitsen in partieelbreuken en dan de gekende transforms te gebruiken.
+\[
+\iff \mathscr{L}^{-1} \big[\frac{2}{\lambda-1}+\frac{3}{(\lambda+1)^2 } -\frac{1}{\lambda+3}\big] 
+.\] 
+\clm{$\mathscr{L} [e^{at} ] $}{}{
+	\[
+	\mathscr{L} [e^{at} ] &= \frac{1}{s-a} 
+	.\] 
+}
+
+\[
+\implies 2e^{t} +3te^{t}  + e^{-3t} 
+.\] 
+
+
+\ex{}{
+	\clm{gegeven dat:}{}{	
+		\[	
+	\mathscr{L}^{-1} \big[\frac{F(s)}{s}\big] &= \int_{0}^{t} f(\tau) d\tau 
+		.\] 
+	}
+	
+dus beschouw:
+\[
+\mathscr{L}^{-1} \big[\frac{1}{s(s-a)}\big] 
+.\] 
+}
+Vorm om naar de vorm hierboven:
+\[
+\mathscr{L}^{-1} \big[\frac{1}{s} \cdot \frac{1}{(s-a)}\big] 
+.\] 
+\[
+\iff \int_{0}^{t} \mathscr{L}^{-1} \big[\frac{1}{s-a}\big]  d\tau
+.\] 
+\[
+\iff \int_{0}^{t} e^{a\tau} d\tau 
+.\] 
+\[
+\implies \frac{1}{a} e^{at} - \frac{1}{a} 
+.\] 
+\subsubsection{convoluties}%
+\label{ssub:convoluties}
+\[
+	f(t)\ast g(t):&= \int_{0}^{t} f(\tau) g(t-\tau) d\tau
+.\] 
+ik ga niet alle eigenschappen opschrijven, maar deze is belangrijk:
+\[
+\mathscr{L} [f(t)\ast g(t)] &= \mathscr{L} [f(t)] \mathscr{L} [g(t)]  
+.\] 
+en dus:
+\[
+	\mathscr{L}^{-1} \big[F(s)G(s)\big] &= f(t)\ast g(t) 
+.\] 
+\ex{}{
+	beschouw:
+	\[
+	\mathscr{L}^{-1} \big[\frac{1}{(s^2+1)^2}\big] 
+	.\] 
+}
+\[
+\iff \mathscr{L}^{-1} \big[\frac{1}{s^2+1}\cdot \frac{1}{s^2+1}\big] 
+.\] 
+\[
+\iff \mathscr{L}^{-1} \big[\mathscr{L} [\sin{(t)} ] \cdot \mathscr{L} [\sin{(t)}] \big] 
+.\] 
+\[
+\iff \sin{(t)  } \ast \sin{(t)}
+.\] 
+\[
+\implies \int_{0}^{t} \sin{(\tau ) } \cdot \sin{(t-\tau )} d\tau 
+.\] 
+\clm{formule van horner}{}{
+	\[
+	\sin{a}\sin{b}&= \frac{1}{2}\cdot \left\{ \cos{(b-a)} -\cos{(b+a)} \right\}  
+	.\] 
+	
+}
+\[
+\iff \int_{0}^{t} \sin{(-2\tau -t)-\cos{t}d\tau } 
+.\] 
+reken de integraal uit en dat is het antwoord.
+
+
+
+\section{de fourierintegraal}
+
+Fourier transformaties zijn een deeltje van laplace transformaties. Het doel is om de functies te vinden die de fourier reeks opbouwen. Wanneer je met een fourier transform van f zijn fourier transform vindt en te weten komt uit welke functies f is opgebouwd, kun je hier aanpassingen aan doen.
+\\ Met de fourier transform kun je dat dus doen zonder dat je eerst de fourier reeks vindt. Je geeft het een functie, en krijgt een amplitude in functie van frequentie terug.
+\[
+\mathscr{F} \big[f(t)\big](\omega) :&= \int_{- \infty}^{+\infty} f(t) \cdot \exp{(-i \omega t)} dt
+.\] 
+\[
+\mathscr{F}^{-1} \big[\hat{f}(t)\big] &= \frac{1}{2\pi} \int_{-\infty}^{+ \infty} \hat{f} (t) \cdot \exp{(i\omega t)}dt  
+.\] 
+De fourier transform is ds een onderdeel van de laplace transform dat vertelt welke sinusoids in een functie zitten. De laplace transform vertelt je welke sinusoids EN exponentiele er in een functie zitten.
+\\ 
+volgende notities zijn van mathematical methods for physics and engineering na pg. 433 en een paar youtube filmpjes, want cursus is onduidelijk.
+
+\subsection{Het idee duidelijk maken}
+\[
+\mathscr{F} \big[f(t)\big](\omega) :&= \int_{- \infty}^{+\infty} f(t) \cdot \exp{(-i \omega t)} dt
+.\] 
+\[
+	\iff \mathscr{F} \big[f(t)\big](\omega) &= \int_{-\infty}^{+ \infty} f(t)\cos{(\omega t) } - i \int_{-\infty}^{+ \infty} f(t)\sin{(\omega t)}   
+.\] 
+en dan wordt de fourier getransformeerde $\hat{f} (\omega )$ dus geplot als amplitude in functie van omega.
+\\ Eigenlijk
+\subsubsection{enkele eigenschappen}%
+\label{ssub:enkele eigenschappen}
+
+\clm{Translatie eigenschap}{}{
+	De translatie eigenschap van laplace transforms gelden ook bij fourier transforms
+	\[
+	\mathscr{F} \big[f(t-a)\big](\omega) &= e^{-i \omega a} \mathscr{F} \big[f(t)\big](\omega)  
+	.\] 
+}
+
+\dfn{ Frequentiedilatatie }{
+	\[
+	\mathscr{F} \big[e^{-ita} f(t) \big](\omega)  &=  \mathscr{F} \big[f(t)\big](\omega + a)  
+	.\] 
+}
+\dfn{ Tijdsschaalwijzigingen }{
+	\[
+	\mathscr{F} \big[f(at)\big](\omega) &= \frac{1}{|a| } \mathscr{F} \big[f(t)\big](\frac{\omega}{a})  
+	.\] 
+}
+
+Wanneer je de amplitude plot in functie van omega, met re"ele en imaginaire component, dan kun je ook de modulus plotten ipv omega op basis daarvan. Een 'Fourier transform magnitude plot' is dus dat.
+
+
+\ex{}{
+	Bewijs de tijdsschaalwijzigingseigenschap:
+\[
+\mathscr{F} \big[f(at)\big](\omega) &= \frac{1}{|a| } \mathscr{F} \big[f\big](\frac{\omega}{a})  
+.\] 
+}
+\[
+\mathscr{F} \big[f(at)\big](\omega) &= \int_{-\infty}^{+ \infty} f(at) \exp{(-i \omega t)} dt  
+.\] 
+stel $u &= at $
+\begin{enumerate}
+	\item We bekijken het geval waar a>0
+\[
+\iff \int_{-\infty}^{+ \infty} f(u) \cdot \exp{(-i \omega \frac{u}{a})} \frac{du}{a}
+.\] 
+Het onderscheid maken tussen $a>0$ en kleiner dan heeft te maken met de grenzen, anders worden ze omgedraaid ofzo
+Indien je dit herschrijft krijg je
+\[
+\iff \frac{1}{a} \mathscr{F} \big[f(t)\big](\frac{\omega}{a}) 
+.\] 
+\item stel $a<0$ \[
+	- \int_{-\infty}^{+ \infty} f(u)\exp{(-i \omega \frac{u}{a})} \frac{du}{a} 
+	.\] 
+	\[
+	\iff -\frac{1}{a} \cdot \mathscr{F} \big[f(t)\big](\frac{\omega}{a}) 
+	.\] 
+
+\end{enumerate}
+\ex{}{
+	we berekenen de fourier transform van
+	\[
+	y &= e^{- |t| }  
+	.\] 
+}
+\[
+\mathscr{F} \big[e^{-|t| } \big](\omega) :&= \int_{- \infty}^{+\infty} e^{-|t| }  \cdot \exp{(-i \omega t)} dt
+.\] 
+\[
+\iff \int_{-\infty}^{+ \infty} e^{-|t| - i \omega t } dt 
+.\] 
+
+\ex{}{
+	Beschouw de differentiaalvergelijking
+	\[
+	y''(t) + y(t) &= 0 
+	.\] 
+	We zullen een algemene oplossing proberen vinden aan de hand van de fourier trransformatie.
+}
+\[
+\mathscr{F} \big[y''(t)+y(t)\big](\omega) &= \mathscr{F} \big[0\big](\omega)  
+.\] 
+nul keer de fourierkern is nul dus dat is gewon nul.
+\[
+\mathscr{F} \big[y''(t)\big](\omega) + \mathscr{F} \big[y(t)\big](\omega) &= 0 
+.\] 
+\clm{de afleidingseiegenschap}{}{
+	\[
+	\mathscr{F} \big[f'(t)\big](\omega) &= i \omega \cdot \mathscr{F} \big[f(t)\big](\omega)  
+	.\] 
+}
+\[
+\iff \mathscr{F} \big[f(t)\big](\omega) \left( 1+(i \omega )^2 \right) &= 0 
+.\] 
+\[
+\equiv \mathscr{F} \big[f(t)\big](\omega) \left( 1-\omega ^2 \right) &= 0 
+.\] 
+\[
+\implies \mathscr{F} \big[f(t)\big](\omega) &= 0 
+.\] 
+Was het even verkeerrd aan het schrijven maar $f(t)&= y(t)   $ ik bedoelde eigenlijk de hele tijd y, te lui om te vervangen.
+\[
+\int_{-\infty}^{+ \infty} y(t)  \cdot \exp{(- i \omega t)}dt&= 0 
+.\] 
+dus $y(t)&= 0 $, we witen sowieso al dat y de nulfunctie kan zijn.
+\cor{oplossingen van fourier transforms van dv's}{
+	We weten dat 
+	\[
+	y_{p} (t)&= C_{1} \sin{t}+C_{2} \cos{t} 
+	.\] 
+	De correcte oplossing is van de differentiaalvergelijking, maar we krijgen dit niet want \textbf{je kunt enkel fourier transformeerbare functies terugvinden wanneer je een dv oplost aan de hand van  fourier transforms} 
+	Sowieso al is het me een raadsel waarom we niet gewoon laplace gebruiken.
+}
+\ex{}{
+	Beschouw:
+	\[
+	y''(t)+y(t)&= e^{-|t| } 
+	.\] 
+}
+\[
+\mathscr{F} \big[y(t)\big](\omega) \left( 1-\omega^2 \right) &=  \frac{2}{(\omega +1)^2}
+.\] 
+
+\subsection{Fourier transform als generalisatie van fourier reeksen}
+
+
+
+\section{Z-transformaties}
+
+\chapter{Partiele differentiaalvergelijkingen }
+
+\section{De warmtevergelijking}
+\subsection{Basismodel}
+\ex{}{
+	Laat u de termperatuur zijn, de volgende parti"ele differentiaalvergelijking beschrijft hoe u verandert in functie van tijd t en plaats x in een homogeen metaal. 
+	\[
+	\alpha^2u_{x x} &= u_{t}  \equiv \alpha^2 \frac{\partial ^2u}{\partial ^2x} &= \frac{\partial u}{\partial t}   
+	.\] 
+	Hier is $\alpha^2$ de materiaalconstante die altijd positief is; warmtegeleidingscoefficient.
+	\\ We defini"eren randcondities:
+	\[
+		\begin{cases}	
+\lim_{x \to 0+} u(x,t)&= 0, \forall t \in \mathbb{R}_{0}^{+} 	\\ 
+\lim_{x \to L-} u(x,t)&= 0, \forall t \in \mathbb{R}_{0}^{+} 
+		\end{cases}
+	.\] 
+	We defini"eren een beginconditie:
+	\[
+		\lim_{t \to 0+} u(x,t)&= \phi(x), \forall x \in ]0,L[ 
+	.\] 
+	Dit heeft een unieke oplossing onder zekere voorwaarden onder f.
+}
+\[
+u(x,t)&= X(x)T(t) 
+.\] 
+en
+\[
+\alpha^2u_{x x} &= u_{t}  
+.\] 
+dus
+\[
+\alpha^2X''(x) T(t)&= T'(t)X(x) 
+.\] 
+\[
+\iff \frac{X''(x)}{X(x) } &= \frac{T'(t)}{\alpha^2T(t)} &= \sigma  
+.\] 
+Als $\sigma &= 0 $ dan krijgen we enkel de nuloplossing (ga na). Dus we zeggen dat $\sigma \neq 0$, we voeren ook een notationeel trucje door en zeggen dat $\sigma &= - \lambda^2 $
+Dit is een steeds negatief getal, want als het positief zou zijn krijg je uiteindelijk een divergerende exponenti"ele in functie van tijd die alles opblaast (indien nodig, ga na). 
+
+\[
+\begin{cases}
+	X''(x)+ \lambda^2X(x)&= 0 \\ 
+	T'(t)+\alpha^2\lambda^2T(t)&= 0 
+\end{cases}
+.\] 
+\begin{enumerate}
+	\item \textbf{We zoeken X(x) en T(t)}
+\begin{itemize}
+	\item We zoeken X(x)
+\end{itemize}
+\[
+X''(x)+\lambda^2X(x)&= 0 
+.\] 
+\[
+X(x)&= A \cos{(\lambda x)} + B \sin{(\lambda x)} 
+.\] 
+\begin{itemize}
+	\item We maken gebruik van de randcondities
+\end{itemize}
+\[
+X(0+)&= 0 \iff A \cos{(0)}+B\sin{(0)} &= 0  
+.\] 
+\[
+\implies A &= 0 
+.\] 
+\[
+X(x)&= B \sin{(\lambda x)} 
+.\] 
+\[
+X(L-)&= 0 \iff B \sin{(\lambda L)   } &= 0  
+.\] 
+\cor{$B\neq 0$}{
+B is niet gelijk aan nul, want dat zou de nuloplossing geven en deze is triviaal. We willen geen triviale oplossingen. We delen B weg.
+}
+\[
+\iff \sin{(\lambda L)} &= 0 \iff \lambda L &= n \pi  
+.\] 
+\[
+\implies \lambda &= \frac{n \pi}{L} 
+.\] 
+\[
+\implies \sigma &= -\left( \frac{n \pi}{L} \right) ^2 
+.\] 
+Dit zijn alle waarden die sigma kan aannemen om een beteknisvolle oplossing te geven.
+\[
+X(x  ) &= C \sin{\left( \frac{n \pi x}{L} \right) } 
+.\] 
+\begin{itemize}
+	\item We zoeken $T(t)$
+\end{itemize}
+\[
+T'(t)+\lambda^2\alpha^2T(t)&= 0 
+.\] 
+\[
+T'(t)+\left( \frac{n \pi \alpha}{L} \right) ^2T(t)&= 0  
+.\] 
+\[
+T(t)&= e^{\left( \frac{n \pi \alpha}{L} \right) ^2 t}  
+.\] 
+
+\item We brengen gevonden oplossingen samen
+\[
+u_{n} (x,t)&= a_{n} \sin{\frac{n \pi x}{L}}  e^{\left( \frac{n \pi \alpha}{L} \right) ^2 t}  
+.\] 
+\[
+	u(x,t)&= \sum_{n=1}^{\infty} a_n \sin{\left( \frac{n \pi x}{L} \right) } e^{\left( \frac{n^2 \pi^2 \alpha^2}{L^2} \right) t}  
+.\] 
+
+\item We gebruiken de beginconditie om $a_{n} $ te bepalen.
+\[
+\phi(x)&= \sum_{n=1}^{\infty} a_n\sin{(\frac{n \pi x}{L})}  
+.\] 
+\[
+\int_{0}^{L} \phi(x) \sin{(\frac{m \pi x}{L}) }dx &= \sum_{n=1}^{\infty}   \int_{0}^{L}    a_{n} \sin{(\frac{n \pi x}{L})} \sin{\left( \frac{m \pi x}{L} \right) } dx
+.\] 
+\[
+a_{n} &= \frac{2}{L} \int_{0}^{L} \phi(x)\sin{(\frac{m \pi x}{L})}  dx
+.\] 
+\item We schrijven de gevonden continue functie die de oplossing is van het probleem.
+\[
+u(x,t)&= \sum_{n=1}^{\infty} \frac{2}{L} \int_{0}^{L} \phi(x) \sin{(\frac{n \pi x}{L}) } dx \cdot \sin{\left( \frac{n \pi x}{L} \right) } \cdot \exp{(\frac{- \alpha^2 n^2 \pi^2 t}{L^2})}  
+.\] 
+Merk op dat 
+\[
+\lim_{t \to \infty} u(x,t)&= 0
+.\] 
+Wat dus betekent dat na verloop van tijd de termperatuur in het metaal naar nul gaat, de randcondities zijn namelijk nul.
+\end{enumerate}
+\clm{Complexe (cos)sinusfuncties}{}{
+	\[
+	\cos{(z)} &= \sum_{n=0}^{\infty} (-1)^{n} \frac{z^{2n} }{2n!} &= \frac{e^{z} +e^{-z} }{2i}  
+	.\] 
+	\[
+	\sin{(z) } &= \sum_{n=0}^{\infty} (-1)^{n} \frac{z^{2n+1} }{2n} &= \frac{e^{z} -e^{-z} }{2i} 
+	.\] 
+}
+
+
+\subsection{Eerste veralgemening}
+\ex{}{
+	Bij het basismodel hadden we homogene begincondities, we bekijken wat er gebeurt met
+	\[
+	\begin{cases}
+		\lim_{x \to 0+} u(x,t)&= T_{1} \\  
+		\lim_{x \to L-} u(x,t)&= T_{2}  
+	\end{cases}
+	.\] 
+	als begincodnities voor dezelfde parti"ele differentiaalvergelijking 
+	\[
+	\alpha^2 u_{x x} &= u_{t}  
+	.\] 
+}
+We kunnen deze omzetten naar de basisvorm.
+\\ Wanneer $\lim_{t \to \infty} $ dan zal er een evenwichtstoestand bereikt worden. We kunnen zeggen dat dan
+\[
+\alpha^2 v''(x)&= 0 
+.\] 
+geldt en v is hier niet afhankelijk van de tijd, aangezien we zeggen dat tijd hier naar oneindig is gegaan.
+\\ We zien dat, omdat $\alpha^2$ niet nul is en kan worden weggedeeld:
+\[
+v''(x)&= 0 
+.\] 
+waaruit volgt
+\[
+v(x)&= C_{1} x + C_{2}  
+.\] 
+en wanneer we nu de randcondities toepassen vinden we eenvoudig:
+\[
+v(x)&= \frac{T_{2} -T_{1} }{L}x+T_{1}  
+.\] 
+We kunnen nu zeggen dat 
+\[
+u(x,t)&= v(x)+w(x,t) 
+.\] 
+$w(x,t)$ is de oplossing gevonden uit
+\[
+\alpha^2w_{x x}  &= w_{t}  
+.\] 
+voor deze functie gelden nu de volgende randcondities:
+\[
+\begin{cases}
+	\lim_{x \to 0+} w(x,t)&= 0 \\  
+	\lim_{x \to L-} w(x,t)&= 0 
+\end{cases}
+.\] 
+en de beginconditie
+\[
+\lim_{t \to 0+} u(x,t)&= \phi(x) - v(x) 
+.\] 
+We passen de methoden in 5.1.1 toe op deze informatie en vinden:
+\[
+u(x,t)&= \frac{T_{2} -T_{1} }{L} x + T_{1} + \sum_{n=1}^{\infty} \zeta_{n} e^{-\frac{n^2\alpha^2\pi^2 t}{L}} \sin{\left( \frac{n \pi x}{L} \right) } 
+.\] 
+\[
+\zeta_{n} &= \frac{2}{L}\int_{0}^{L} \sin{\left( \frac{n \pi}{L}x \right) } \left[ \phi(x)-\frac{T_{2} -T_{1} }{L}x-T_{1}  \right] dx  
+.\] 
+
+
+
+\subsection{Tweede veralgemening}
+\ex{}{
+	Deze is voor een vergelijking van een volledig andere aard fysisch gezien betekent dit dat de randpunten ge"isoleerd zijn. We nemen de vergelijking uit 5.1.1 en voegen de volgende voorwaarden toe:
+	\[
+		\begin{cases}		
+	\lim_{x \to 0+} u_{x} (x,t)&= 0 \\ 
+	\lim_{x \to L-} u_{x} (x,t)&= 0 
+		\end{cases}
+	.\] 
+}
+De vergelijking zal anders worden opgelost wanneer we bij de randcondities komen om $\sigma$ te achterhalen. 
+
+
+
+
+\section{Trillingen van een elastische snaar (golfvergelijjking)}
+\ex{}{
+	Golfvergelijkingen komen veelvuldig voor. Indien we een elastische snaar met lengte L bschouwen, met 0 en L op dezelfde hoogte, en de snaar wordt in beweging gebracht in een verticaal vlak, dan geeft u ons de verticale verplaatsing op plaats x tijdstip t. 
+	\[
+	\alpha^2u_{x x} &= u_{t t}  
+	.\] 
+	$\alpha^2$ is gerelateerd tot de voorplantinssnelheid van de golven.
+	\[
+	\begin{cases}
+		\lim_{x \to 0+} u(x,t)&= 0 \\  
+		\lim_{x \to L-} u(x,t)&= 0 
+	\end{cases}
+	.\] 
+	Aangezien we zeggen dat de snaar vastgebonden zit.
+	\[
+	\lim_{t \to 0+} u(x,t)&= \phi(x) 
+	.\] 
+	Dit is de beginconditie. We willen ook een conditie voor beginsnelheid:
+	\[
+	\lim_{t \to 0+} u_{t} (x,t)&= \psi(x) 
+	.\] 
+}
+We pakken dit zoals bij 5.1 aan met scheiding der variabelen.
+
+
+
+
+
+
+
+\section{De vergelijking van Laplace (evenwichtsvergelijking)}
+\ex{}{
+	Dit is één van de belangrijkste divverentiaalvergelijkingen. In twee dimensies:
+	\[
+	u_{x x} + u_{yy} &= 0 
+	.\] 
+	In drie dimensies:
+	\[
+	u_{x x} +u_{yy} +u_{zz} &= 0 
+	.\] 
+	Functies die in een gebied tweemaal differentieerbaar zijn en aan deze vergelijking voldoen noemen we harmonische functies. 
+}
+
+
+
+\end{document}
+Footer
+

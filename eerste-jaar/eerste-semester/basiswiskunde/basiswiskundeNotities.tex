@@ -1,0 +1,507 @@
+\documentclass{report}
+
+\input{~/school/textemplates/notestemplate/afkortingen/preamble.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/macros.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/letterfonts.tex}
+
+\title{\Huge{Basiswiskunde}\\Vakvoorbereiding}
+\author{\huge{Fordeyn Tibo}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Analyse}
+De notities zijn van de videolessen op ufora, en ook een beetje van de cursus. Alle voorbeeldvragen zijn oud-examenvragen.
+Voor het extra studeren als je dit terugleest op 30 januari, het eerste dat je echt moet doen is eens diep op de cyclometrische en hyperbolische functies ingaan.
+Ik ga nu enkel noteren bij alles lesvideos, een beetje cursus bekijken
+ en anki kaartjes maken, maar ben er niet enorm diep op ingegaan. Voor 17/20 ga je echt nog een paar dagen serieus moeite moeten doen.
+ \\ Ik zou op de eerste dag, desnoods ook de tweede, nog eens dit dat allemaal is herhalen en aanvullen.. Ook de werkcolleges eens bekijken en verder aanvullen. Dan op de derde dag alles opnieuw herhalen, opschrijven wat je niet snapt voor bijles en oud-NPGE's doornemen, kijken naar speciale functies. Dan de dag ervoor zo veel mogelijk vragen en doornemen tijdens de bijles. Je zou echt minstens 16/20 moeten kunnen halen na al dit voorbereidingswerk, anders ben je echt een loser.
+\section{Limieten}
+
+\[
+\lim_{x \to a} f(x)&= L 
+.\] 
+\[
+|f(x)-L | \to 0
+.\] 
+zodra \[
+|x-a| \to 0
+.\] 
+
+
+Als het mogelijk is om van beide kanten naar het punt a te naderen, en dezelfde limiet L uitkomt. Dan bestaat die limiet en de limiet is L
+\[
+\lim_{x \to a} f(x)&= L \iff \lim_{x \to <a} &= L &= \lim_{x \to >a} f(x)   
+.\] 
+\subsubsection{Sandwich rule}%
+\label{ssub:Sandwich rule}
+
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= x\sin{(\frac{1}{x})} 
+	.\] 
+	We gaan $\lim_{x \to 0} $ na.
+}
+We kunnen dit nagaan, want de sinusfunctie zit altijd tussen min één en één.
+\[
+-1 < \sin{\left( \frac{1}{x} \right) } < 1
+.\] 
+\[
+\iff -x < x \sin{\left( \frac{1}{x} \right) } < x, x\in \mathbb{R}_{0}^{+}
+.\] 
+\[
+\iff x < x\sin{\left( \frac{1}{x} \right) } < -x, x\in \mathbb{R}_{0}^{-}
+.\] 
+De betrekking die gelijk is aan x als x positief is en -x als x negatief is, is absolute waarde x.
+\[
+\iff - |x| < x\sin{\left( \frac{1}{x} \right) } < |x| 
+.\] 
+Als x nul is, dan zal $x\sin{\left( \frac{1}{x} \right) }$ tussen 0 en 0 liggen, maw het zal nul zijn.
+\ex{}{
+Beschouw:
+\[
+	f(x)&= \sqrt[3]{x^3+7x^2} - \sqrt[3]{x^3+3x}  
+.\] 
+We zoeken $\lim_{x \to \pm \infty}$
+}
+\[
+\text{Je kunt dit zien alsk } A-B
+.\] 
+\clm{formule}{}{
+	\[
+	A^3-B^3&= (A-B)(A^2+AB+B^2) 
+	.\] 
+}
+\[
+A - B &= \frac{A^3-B^3}{A^2+AB+B^2} 
+.\] 
+\[
+	\frac{7x^2-3x}{\sqrt[3]{(x^3+7x^2)^2 }  + \sqrt[3]{(x^3+7x^2)(x^3+3x)} + \sqrt[3]{(x^3+3x)^2} } 
+.\] 
+
+\[
+\iff \frac{7x^2-3x}{x^2\left[ \sqrt[3]{1+\ldots} + \sqrt[3]{1+\ldots} + \sqrt[3]{1+\ldots}  \right] }
+.\] 
+\[
+\iff \lim_{x \to \infty} f(x)&= \lim_{x \to \infty} \frac{7x^2-3x}{x^2\left[ \sqrt[3]{1+\ldots} + \sqrt[3]{1+\ldots} + \sqrt[3]{1+\ldots}  \right] } 
+.\] 
+Alles valt weg behalve de termen van de derde graad en de co"eficienten ervan.
+\[
+\iff \lim_{x \to \infty} f(x)&= \lim_{x \to \infty} \frac{7x^2}{3x^2} 
+.\] 
+\[
+	\implies \lim_{x \to \pm \infty} f(x)&= \frac{7}{3}  
+.\] 
+\[
+HA: y &= \frac{7}{3} 
+.\] 
+\cor{Omvorming}{
+	Het idee van de omvorming hier is dus eigenlijk dat je de 2 delen van de functie gelijksteld aan a en b, dan zoek je een expressie voor de optelling/aftrekking van deze vergelijking om een \textbf{rationale functie} te bekomen, want met rationale functies kun je eenvoudig asymptoten vinden. 
+}
+Een opdracht is om het ook met L'hopital te vinden
+\clm{L'hopital}{}{
+	Wik dacht ik schrijf het nog eens
+	\[
+	\lim_{x \to a} \frac{f(x)}{g(x)} &= \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+	.\] 
+	voor $\frac{0}{0} $of oneindig op oneindig ofzo
+}
+ Als je een oneindig min oneindig ofzo hebt dan moet je omvormen naar een breuk die met l"hopital kan worden gedan
+ \[
+ \sqrt[3]{x^3+7x^2} - \sqrt[3]{x^3+3x} &= x \left[ \sqrt[3]{1+7x^2} - \sqrt[3]{1+3x}  \right]  
+ .\] 
+Bekijk nog eens
+
+\subsubsection{Cauchy}%
+\label{ssub:Cauchy}
+Stel $ax+b$ is de SA van (f(x))
+\[
+a &=  \lim_{x \to \infty} \frac{f(x)}{x}
+.\] 
+en \[
+b &= \lim_{x \to + \infty} \left[ f(x)-ax \right]  
+.\] 
+
+\ex{}{
+	Beschouw:
+	\[
+	f(x) &= \frac{x^2 -1 + \sqrt{x^2-1} }{x-1} 
+	.\] 
+	We willen de schuine asymptoot bepalen.
+}
+\[
+m &=  
+.\] 
+bekijk nog
+
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= \ln{(x)} +x 
+	.\] 
+}
+Er lijkt een schuine asymptoot te zijn,
+\[
+a&= 1 
+.\] 
+Maar er is geen b ds de SA bestaat niet.
+\section{Continu"iteit}
+Dit is echt een heel klein stuk over continue uitbreidbaarheid.
+
+\\ Stel nu de functie $f(x) $ bestaat niet in $a$, $a \notin \dom f$
+
+We kunnen een nieuwe functie $f^{*} (x) $ defini"eren.
+
+\[
+f^{*} (x)&= \begin{cases}
+	f(x), x \neq a \\ 
+	L, x = a \\  
+\end{cases} 
+.\] 
+Dus we zeggen dat de functie f continu uitbreidbaar is in a, omdat we zien dat een functiewaarde a kan worden toegevoegd.
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= \frac{\sin{(x)}}{x} 
+	.\] 
+	Merk op dat f in gans $\mathbb{R}$ gedefini"eerd is, behalve in $x&= 0 $
+}
+met L'hopital vinden we:
+\[
+\iff \lim_{x \to 0} \frac{\sin{(x)}}{x}&= \lim_{x \to 0} \frac{\cos{x}}{1} 
+.\] 
+\[
+\implies \lim_{x \to 0} \cos{(x)}&= 1 
+.\] 
+
+We vinden dat f continu uitbreidbaar is in nul.
+\[
+f^{*} (x)&= \begin{cases}
+	\frac{\sin{(x)}}{x}, x\neq 0 \\ 
+	1, x= 0 \\ 
+\end{cases} 
+.\] 
+We spreken NIET MEER over perforaties.
+
+\section{Afgeleiden}
+\[
+f(a)&= \lim_{x \to a}  \frac{f(x)-f(a)}{x-a} 
+.\] 
+\subsubsection{Regels}%
+\label{ssub:Regels}
+
+\[
+(f+g)'&=  f'+g'
+.\] 
+\[
+(fg)'&= f'g+fg'
+.\] 
+\[
+\left( \frac{f}{g} \right) '&= \frac{f'g-fg'}{g^2} 
+.\] 
+\textbf{
+\[
+(f\circ g)'&= (f'\circ g)g' 	
+.\] 
+}
+\[
+\left[ f^{-1} (x) \right] '&= \frac{1}{f'(f^{-1} (x))} 
+.\] 
+\[
+\frac{d}{dx} \big[ f(x)^{g(x)} \big] &= f^{g} \cdot \ln{f} \cdot g' + f^{g-1} \cdot g\cdot f' 
+.\] 
+
+\subsubsection{Afgeleiden van functies}%
+\label{ssub:Afgeleiden van functies}
+\begin{enumerate}
+	\item GONIOMETRISCHE
+\[
+\frac{d}{dx} \big[ \tan{(x)} \big] &= \csc^2{(x)} 
+.\] 
+\[
+\frac{d}{dx} \big[ \cot{(x)} \big] &= - \sec^2{(x)} 
+.\] 
+
+\[
+\frac{d}{dx} \big[ \arcsin{(x)}\big]  &= \frac{1}{\sqrt{\frac{1}{1-x^2}} } 
+.\] 
+\[
+\frac{d}{dx} \big[ \cos{(x)} \big] &= \frac{-1}{\sqrt{1-x^2} }  
+.\] 
+\[
+\left[ \arctan{(f(x))}  \right] ' &= \frac{f'(x)}{1+\left[ f(x) \right]^2 } 
+.\] 
+\[
+\left[ \text{arccot}(f(x))  \right] '&= \frac{-f'(x)}{1+\left[ f(x) \right] ^2} 
+.\] 
+\[
+\frac{d}{dx} \big[ \text{bgsec} {(x)} \big] &= \frac{1}{|x| \sqrt{x^2-1} } 
+.\] 
+\[
+\frac{d}{dx} \big[ \text{bgcsc}(x)\big] &= \frac{-1}{|x| \sqrt{x^2-1} } 
+.\] 
+\item HYPERBOLISCHE
+	Voor csch en sech afgeleiden, leid je gewoon csc en sec af, want het is echt exact hetzelfde.
+\[
+\frac{d}{dx} \big[ \text{sech} {(x)}\big] &= \text{tanh} (x) \cdot \text{sech} (x) 
+.\] 
+Bekijk hyperbolische functies met meer diepgang!!!
+Bekijk de grafieken en afgeleiden nauwgezet.
+\item ANDERE
+\[
+\frac{d}{dx} \big[ \log{(f(x))}\big] &=  \frac{f'(x)}{f(x)\cdot \ln{10}}
+.\] 
+
+
+\end{enumerate}
+\subsubsection{Voor de rest}%
+\label{ssub:Voor de rest}
+\ex{}{
+	Beschouw:
+	\[
+	f(x)&= x^2\sin{\left( \frac{1}{x} \right) } 
+	.\] 
+	$\dom f &= \mathbb{R} _{0} $ 
+	We willen deze functie afleiden, zoals je ziet zal dit productregel en kettingregel utiliseren.
+}
+Ik pas eerst productregel toe:
+\[
+\left[ f(x) \right] '&=  2x\cdot \left[ \sin{\left( \frac{1}{x} \right) } \right] + x^2\cdot \left[ \sin{\left( \frac{1}{x} \right) } \right] ' 
+.\] 
+\[
+\iff - \cos{\left( \frac{1}{x} \right) } + 2x \sin{\left( \frac{1}{x} \right) }
+.\] 
+Dat was makkelijk, nu bekijken we $x&= 0 $
+ \[
+ \lim_{x \to 0} x^2\sin{\left( \frac{1}{x} \right) } &= 0 &= L  
+ .\] 
+ De continu uitbreidbare functie tot nul zal wel afleidbaar zijn, en dat moetje dan nog eens bekijken.
+
+ \cor{oefenen afgeleiden}{
+ 	Theorie lijkt enorm makkelijk, maar hou je bij het oefenen vooral bezig met he afleiden van discontinue functies zoals die die je in de npge kreeg, want die zijn eigenlijk echt uitdagend. Voor de rest als dit herhaald is enzo, moet dat echt lukken op de npge.
+ }
+\section{Integralen}
+Dit is een deel waarvan ik vind dat je het vooral moet bekijken net voor het examen, want je moet eigenlijk gewoon wat regels enzo vanbuiten leren, zal wel wat makkelijker gaan na analyse. Maar ik schrijf de belangrijkste dingen op.
+
+\cor{Leren}{
+	Mijn idee van hoe je dit perfect leert voor het examen; ik schrijf nu rekenregels en fundamentelen op enzo, maar op 30 januari moet jij dus nog eens kijken naar technieken voor goniometrische en irrationale
+}
+
+\subsubsection{Rekenregels}%
+\label{ssub:Rekenregels}
+\[
+\text{substitutie} \iff \int_{ }^{ } f(g(t)) g'(t)dt &= \int_{ }^{ } f(x)dx   
+.\] 
+\[
+\text{parti"ele integratie} \iff \int_{ }^{ } fdg &= fg - \int_{ }^{ } gdf   
+.\] 
+\[
+\text{Onthoud dit voor het splitsen} \iff \int  \frac{f(x)}{g(x)} &= \int q(x) + \int \frac{r(x)}{g(x)} 
+.\] 
+
+\subsubsection{fundamentele}%
+\label{ssub:}
+\[
+\int_{ }^{ } x^{n} dx&= \frac{x^{n+1} }{n+1}  +C
+.\] 
+\begin{enumerate}
+	\item RATIONALE
+
+\[
+\int \frac{p}{ax+b}dx &= \frac{p\cdot ln(ax+b)}{a}+C 
+.\] 
+\[
+\int \frac{p}{(ax+b)^{n} } &= \frac{-p}{a(n-1)(ax+b)^{n-1} } +C 
+.\] 
+\[
+\int_{ }^{ } \frac{p}{a^2+x^2}&= \frac{p}{a}\arctan{\left( \frac{x}{a} \right) } +C  
+.\] 
+		
+\[
+\int \frac{p}{ax^2+bx}dx &= \frac{p}{b}\ln{\left( \frac{x}{ax+b} \right) } +C 
+.\] 
+\[
+\int \frac{p}{ax^2+bx+c} dx&= \begin{cases}
+	D>0, \frac{p}{\sqrt{D} } \cdot \ln{\left( \frac{2ax+b-\sqrt{D} }{2ax+b+\sqrt{D} } \right) } +C \\
+	D < 0, \frac{2p}{\sqrt{4ac-b^2} } \cdot \text{arctan} \left( \frac{2ax+b}{\sqrt{4ac-b^2} } \right) +C\\
+	D=0, \text{merk op: merkwaardig product} 
+\end{cases} 
+.\] 
+\[
+\int \frac{px}{ax^2+bx+c}dx&= \text{ pas parti"ele integratie toe}  
+.\] 
+
+
+\item IRRATIONALE
+	\[
+	\int \frac{du}{\sqrt{a^2-u^2} }	&= \text{arcsin}  (\frac{u}{a}) +C
+	.\] 
+	\[
+	\int \frac{du}{\sqrt{a^2-u^2} } du &= \text{arccos} (\frac{u}{a}) +C
+	.\] 
+	\[
+	\int \frac{du}{u \sqrt{u^2-a^2} } du&= \frac{1}{a} \text{arcsec} \left( \frac{|u|  }{a} \right) +C 
+	.\] 
+	\[
+	\int \sqrt{a^2-x^2}  dx &= \frac{x}{2} \sqrt{a^2-x^2}  + \frac{a^2}{2} \text{arcsin} \left( \frac{x}{a} \right) +C  
+	.\] 
+	\[
+	\int (a^2-x^2)^{\frac{3}{2}} dx&= \frac{x}{8}(5a^2 - 2x^2) \sqrt{a^2-x^2}  + \frac{3a^{4} }{8} \arcsin{\frac{x}{a}} +C 
+	.\] 
+
+\item GONIOMETRISCHE
+	\[
+	\int \cos^2{(x)} &=  \frac{1}{2}\left( \cos{(x) }\cdot \sin{(x)} + x \right)  +C
+	.\] 
+	\[
+	\int \sin^2{(x)}&= \frac{1}{2}\left(\cos{(x)} \sin{(x)}+x \right)  
+	.\] 
+\item ANDERE
+	\[
+	\int \frac{f'(x)}{f(x)} &= \ln{(f(x))} + C
+	.\] 
+
+\end{enumerate}
+
+\ex{}{
+	Beschouw:
+	\[
+	\int \frac{1}{ax+b}
+	.\] 
+}
+Stel $u&= ax+b $
+\clm{Substitutie}{}{
+	\[
+	\int f(g(t)) g'(t)dt &= \int f(x)dx 
+	.\] 
+}
+\[
+\iff \frac{1}{a} \int \frac{1}{u}du
+.\] 
+\[
+\frac{1}{a} \cdot \ln{(u)} +C
+.\] 
+\[
+\frac{1}{a}\cdot \ln{(ax+b)} +C
+.\] 
+
+
+
+\section{NPGE 2 VOORBEELDVRAGEN}
+
+\cor{CONCLUSIE}{
+Vanaf je dit allemaal vanbuiten kent moet je gewoon nog eens werken aan technieken om nulwaarden van samengestelde functies enzo te vinden, want je zult uiteindelijk ook een grafiek moeten tekenen. En je moet vooral moeilijke functies kunnen afleiden en integreren.	
+}
+\qs{}{
+	Bespreek deze functie (nulwaarden, symetrie, limieten, afgeleiden, integraal, schets)
+	\[
+	f(x)&= \arctan{\left( \frac{x}{|x-1| } \right) } 
+	.\] 
+\subsubsection{DEELVRAAG 1: bepaal het domein en eventuele asymptoten van deze functie}%
+\label{ssub:DEELVRAAG 1: bepaal het domein en eventuele asymptoten van deze functie}
+Stel \[
+f(x)&= f_{1} (x) \circ f_{2} (x) 
+.\] 
+\[
+f_{1} (x) \iff HA: y &= \frac{\pi}{2} 
+.\] 
+Met $x\to + \infty$ en \[
+f_{1} (x)&= HA: y&= -\frac{\pi}{2}  
+.\] 
+voor $x\to - \infty$
+\\ merk ook op dat $f_{1} (x) $ een even functie is.
+
+
+\\ Nu over $f_{2} (x)$, deze heeft een verticale asymptoot in $x&= 1 $, voor de rest is deze negatief in  $\mathbb{R}_{0}^{-}$, 0 door de oorsprong en positief in $\mathbb{R}_{0}^{+}$.
+
+\\ HORIZONTALE ASYMPTOTEN VAN F
+\[
+\lim_{x \to \infty} f(x)&= \arctan{(1)} &= \frac{\pi}{4} 
+.\] 
+\[
+\lim_{x \to - \infty} f(x)&= -\frac{\pi}{4} 
+.\] 
+Er zijn dus twee horizontale asymptoten.
+
+\\ VERTICALE ASYMPTOTEN VAN F
+\\ f is continu uitbreidbaar, zowel de linker als rechterlimiet in één zijn pi over 2.
+Er is geen verticale asymptoot.
+We defini"eren $f*$ de continu uitgebreide functie f in 1.
+\[
+f^{*} (x)&= \begin{cases}
+	\arctan{\left( \frac{x}{|x-1| } \right) }, x \neq 1\\
+	\frac{\pi}{2}, x= 1 \\
+\end{cases} 
+.\] 
+De nulwaarde is de oorsprong, voor de rest geen nulwaarden.
+\subsubsection{afgeleiden}%
+\label{ssub:afgeleiden}
+\[
+\text{kettingregel } \iff (f\circ g)'&= (f'\circ g)g' 
+.\] 
+\[
+\frac{d}{dx} \big[ \arctan{\left( \frac{x}{|x-1| } \right) }\big] &= \frac{f_{2} '}{1+f_{2} ^2} 
+.\] 
+$f_{2}  $ afleiden is niet heel prettig dus ik doe het straks apart.
+\[
+\iff \frac{(x-1)^2\cdot f'_{2} }{1+x^2}
+.\] 
+
+Nu leid ik $f_{2}  $ af.
+\[
+\frac{d}{dx} \big[ \frac{x}{|x-1| }\big] &=  
+.\] 
+Je kunt deze afgeleiden makkelijk berekenen als je de absolute waarde opsplitst, dus dat ga ik doen. Moet je trouwens ALTIJD wel eens doen wanneer je werkt met absolute waardes.
+\\ De afgeleide bestaat NIET in 1
+\\ Afgeleide met x in $- \infty$ tot en zonder 1
+\[
+\frac{d}{dx} \big[ \frac{x}{-x+1}\big] &= \frac{1}{(-x+1)^2} 
+.\] 
+afleiden van $x>1$ 
+\[
+\frac{d}{dx} \big[ \frac{x}{x-1}\big] &= -\frac{1}{(x-1)^2} 
+.\] 
+
+Je moet analyse zeker nog een goed namiddagje verder bekijken, maar ik heb het gevoel dat ik het nu goed snap en zit veel achtter dus ik ga verder.
+}
+
+	
+\chapter{Complexe getallen}
+\section{Machtsverheffing van complexe getallen}
+\[
+z^{n} &= |z| ^{n} \cdot e^{n i \theta}  
+.\] 
+Dit is echt het enige dat je moet weten wat betreft machtsverheffing.
+
+\section{machtsworteltrekken}
+Een machtswortel nemen is eigenlijk zoals een complexe veelterm oplossen, een nde-machtswortel heeft dan ook altijd n-oplossingen.
+
+\[
+\omega &= \sqrt[n]{z}  \iff \omega ^{n} &= z \iff \omega ^{n} -z &= 0    
+.\] 
+
+\section{Vraag complexe getallen}
+\qs{}{
+Los op in $\mathbb{C}$	
+\[
+z^2 + (3-5i)z-(10-5i)&= 0
+.\] 
+Het eerste dat je doet is de discriminant berekenen.
+\[
+D&= (3-5i)^2+4(10-5i)&= 2(12-5i)
+.\] 
+}
+
+\end{document}
+Footer
+

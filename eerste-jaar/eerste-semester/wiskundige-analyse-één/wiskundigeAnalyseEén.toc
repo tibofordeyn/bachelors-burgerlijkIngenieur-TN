@@ -1,0 +1,89 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{\numberline {1}Gewone differentiaalvergelijkingen}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Lineaire gewone differentiaalvergelijkingen}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Lineaire gewone differentiaalvergelijkingen van de eerste orde}{2}{subsection.1.1.1}%
+\contentsline {subsubsection}{Scheiding der variabelen}{2}{section*.2}%
+\contentsline {subsection}{\numberline {1.1.2}Lineaire onafhankelijkheid controleren, de wronkiaanse determinant}{6}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Lineaire gewone differrentiaalvergelijkingen van de tweede orde}{6}{subsection.1.1.3}%
+\contentsline {subsubsection}{Constante coefficienten, homogeen}{6}{section*.5}%
+\contentsline {subsubsection}{Constante coefficienten, niet homogeen, opgelost met methode van onbepaalde coefficienten.}{8}{section*.6}%
+\contentsline {subsubsection}{Constante coefficienten, niet homogeen, methode van variation of parameters}{9}{section*.7}%
+\contentsline {subsubsection}{Functies als coefficienten, homogeen, Eulerse differentiaalvergelijkingen }{11}{section*.8}%
+\contentsline {subsubsection}{Functies als coefficienten, Harmonische oscillator }{13}{section*.9}%
+\contentsline {subsection}{\numberline {1.1.4}Lineaire gewone differentiaalvergelijkingen van hogere orde }{14}{subsection.1.1.4}%
+\contentsline {subsubsection}{Constante coefficienten, homogeen}{14}{section*.10}%
+\contentsline {subsubsection}{Constante coefficienten, niet homogeen, methode van variation of parameters (ook wel Lagrange methode genoemd) }{15}{section*.11}%
+\contentsline {section}{\numberline {1.2}Non-lineaire gewone differentiaalvergelijkingen}{16}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Non-lineaire gewone differentiaalvergelijkingen van de eerste orde}{16}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Besluit van deel 1}{17}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Rijen en reeksen}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Rijen, Numerieke reeksen en algemene functiesreeksen}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Rijen (herhaling)}{19}{subsection.2.1.1}%
+\contentsline {subsubsection}{Basis}{19}{section*.13}%
+\contentsline {subsubsection}{Enkele definities}{19}{section*.14}%
+\contentsline {subsection}{\numberline {2.1.2}Rijen van reele getallen}{20}{subsection.2.1.2}%
+\contentsline {subsubsection}{stijgen en dalen van rijen}{20}{section*.15}%
+\contentsline {subsubsection}{Deelrijen}{20}{section*.16}%
+\contentsline {subsubsection}{Twee nieuwe noties van een limiet van een rij}{20}{section*.17}%
+\contentsline {subsection}{\numberline {2.1.3}Numerieke reeksen}{21}{subsection.2.1.3}%
+\contentsline {subsubsection}{Meetkundige reeksen}{21}{section*.18}%
+\contentsline {subsubsection}{Harmonische reeksen}{22}{section*.19}%
+\contentsline {subsubsection}{hyperharmonische reeks}{22}{section*.20}%
+\contentsline {subsubsection}{Integraal test}{23}{section*.21}%
+\contentsline {subsubsection}{absolute en betrekkelijke convergentie}{24}{section*.22}%
+\contentsline {subsubsection}{De rest van een reeks}{24}{section*.23}%
+\contentsline {subsubsection}{vergelijkingstest voor reeksen}{26}{section*.24}%
+\contentsline {subsubsection}{limiet vergelijkingstest voor reeksen}{27}{section*.25}%
+\contentsline {subsubsection}{worteltest}{27}{section*.26}%
+\contentsline {subsubsection}{d'Alembert}{28}{section*.27}%
+\contentsline {subsubsection}{wisselreeksen}{28}{section*.28}%
+\contentsline {subsubsection}{rest van een wisselreeks}{29}{section*.29}%
+\contentsline {subsubsection}{8 extra voorbeelden omdat ik het nog niet duidelijk genoeg vind}{30}{section*.30}%
+\contentsline {subsection}{\numberline {2.1.4}Algemene functierijen en functiereeksen}{33}{subsection.2.1.4}%
+\contentsline {subsubsection}{functierijen}{33}{section*.31}%
+\contentsline {section}{\numberline {2.2}Reekssommen bepalen}{33}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Positieve en negatieve machtreeksen}{35}{section.2.3}%
+\contentsline {subsubsection}{convergentieinterval vinden, voorbeeld positieve machtreeks}{35}{section*.32}%
+\contentsline {subsubsection}{een posietieve machtreeks}{36}{section*.33}%
+\contentsline {subsubsection}{negatieve machtreeksen}{36}{section*.34}%
+\contentsline {section}{\numberline {2.4}Formules van Taylor}{36}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Algemeen: Taylor reeksen van functies maken}{36}{subsection.2.4.1}%
+\contentsline {subsubsection}{laten we $a\neq 0$ bekijken}{37}{section*.35}%
+\contentsline {subsection}{\numberline {2.4.2}integralen evalueren met taylor reeksen}{37}{subsection.2.4.2}%
+\contentsline {subsubsection}{limieten evalueren}{38}{section*.36}%
+\contentsline {subsubsection}{reeksen evalueren}{38}{section*.37}%
+\contentsline {subsection}{\numberline {2.4.3}de rest van een taylor reeks}{38}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Fourier reeksen}{38}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Algemeen}{39}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Eerste voorbeeld}{40}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Veralgemende formules voor fourier reeksen}{41}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Besluit deel 2}{43}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Addendum: oneigenlijke integralen}{44}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Oneigenlijke Rieman integraal}{44}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Integraaltransformaties}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}laplacetransformatie}{47}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Inleidende voorbeelden}{47}{subsection.4.1.1}%
+\contentsline {subsubsection}{gamma functie}{48}{section*.38}%
+\contentsline {subsection}{\numberline {4.1.2}Eigenschappen}{49}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Laplace transformatie van afgeleiden en integralen}{49}{subsection.4.1.3}%
+\contentsline {subsubsection}{eerste afgeleide}{49}{section*.39}%
+\contentsline {subsubsection}{tweede afgeleide}{49}{section*.40}%
+\contentsline {subsubsection}{nde afgeleide}{49}{section*.41}%
+\contentsline {subsubsection}{integraal}{50}{section*.42}%
+\contentsline {subsection}{\numberline {4.1.4}toepassingen}{50}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}inverse laplace transformatie}{51}{section.4.2}%
+\contentsline {subsubsection}{inleidende voorbeelden}{51}{section*.43}%
+\contentsline {subsubsection}{convoluties}{53}{section*.44}%
+\contentsline {section}{\numberline {4.3}de fourierintegraal}{53}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Het idee duidelijk maken}{54}{subsection.4.3.1}%
+\contentsline {subsubsection}{enkele eigenschappen}{54}{section*.45}%
+\contentsline {subsection}{\numberline {4.3.2}Fourier transform als generalisatie van fourier reeksen}{56}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Z-transformaties}{56}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Partiele differentiaalvergelijkingen }{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}De warmtevergelijking}{57}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Basismodel}{57}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Eerste veralgemening}{59}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Tweede veralgemening}{60}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Trillingen van een elastische snaar (golfvergelijjking)}{60}{section.5.2}%
+\contentsline {section}{\numberline {5.3}De vergelijking van Laplace (evenwichtsvergelijking)}{60}{section.5.3}%
+\contentsfinish 

@@ -1,0 +1,189 @@
+\documentclass{report}
+
+\input{~/school/textemplates/notestemplate/afkortingen/preamble.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/macros.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/letterfonts.tex}
+
+\title{\Huge{Extra fourier, laplace en z transforms}\\}
+\author{\huge{Tibo Fordeyn}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Fourier transforms}
+fourier transforms zijn onderdeel van de laplace transforms.
+Fourier transforms zoeken sinusoidale functies, laplace zoekt sinusoidale en exponenti"ele.
+\[
+\mathscr{F} \big[f(t)\big](\omega) &= \int_{-\infty}^{+ \infty} f(t)e^{-i \omega t} dt  
+.\] 
+\ex{}{
+\[
+y(t)&= \begin{cases}
+	0, t<0 \\ 
+	1, t>0 \\ 
+\end{cases} 
+.\] 	
+\[
+f(t)&= y(a-|t| ) 
+.\] 
+a is een constante functie en t is dus een absolutewaardefunctie. We zien dat deze functie overal nul is behalve wanneer:
+\[
+a-|t| >0 \iff |t| < a
+.\] 
+We noemen dit een blokgolf functie.
+}
+Aangezien de functie overal nul is behalve van min a naar a, integreren we niet over gans $\mathbb{R}$
+\[
+\mathscr{F} \big[f(t)\big](\omega) &= \int_{-a}^{a} 1\cdot e^{-i \omega t} dt  
+.\] 
+In het interval waar we wel over integreren is f 1, dus we kunnen gewoon 1 schrijven als f.
+\[
+\iff \mathscr{F} \big[f(t)\big](\omega) &= \left[ \frac{e^{-i \omega t} }{-i \omega } \right]  ^{a} _{-a} 
+.\] 
+\[
+\iff \frac{e^{-i \omega a} }{-i \omega } - \frac{e^{i \omega a} }{-i \omega }
+.\] 
+\[
+\iff \frac{1}{i \omega } \left[ e^{i \omega a} - e^{-i \omega a}  \right] 
+.\] 
+\[
+\implies 2a \frac{\sin{(a\omega )}}{a\omega }
+.\] 
+
+\ex{}{
+	Beschouw:
+	\[
+	f(t)&= e^{-|t| }  
+	.\] 
+	We willen de fourier transform van f.
+}
+
+\[
+\mathscr{F} \big[e^{-|t| } \big](\omega) &= \int_{-\infty}^{+ \infty} e^{-|t| } \cdot e^{- i \omega t} dt   
+.\] 
+Een absolute waarde splits je altijd op.
+\[
+\mathscr{F} \big[f(t)\big](\omega) &= \int_{-\infty}^{0} e^{t} \cdot e^{-i \omega t} dt  + \int_{0}^{+ \infty} e^{-t} \cdot e^{-i \omega t} dt 
+.\] 
+Limiet nemen voor de oneigenlijke integraal.
+\[
+\iff \lim_{p \to \infty} \int_{-p}^{0} e^{t(1-i \omega )} dt + \int_{0}^{p} e^{-t(1+i\omega )} dt  
+.\] 
+\[
+	\iff \lim_{p \to \infty}  \left[ \frac{e^{t(1-i \omega )} }{1-i \omega } \right] ^{0} _{- p} + \left[ \frac{e^{-t(1+i \omega )} }{-(1+i \omega )} \right] ^{p} _{0} 
+.\] 
+\[
+\implies \frac{1}{1-i \omega } - \frac{1}{-(1+i\omega  )}
+.\] 
+\[
+\implies \frac{2}{1-i\omega }
+.\] 
+\hline
+\section{fourier voor afgeleiden van functies}%
+\label{ssub:fourier voor afgeleiden van functies}
+
+\\ 
+\\ 
+Je wilt waarschijnlijk eens de voorwaarden voor een functie om fourier transformeerbaar te zijn bekijken.
+\section{AFGELEIDE FORMULE}%
+\label{ssub:AFGELEIDE FORMULE}
+
+\begin{enumerate}
+	\item f continu over gans $\mathbb{R}$
+	\item f' Stuksgewijs continu over elke periode
+	\item f fourier transformeerbaar
+	\item $\lim_{t \to \infty}f(t) &= 0 $
+\end{enumerate}
+dan geldt:
+\[
+\mathscr{F} \big[f'(t)\big](\omega) &= i \omega \hat{f}(\omega ) 
+.\] 
+\dfn{ Algemeen }{
+	\textbf{Als}
+	\begin{enumerate}
+		\item $f^{(k-1)}$ continu is op gans $\mathbb{R}$ 
+		\item $f^{(k)}$ stuksgewijs continu op elk interval
+		\item $f^{(k-1)}$ moet fourier transformeerbaar 
+		\item $\lim_{t \to \infty} f^{(k-1)} (t)&= 0 $
+	\end{enumerate}
+	\textbf{Dan}
+	\[
+	\mathscr{F} \big[f^{(k)} (t)\big](\omega) &= (i \omega )^{k}\cdot  \mathscr{F} \big[f(t)\big](\omega)  
+	.\] 
+}
+\section{Verder toepassingen oplossen}%
+\label{ssub:Verder toepassingen oplossen}
+\ex{}{
+	Beschouw:
+	\[
+	q(t)&= \begin{cases}
+		e^{t}, t<0 \\ 
+		-e^{-t}, t>0 \\  
+	\end{cases} 
+	.\] 
+}
+\[
+\mathscr{F} \big[q(t)\big](\omega) &= \int_{-\infty}^{+ \infty} q(t)\cdot e^{-i \omega t} dt  
+.\] 
+\clm{Andere functie}{}{
+	De functie $e^{-|t| }  $ hebben we alreeds fourier getransfomeerd.
+	\[
+	\mathscr{F} \big[e^{-|t| } \big](\omega) &= \frac{2}{1-i \omega }
+	.\] 
+	Stel $f(t)&= e^{-|t| }  $
+	 \[
+	 q(t)&= f'(t) 
+	 .\] 
+	 en
+	 \[
+	 \mathscr{F} \big[f^{(k)}(t)\big](\omega) &= (i\omega )^{k} \cdot \int_{-\infty}^{+ \infty} f(t)e^{-i \omega t} dt  
+	 .\] 
+}
+\[
+\iff \mathscr{F} \big[q(t)\big](\omega) &=  (i \omega )\cdot \int_{-\infty}^{+ \infty} f(t)e^{-i \omega t} dt  
+.\] 
+\[
+\implies \mathscr{F} \big[q(t)\big](\omega) &= (i \omega) \cdot \frac{2}{1-i\omega } 
+.\] 
+\[
+\implies Q(\omega )&= \frac{2 i \omega }{1-i\omega } 
+.\] 
+\ex{}{
+Beschouw:
+\[
+y''+y&= 0 
+.\] 
+}
+\[
+\mathscr{F} \big[y"\big](\omega) + \mathscr{F} \big[y\big](\omega) &= \mathscr{F} \big[0\big](\omega)  
+.\] 
+\[
+	(i\omega )^2\mathscr{F} \big[y\big](\omega) + \mathscr{F} \big[y\big](\omega) &= 0 
+.\] 
+\[
+\mathscr{F} \big[y\big](\omega) &= 0 
+.\] 
+\[
+y&= 0 
+.\] 
+we vinden geen sinus en cosinus als oplossingen, want sinus en cosinus zijn niet foutier transformeerbaar. (de voorwaarde $\lim_{x \to \infty} f(x)&= 0 $ is niet voldaan.)
+
+
+
+
+
+
+
+
+\end{document}
+Footer
+

@@ -1,0 +1,840 @@
+\documentclass{report}
+
+\input{~/school/textemplates/notestemplate/afkortingen/preamble.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/macros.tex}
+\input{~/school/textemplates/notestemplate/afkortingen/letterfonts.tex}
+
+\title{\Huge{Discrete Wiskunde}\\Eerste semester}
+\author{\huge{Tibo Fordeyn}}
+\date{}
+
+
+\begin{document}
+
+
+
+\maketitle
+
+
+
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{Relaties en functies}%
+\label{cha:Verzamelingen, relaties en functies}
+\section{Relaties en functies}
+Stel R is een relatie tussen A en B: $R \subset A \times B $, vaak genoteerd als $R: A \to  B$, dan noemt men dit een binaire relatie. Dit hoofdstuk gaat uitsluitend over vormen van binaire relaties.
+\\Het domein van een relatie omvat alle punten waaruit een pijl vertrekt. Het bereik omvat dus vanzelfsprekend alle plaatsen waar een pijl aankomt.
+\[
+dom R: \forall x \in A: \exists y \in B: (x,y) \in R \\
+.\] 
+\[
+codom R: \forall x \in A: \exists y \in  B: (x,y) \in R
+.\] 
+We noemen zo'n relatie een \textbf{functie} wanneer \textbf{uit elk element a hoogstens één pijl vertrekt.}:
+\[
+Functie \iff \forall a \in dom R: \exists ! b \in B: \left( a, \rght b) \in  R
+.\] 
+Relatie wordt een \textbf{afbeelding} genoemd indien \textbf{uit elk punt precies één pijl vertrekt}:
+\[
+Afbeelding \iff \forall a \in A: \exists ! b \in B: (a,b)\in R
+.\] 
+Relatie wordt een \textbf{bijectie} genoemd indien uit elk punt \textbf{precies één pijl vertrekt en aankomt} 
+\[
+Bijectie \iff \begin{cases}
+	\forall a \in A: \exists ! b \in B: (a,b) \in R \\
+	\forall b \in B: \exists ! a \in A: (a,b) \in R
+\end{cases}
+.\] 
+Relatie wordt een \textbf{injectie} genoemd indien  er \textbf{in geen enkel punt meer dan 1 pijl vertrekt of aankomt}
+\[
+Injectie \iff \begin{cases}
+\forall a \in  dom R: \exists ! b \in B: (a,b)\in R \\
+\forall b \in codomR: \exists ! a \in A : (a,b)\in R
+\end{cases}
+.\] 
+
+Relatie wordt een \textbf{surjectie} genoemd indien \textbf{uit elk punt één pijl vertrekt} en er \textbf{ten minste één aankomt}.
+\[
+Surjectie \iff \begin{cases}
+	\forall a \in A: \exists ! b \in B: (a,b)\in R \\
+	\forall b \in  B: \exists a \in A: (a,b)\in R
+\end{cases} 
+.\] 
+
+\section{Aftelbaarheid}
+Wanneer er een bijectie bestaat tussen A en B, zeggen we dat deze verzamelingen dezelfde cardinaliteit hebben. 
+Op basis van cardinaliteit wordt er onderscheid gemaakt tussen aftelbare en niet-aftelbare verzamelingen.
+\begin{itemize}
+	\item Voor een eindige verzameling A en B zeggen we dus dat ze eenzelfde cardinaliteit hebben als er een bijectie bestaat. Deze noeme  we aftelbaar
+	\item Voor een oneindige verzameling $V$, wordt deze aftelbbaar genoemd als er een bijectie bestaat van $\mathbb{N}$ op $V$, met ander woorden; als V dezelfde cardinaliteit heeft als $\mathbb{N}$
+\end{itemize}
+Zo bestaat er een bijectie van $\mathbb{N}$ naar $\mathbb{Z}$
+\[
+b: \mathbb{N} \to \mathbb{Z}: n \leftrightarrowz &= \begin{cases}
+	\frac{n}{2}, \text{ wanneer n even is } \\ 
+	-\frac{n+1}{2}, \text{ wanneer n oneven is} 
+\end{cases} 
+.\] 
+Indien zo'n bijectie niet bestaat voor de oneindige verzameling V, dan zegge we dat deze verzameling overaftelbaar is.
+En een eindige verzameling is dus altijd aftelbaar.
+
+\section{Functies, bijkomende definities voor functies}
+\\ 
+Een \textbf{identieke functie}: \[
+	I: V \to V: I(x)&= x, x\in V \equiv  I_{V} 
+.\] 
+Merk op dat $ \dom I &= V $ niet altijd moet gelden.
+
+\\ 
+Een \textbf{samenstelling}:
+\[
+\text{brengt } f:A\to B, \text{ en } g:B\to C
+.\] 
+\[
+\text{samen tot }h:A\to C
+.\] 
+Dit onder de vanzelfsprekende voorwaarden:
+\begin{itemize}
+	\item $\dom h = {a:a \in  \dom f, f(a) \in \dom g}$
+	\item $h&= g(f(a) ), \forall a \in A $
+\end{itemize}
+
+
+Een \textbf{inverse functie} van $f:A \to B$ is $G: B\to A$ als:
+\begin{itemize}
+	\item $f \circ g &= 1_{\dom f}  $ 
+	\item $g\circ f&= 1_{\text{codom }  f}  $
+\end{itemize}
+
+\section{equivalentierelaties}
+\begin{enumerate}
+	\item reflexiviteit
+		\[
+		\forall x \in V: (x,x)\in R
+		.\] 
+	\item symmetrie
+		\[
+	\forall x,y \in  V: (x,y)\in R \implies (y,x)\in R	
+		.\] 
+	\item transitiviteit
+		\[
+	\forall x,y,z \in V: (x,y)\in R \wedge (y,z)\in R \implies (x,z)\in R	
+		.\] 
+\end{enumerate}
+De absolute waarde bijvoorbeeld is een equivalentieklasse.
+
+Een \textbf{equivalentieklasse} bestaat wanneer $x \in V: (x,y)\in R $ deze elementen y vormen een deelverzameling, een equivalentieklasse. We noteren
+\[
+\left[ x \right] _{R} &= \left\{ y: y\in V \wedge (x,y)\in R \right\}  
+.\] 
+twee willekeurige elementen $x \text{ en } y $ hun corresponderende equivalentieklassen zullen ofwel samenvallen, of disjunct zijn.
+
+
+We sperken over een \textbf{parti"ele orderlatie} als:
+\begin{itemize}
+	\item reflexiviteit:
+		\[
+		\forall x \in V: (x,x)\in R
+		.\] 
+	\item anti-symmetrie:
+		\[
+	\forall x,y \in V: \left\{ (x,y)\in R\wedge (y,x)\in R \implies x=y \right\} 	
+		.\] 
+	\item Transitiviteit:
+		\[
+		\forall x,y,z \in R: \left\{ (x,y)\in R \wedge (y,z)\in R \implies (x,z)\in R \right\} 
+		.\] 
+\end{itemize}
+Een zeer duidelijk voorbeeld van een parti"ele orderelatie is $\subset  $.
+
+We spreken over een \textbf{totale orderelatie} wanneer ook
+\begin{itemize}
+	\item $\forall x,y \in V: (x,y)\in R \vee (y,x)\in R$ 
+\end{itemize}
+Een duidelijk voorbeeld van een totale orderelatie is $\le$, ga na dat dit zorgt voor totale ode, $<$ is een strikterer versie - zie straks.
+
+Wanneer V geordend wordt door een totale orderelatie, dan zeggen we dat V een lineair geordende relatie of ketting is.
+
+Het idee van equivalentieerlaties tegenover orderelaties is zeer intu"itief; equivalentierelatief zoals absolute waarde bekijken equivalente elementen, orderelaties zorgen voor een hi"erarchische structuur, ze zorgen voor orde.
+
+
+We spreken van een \textbf{strikte orderelatie} wanneer de orderelatie anti-reflexief is.
+\begin{itemize}
+	\item $\forall x \in V:  (x,x)\notin R$
+\end{itemize}
+
+
+
+\begin{Besluit}
+	\begin{itemize}
+	
+		1.1 Speciale relaties: \\
+		\begin{enumerate}
+			\item functie \implies \textbf{ uit elk punt in A vertrekt hoogstens één pijl.} \\
+			\item afbeelding \implies \textbf{ uit elk punt precies één pijl.} \\
+			\item bijectie \implies \textbf{één naar één mapping.} \\
+			\item injectie \implies \textbf{ten hoogste één pijl vertrekt en komt aan.}\\
+				\itemi surectie \implies \textbf{precies één vertrekt en ten minste één pijl komt aan.}\\   
+		\end{enumerate}
+
+		1.2 aftelbaarheid: \\ 
+	\end{itemize}
+
+\end{Besluit}
+
+
+\chapter{Modulorekenen}
+De modulo relatie is een equivalentierelatie.
+
+\section{Zeef van Eratosthenes}
+Om alle priemgetallen te vinden kleiner dan een getal $N \in \mathbb{N}$, beschouw een lijst $2 \text{ tot }  N-1$ :
+\begin{itemize}
+	\item Schrap alle veelvouden van 2
+	\item schrap alle veelvouden van 3
+	\item schrap alle veelvouden van 5
+	\item ga zo verder tot $\sqrt{N} $, daarna mag je stoppen
+\end{itemize}
+
+\textbf{Elk getal $\ge 2$ kan als een vermenigvuldiging van priemgetallen geschreven worden, met de priemgetallen in stijgende volgorde.}
+\[
+2\cdot 2\cdot 2\cdot 2\cdot 2\cdot 2\cdot 3 &= 192 
+.\] 
+Als een getal a deelbaar is door b, dan schrijven we $a|b$
+
+\[
+\text{ggd}(a,b)\cdot \text{kgv} (a,b)&= |a-b|  
+.\] 
+nog een eigenschap die best logisch is:
+\[
+\text{ggd}(a,b) &= \text{ggd}(a-b,b) &= \text{ggd}(a,b-a)   
+.\] 
+dit als het kleinste argument van het grootste wordt afgetrokken.
+
+\section{Modulorekenen basisprincipes}
+\[
+a \overset{m}{=} b
+.\] 
+betekent dat de mod m van a gelijk is aan de mod m van b.
+\[
+	\equiv m | a-b
+.\] 
+omdat
+\[
+a \overset{m}{=} b \iff a-b \overset{m}{=} 0
+.\] 
+\clm{Over equivalentieklassen}{}{
+	$\left[ 0 \right] _{m} $, een goed voorbeeld voor een equivalentieklassen. Dit betekent dus alle getallen waarvan de modulo m, nul is.
+}
+\dfn{ basiseigenschappen }{
+	\[
+	a \overset{m}{=} b \wedge c \overset{m}{=} d \implies a+c \overset{m}{=} b+d
+	.\] 
+	en 
+	\[
+	a\cdot c \overset{m}{=} b\cdot d
+	.\] 
+	
+}
+
+Om modulus duidelijk te defini'eren:
+\[
+a&= mq+r , r<m, m \in \mathbb{N}_{0} , a,q,r \in \mathbb{N}
+.\] 
+m mag niet nul zijn, want je kunt natuurlijk niet delen door nul, q kan wel nul zijn want soms deel je door een getal en krijg je enkel rest, bv. $\frac{5}{6}$.
+
+hieruit volgt:
+\[
+q&= a \text{ div } m 
+.\] 
+\[
+r&= a \text{ mod } m 
+.\] 
+\clm{equivalentieklassen}{}{
+	Nog eens de definitiie want ik vergeet deze altijd:
+	\[
+	\left[ x \right] _{R} &= \left\{ \forall y \in V \wedge  (x,y)\in R \right\}  
+	.\] 
+}
+
+Bemerk:
+\begin{itemize}
+	\item optelling: $\left[ a \right] _{m} +_{m}  \left[ b \right] _{m} &= \left[ a+b \right] _{m}  $
+	\item  vermenigvuldiging: $\left[ a \right] _{m} \times _{m} \left[ b \right] _{m} &= \left[ a\cdot b \right] _{m}  $
+\end{itemize}
+bijvoorbeeld:
+\[
+\left[ 2 \right] _{3} +_{3} \left[ 1 \right] _{3} &= \left[ 3 \right] _{3} &= 0  
+.\] 
+\[
+\left[ 8 \right] _{3} \times _{3} \left[ 14 \right] _{3} &= \left[ 112 \right] _{3} &=   1
+.\] 
+
+\cor{de modulo optelling en vermenigvuldiging}{
+	dit betekent dat wanneer deze som of product groter zijn dan m, m er opnieuw van wordt afgetrokken.
+}
+\section{Eenvoudige vergelijking }
+\ex{}{
+	beschouw:
+	\[
+	5 + x \overset{3}{=} -2
+	.\] 
+}
+dit is een eenvoudige vergelijking.
+Algemeen kunnen we oplossingen van de vorm:
+\[
+x+a \overset{m}{=} b
+.\] 
+vinden door:
+\[
+\left[ x \right] _{m} &= \left[ b-a \right] _{m}  
+.\] 
+echter is enkel de oplossing tussen 0 en m-1 kennen voldoende.
+
+\section{Lineaire congruenties}
+Beschouw de algemene vorm van een lineaire congruentie:
+\[
+ax \overset{m}{=} b
+.\] 
+er zijn vele mogelijkheden voor oplossingen hiervan, soms kunnn ze niet opgelost worden. We overlopen.
+
+
+\ex{}{
+Beschouw:
+\[
+2x \overset{8}{=} 51
+.\] 
+zie als voorbeeld van standaardvorm
+\[
+ax \overset{8}{=} b
+.\] 
+}
+\begin{enumerate}
+	\item vind de grootste gemeenschappelijke deler van a en m.\[
+	2
+	.\] 
+\item kijk of de ggd b kan delen: \[
+\frac{51}{2} \notin \mathbb{Z}
+.\] 
+nee, dit is niet het geval dus we moeten deze niet proberen oplossen want \textbf{er is geen oplossing}.
+\end{enumerate}
+
+\ex{}{
+	Beschouw:
+	\[
+	4x\overset{7}{=} 26
+	.\] 
+}
+\begin{enumerate}
+	\item De ggd van a en m: \[
+			\text{ggd}(4,7) &= 1 
+	.\] 
+	\cor{7 is een priemgetal}{
+		je ziet natuurlijk onmiddellijk dat dit één is en moet het snel opmerken in oefeningen, want 7 is een priemgetal.
+		Als de modulo of a een priemgetal is, dan zal je één oplossing hebben.
+	}
+\item als we zien dat deze ggd één is, moet je beseffen dat er \textbf{één enkele oplossing voor deze lineaire congruentie} zal zijn.
+
+\item je past rekenreges toe om tot een makklijk antwoord te raken. Je mag altijd beide leden delen door een getal c, \textbf{als ze natuurlijk allebei perfect deelbaar zijn door dat getal}.
+	\[
+	\iff 2x \overset{7}{=} -1 \vee 2x \overset{7}{=} 6
+	.\] 
+
+\item we vinden uiteindelijk het antwoord onmiddellijk door bij dat laatste te delen door twee.
+	\[
+	\implies x \overset{7}{=} 3
+	.\] 
+\end{enumerate}
+
+\ex{}{
+Beschouw dit moeilijkere voorbeeld:
+\[
+25x \overset{29}{=} 15
+.\] 
+}
+\begin{enumerate}
+	\item We bemerken onmiddellijk dat de ggd één is aangezien 29 een priemgetal is.
+
+	\item natuurlijk is 15 deelbaar door één.
+	\item We kuisen de vergelijking op:
+\[
+5x \overset{29}{=} 3
+.\] 
+\item merk op dat 3 min twee keer 29 gelijk is aan min 55, we vinden:
+	\[
+	x \overset{29}{=} -11 \vee x \overset{29}{=} 18
+	.\] 
+\end{enumerate}
+
+\ex{}{
+	We kijken naar voorbeelden met meerdere antwoorden. Deze zijn een stukje lastiger en moeten herhaald worden voor het examen:
+	\[
+	9x \overset{6}{=} 42
+	.\] 
+}
+\begin{enumerate}
+	\item ggd van a en m is drie
+		\cor{betekenis}{
+			omdat de ggd van a en m 3 is, zullen er 3 oplossingen zijn! \textbf{$ \text{ggd}(a,m) &= \# \text{oplossingen}  $}
+		}
+	\item 42 is deelbara door drie.
+	\item  wanneer je in een situatie komt waar ALLE (ook a,b en m) bekenden deelbaar zijn door drie, \textbf{dan mag het}.
+		\[
+		3x \overset{2}{=} 14
+		.\] 
+		we vinden
+		\[
+		x \overset{2}{=} 0
+		.\] 
+		dit is de oplossing van de \textbf{gelijkwaardige congruentie}. Nu moeten we deze nog terugzetten naar de standaardvorm.
+	\item we doen dit door de nu gebruikte mod, vanaf de gevonden congruentiewaarde op te tellen in een congruentie met de originele mod:
+		\[
+		x \overset{6}{=} 0
+		.\] 
+		\[
+		x \overset{6}{=} 2
+		.\] 
+		\[
+		x \overset{6}{=} 4
+		.\] 
+		Merk dus op dat we gewoon de 2, die de mod was van de gelijkwaardige congruentie, optellen bij de b van de gelijkwaardige congruentie.
+\end{enumerate}
+
+
+\cor{kort samengevat}{
+	\[
+	ax \overset{m}{=} b
+	.\] 
+	\begin{enumerate}
+		\item check de ggd van a en m, deze is ook het aantal oplossingen (in het geval dat hij een deler van b is.)
+		\item kijk of deze gevonden ggd een deler is van b.
+		\item gebruik de verschillende technieken om de vergelijking te herleiden naar $a&= 1 $ 
+		\item indien dit een gelijkwaardige congruentie is; zet terug om naar de oorspronkelijke vergelijking. Doe dit door de mod terug te zetten, en als antwoorden de b van de gelijkwaardige congruentie opgeteld met de mod van de gelijkwaadige congruentie als antwoorden te beschouwen.
+	\end{enumerate}
+}
+
+\qs{}{
+Een vraag van op de powerpoint:
+\[
+10x \overset{14}{=} 22
+.\] 
+\begin{enumerate}
+	\item de ggd is 2
+	\item 22 is deelbaar door 2, we zullen bijgevolg 2 antwoorden vinden.
+	\item we stellen een gelijkwaardige vergelijking op:
+		\[
+	5x \overset{7}{=} 11	
+		.\] 
+		\[
+		x \overset{7}{=} 5
+		.\] 
+	\item we zetten de gelijkwaardige congruentie terug naar de oorspronkelijke gedaante.
+		\[
+		x \overset{14}{=} 5
+		.\] 
+		\[
+		x \overset{14}{=} 12
+		.\] 
+		dit is het antwoord. Te makkelijk.
+\end{enumerate}
+}
+
+\section{stelsels van lineaire congruenties}
+for the record; ik haat stelsels en je zult hier zeker een paar oefeningen op moeten maken.
+voorbeeld van een stelsel:
+\[
+\begin{cases}
+x \overset{m_{1} }{=} a_{1} \\ 	
+x \overset{m_{2} }{=} a_{2} \\ 
+\ldots \\ 
+x \overset{m_{n} }{=} a_{n} 
+\end{cases}
+.\] 
+hiervoor bestaat een unieke oplossing en alle andere oplossingen zijn congruent met deze oplossing.
+
+
+
+\ex{}{
+	Beschouw:
+	\[
+	\begin{cases}
+		x \overset{3}{=} 1 \\ 
+		x \overset{5}{=} 4 \\ 
+		x \overset{7}{=} 6 
+	\end{cases}
+	.\] 
+}
+het idee is dat we x zullen uitwerken in drie delen. Eerst de mod 3, dan de mod 5, dan de mod 7.	
+\begin{enumerate}
+	\item zeg dat $x&= \ldots+\ldots+\ldots $, dit zijn de drie delen. Vermenigvuldig elk niet mod 3 deel met 3 zodat je er niet naar moet kijken voor het mod 3 deel, doe dan hetzelfde voor 5 en 7 en krijg:
+		\[
+		x &= 5\cdot 7+3\cdot 7+3\cdot 5 
+		.\] 
+	\item bekijk de termen van de vergelijking voor of ze al kloppen met het stelsel van congruenties, en zo niet vind je een geheel getal om het mee te vermenigvuldigen tot het wel klopt.
+		\[
+		x&= 2\cdot 5\cdot 7 + 3\cdot 4\cdot 7 + 90&= 244  
+		.\] 
+		dit voldoet aan het stelsel, maar is niet het kleinste getal.
+	\item Als we nu alle mods vermenigvuldigen, dan kunnen we ons getal 244 eigenlijk daarmee aftrekken en het kleinst mogelijk antwoord bekomen.
+		\[
+		3\cdot 5\cdot 7 &= 105 
+		.\] 
+
+		we krijgen dus als we ons gevonden getal 2 keer hiermee verminderen:
+		\[
+		244 - 210 &= 34 
+		.\] 
+		als een equivalentieklasse:
+		\[
+		\left[ 34 \right] _{105} 
+		.\] 
+\end{enumerate}
+
+\dfn{ Bewijs van de Chinese reststelling }{
+
+	\textbf{dit bewijs heb ik niet super goed geleerd of diep bekeken, maar ik snap de oefeningen, dus je moet dit bewijs nog eens vanbuiten leren, maak er een anki kaartje van.}
+	Het stelsel lineaire congruenties bezit een unieke oplossing modulo $M&= m_{1} \cdot m_{2} \cdot \ldots\cdot m_{n}  $ 
+	\cor{bedoeling}{
+		Wat hiermee eigenlijk gezegd wordt is wat in bovenstaand voorbeeld gedemonstreerd wordt, namelijk dat het antwoord een rest is van een deling door M, M zijnde de vermenigvuldiging van de moduli.
+	}
+\begin{enumerate}
+	\item We tonen aan dat er een oplossing $x\in \left[ 0,1,2,\ldots,M-1 \right] $ bestaat.
+		\[
+		\text{Stel } \frac{M}{m_{i} }&= M_{i}  
+		.\] 
+		er geldt:
+		\[
+		\text{ggd}(M_{i} , m_{i}  ) &= 1 
+		.\] 
+		er bestaat een geheel getal waarvoor:
+		\[
+		M_{i} y_{i} \overset{m_{i} }{=} 1
+		.\] 
+\end{enumerate}
+
+
+
+
+}
+\ex{}{
+	Beschouw de algemene vorm:
+	\[
+	\begin{cases}
+	 x \overset{m_{1} }{=}  a_{1} \\  	
+	 x \overset{m_{2} }{=} a_{2} \\ 
+	 \ldots \\ 
+	 x \overset{m_{n} }{=} a_{n} 
+	\end{cases}
+	.\] 
+	waar
+	\[
+	M &= \prod_{i=1}^{n} m_{i}   
+	.\] 
+	\[
+	M_{i} &= \frac{M}{m_{i} } 
+	.\] 
+	\cor{ik had dit eerst niet door}{
+	in de cursus staat de redenering hierachter niet duidelijk, maar ik heb het net ingezien; het idee is gewoon dat je op deze manier scrijft dat je alle moduli vermenigvuldigd behalve die waar je in die term mee bezig bent!	
+	}
+}
+\begin{enumerate}
+	\item Opschrijven van de termen, de moduli van vergelijkingen vermenigvuldigd :
+		\[
+		x &= \sum_{i=1}^{n} M_{i} 
+		.\] 
+	\item Nu moet ervoor gezorgd worden dat per term de congruentie klopt.
+		\[
+		x&= \sum_{i=1}^{n} a_{i} M_{i} y_{i}  
+		.\] 
+		voor de uiteindelijke oplossing nemen we de mod M hiervan (vanzelfsprekend):
+		\[
+		x&=  	\left[ \sum_{i=1}^{n} a_{i} y_{i} M_{i}  \right] \mod M
+		.\] 
+\end{enumerate}
+
+\textbf{De toepassingen en bewijzen heb ik niet heel uitgebreid bekeken, dus dat moet j edan no geens doen.}
+
+\chapter{Algebra"ische structuren}
+in dit hoofdstukken worden groepen, ringen, velden en vectorruimten bekeken.
+
+\section{Binaire bewerkingen}
+De binaire bewerking is een bepaald type afbeelding.
+
+Binaire bewerking:
+\[
+V \times V \text{ op } V
+.\] 
+
+Bekijk nog eens wa een Cayley-tabel is.
+
+\subsubsection{eigenschappen van bewerkingen}%
+\label{ssub:eigenschappen van bewerkingen}
+we noemen de bewerking $\circ $ gewoon de voorbeeld bewerking.
+\begin{enumerate}
+	\item Commutativiteit
+		\[
+		\forall x,y \in V: x \circ y &= y\circ x 
+		.\] 
+	\item Associativiteit
+		\[
+	\forall x,y,z \in V: (x \circ y)\circ z &= x \circ (y\circ z) 	
+		.\] 
+	\item Eenheidselement, een verzameling beschikt over een eenheidselement als
+		\[
+		\forall x \in V: \exists e_{0} \in V: e_{\circ } \circ x &= x \circ e_{\circ } &= x  
+		.\] 
+	\item invers element, een verzameling beschikt over een invers element als 
+		\[
+		\forall x \in V: \exists x': x \circ x' &= x' \circ x&= e_{\circ }   
+		.\] 
+		zie $x'$ als de inverse van x.
+		je kunt dus ook enkel een invers element hebben, als je ook een eenheidselement hebt.
+	\item  Distributiviteit
+		\[
+		(x \texttt{ bew } y ) \circ z &= (z\circ x) \texttt{ bew } (z \circ y) 
+		.\] 
+		en 
+		\[
+		(x \texttt{ bew }y )\circ z &= (x\circ z) \texttt{ bew } (y\circ z) 
+		.\] 
+		waar 'bew' natuurlijk gewoon eender welke bewerking is.
+\end{enumerate}
+
+\newpage
+\section{Groepen}
+\subsection{één binaire bewerking}
+\subsubsection{Semi-groep, groep, abelse groep}
+
+Een groep wordt geschreven als een verzameling mt een daarin gedefinieerde bewerking: $(V,\circ )$.
+\begin{enumerate}
+	\item \textbf{eigenschappn semi groep}
+		\begin{itemize}
+			\item Associativiteit
+		\end{itemize}
+	\item \textbf{eigenschappen groep}
+		\begin{itemize}
+			\item Associativiteit
+			\item Eenheidselment
+			\item Invers element
+		\end{itemize}
+	\item \textbf{eigenschappen abelse groep}
+		\begin{itemize}
+			\item Associativiteit
+			\item Eenheidselement
+			\item Invers element
+			\item Commutativiteit
+		\end{itemize}
+\end{enumerate}
+abelse groepen worden ook commutatieve groepen genoemd.\\ 
+	Orde: $\# V$
+	\\ Orde van een element: kleinste $n \in \mathbb{N}_{0} $ waarvoor $a^{n} &= e_{\circ } ,  $, hier moet $a^{n} $ gezien worden als $ a\circ a\circ \ldots\circ a $
+
+
+
+
+\ex{}{
+	\[
+	(\mathbb{Z}_{2} , + ) , \mathbb{Z}_{2} &= \left\{ \left[ 0 \right] _{2} , \left[ 1 \right] _{2}  \right\}  
+	.\] 
+	zie dit als een subgroep van $\mathbb{Z}$ die enkel de elementen bevat die 
+	die $\mathbb{Z}_{2} $ is effectief Z modulo twee, maar ik kan deze vraag niet dus je moet het nog eens bekijken voor het examen.
+	onthoud dat als de groep bestaat uit equivalentieklssen, optellingen ook tussen euivalentieklassen gebeuren.
+}
+
+
+\cor{onthoud}{
+	SEMI-GROEP: A \\ 
+	GROEP: A,E,I \\ 
+	ABELSE GROEP: A,E,I,C
+	\\ 
+	Orde: $\# V$
+	\\ Orde van een element: kleinste $n \in \mathbb{N}_{0} $ waarvoor $a^{n} &= e_{\circ } ,  $, hier moet $a^{n} $ gezien worden als $ a\circ a\circ \ldots\circ a $
+}
+\subsubsection{eigenschappen}
+
+We leiden uit de drie eigenschappen alreeds besproken enkele essenti"ele bijkomende eigenschappen af:
+\[
+\text{linkse schrappingswet } \iff \forall x,y,a \in V: a \circ  x&= a \circ y \implies x&= y   
+.\] 
+\[
+\text{rechtse schrappingswet } \iff \forall x,y,a \in V: x \circ a&= y \circ a \implies x&= y  
+.\] 
+Denk over de schrappingswetten als linkse en rechtse transiviteit.
+
+\dfn{ Bewijs linkse schrappingswet }{
+We beginnen bij het te bewijzen:
+\[
+a \circ x &= a \circ y 
+.\] 
+steunt op het bestaan van inverse elementen:
+\[
+\iff a^{-1} \circ  (a \circ x) &= a^{-1} \circ (a\circ y) 
+.\] 
+steunt op de associativiteit en de definitie van het eenheidselement:
+\[
+e_{\circ } \circ x &= e_{\circ } \circ y 
+.\] 
+en dan volgt uit de definitie van het eenheidselement:
+\[
+x&= y 
+.\] 
+}
+
+rechtse schrappingswet is natuurlijk analoog.
+
+2 kleine extra eigenschappen:
+\begin{itemize}
+	\item $x \circ a &= b $ $\implies x &= b \circ a^{-1}  $
+	\item $a \circ x &= b \implies x &= a^{-1} \circ b  $
+	\item $(a\circ b)^{-1} &= b^{-1} \circ a^{-1}  $
+		\\ 
+		deze laatste geldt eigenlijk voor maakt niet uit hoeveel termen, veel termen tergelijk inverse nemen is de inverse van elk element en je wisselt de plaatsen om.
+		\[
+		(a\circ b \circ \ldots\circ p \circ q  ) ^{-1} &= q^{-1} \circ p^{-1} \circ \ldots \circ b^{-1} \circ a^{-1}  
+		.\] 
+\end{itemize}
+
+
+\subsubsection{deelgroepen of subgroepen}
+we maken een onderscheid tussen echte en onechte deelgroepen. Onechte deelgroep:
+\[
+	(V,\circ ), \texttt{ onechte deelgroep: } (\left\{ e_{\circ }  \right\} , \circ )
+.\] 
+een echte deelgroep is elke andere deelgroep $(W,\circ )$
+
+stelling van lagrange $\iff$ \textbf{Als $(W,\circ )$ een deelgroep is van $(V,\circ )$, dan is de orde van W een deelgroep van de orde van V.}
+dus stel nu de orde van v is 6, dan is die van W 3,2 of 1.
+
+
+Als je wilt testen of die deelverzameling W met dezelfde bewerking ook een groep vormt moet je gewoon controleren of $a\circ b \in W$, en voor een oneindige groep controleer je ook of er zeker een invers element is.
+
+\dfn{ Bewijs test }{
+	Bewijs dat \[
+	\forall a,b \in W: a \circ b \in V: a \in W: a^{-1} \in W 
+	.\] 
+	Stel: $\left[ x_{1} ,x_{2} ,\ldots,x_{n}  \right] , a \in W$
+	
+	\[
+	\begin{cases}
+	a \circ x_{1} &= y_{1} \\  	
+	a \circ x_{2} &= y_{2} \\  
+	\ldots \\ 
+	a \circ x_{n} &= y_{n}   
+	\end{cases}
+	.\] 
+	dan $y_{1} ,y_{2} ,\ldots,y_{n} \in W$
+	\\ deze zijn onderling niet gelijk dus
+	\[
+	y_{i} &= a \implies x = e_{\circ }  \in W 
+	.\] 
+	\[
+	y_{i} &= e_{\circ } \implies x &= a^{-1} \in W  
+	.\] 
+	dat laatste stuk snap ik niet helemaal dus dat moet je nog eens bekijken.
+}
+Wat eigenlijk werd bewezen is dat je niet moet checken of er een eenheidselement is voor een eindige deelgroep.
+
+\subsubsection{morfismen}
+via morfismen kunnen groepen in elkaar worden omgezet. Het deelt alle soorten groepen op.
+
+
+\begin{enumerate}
+	\item een morfisme van V in W is een afbeelding $\theta$ van $(V,\circ )$ naar $(W, \mathbin{\rule{.2cm}{.2cm}})$ waarbij:
+		\[
+			\forall a,b \in V: \theta (a\circ b)&= \theta(a)\mathbin{\rule{.2cm}{.2cm}} \theta(b) 
+		.\] 
+	\item is deze afbeelding bijectief dan spreken we over een \textbf{isomorfisme.}
+	\item Een isomorphisme van $(V,\circ )$ op $(V,\circ )$ is een \textbf{automorfisme}
+\end{enumerate}
+en voor de duidelijkheid, theta is een functie.
+
+\cor{bekijk nog}{
+	cursus ging hier echt kort over dus wederom iets dat je nog eens dieper moet bekijken, eigenlijk gewoon een drietal oefeningen maken met de vtk oplossingensleutel en dan zul je het wel nappen.
+}
+
+\subsubsection{cyclische groepen}
+
+We noemen een groep $(V,\circ )$ een cyclische groep als en slechts als er $a\in V$ zodat elk element van V geschreven kan worden onder de vorm $a^{m} , m \in \mathbb{Z} $. En a is hier een \textbf{voortbrengend element} van de groep $(V,\circ )$
+
+\begin{enumerate}
+	\item $(V,\circ )$ is een cyclische groep $\implies$ het is een abelse groep. Commutativiteit is een vereiste.
+		\\ \textbf{bewijs dit later nog!}
+	\item de ggd van de orde van V en het voortbrengend element is één.
+		\[
+		\text{ggd}(\#V, a) 
+		.\] 
+	\item  elke deelgroep van een cyclische groep is zelf ook cyclisch.
+	\item groepen met als orde een priemgetal zijn altijd cyclisch. \textbf{(zie bewijs op slides!)}
+\end{enumerate}
+
+en het idee is dus dat elk element geschreven kan worden als een product van het voortbrengend element met zichzelf.
+\cor{hoe je dit moet interpreteren}{
+	Bij een additieve groep staat $x^{m}  $ gelijk aan $mx$, dus je moe teigenlijk dat tot de macht zien als een aantal keer dat je de operatie uitvoert op het element.
+}
+
+\subsubsection{verband tussen cyclische groepen en isomorfismen}
+\begin{enumerate}
+	\item als een groep van oneindige orde cyclisch is, dan is deze isomorf met $(Z, +)$
+	\item als een groep een eindige orde heeft en cyclisch is, dan is deze isomorf met $Z_{m} , +$
+\end{enumerate}
+
+\subsubsection{direct product van groepen}
+
+\ex{}{
+	Beschouw een groep $(V,\circ )$ en $(W,\mathbin{\rule{.2cm}{.2cm}})$
+	We onderzoeken in de verzameling $V\times W$ de bewerking $\star$ die als volgt gedefinieerd wordt:
+	\[
+		(v_{1} , w_{1}   ) \star (v_{2} , w_{2}  ) &= (v_{1} \circ v_{2} , w_{1} \mathbin{\rule{.2cm}{.2cm}}w_{2} ) 
+	.\] 
+	we hebben nu een nieuwe groep:
+	\[
+	(V\times W, \star)
+	.\] 
+}
+\ex{}{
+	We zoeken het direct product van 
+	\[
+	(Z_{2} , + ) \texttt{ en } (Z_{3} ,+)
+	.\] 
+}
+\begin{itemize}
+	\item groep met 6 elementen
+	\item $(\left[ 1 \right] _{2} , \left[ 1 \right] _{3} ) $ is het genererend element.
+	\item hieruit volgt dat het isomorf is met $(Z_{m} ,+)$ 
+	\item dit is mod 6 rekening ontbonden in mod 2 en drie rekening
+\end{itemize}
+\cor{bekijk filmpje}{
+	je gaat hier zeker een youtube filmpje over moeten zoeken.
+}
+
+\cor{nut}{
+	dit is nuttig voor het ontbinden van grote groepen tot kleine bouwstenen of het combineren van kleine tot grote.
+}
+\subsubsection{Permutatiegroepen}
+we bekijken dit thema beperkt tot eindige verzamelingen.\\ 
+Voor een verzameling V met n elementen bestaan er n! verschillende elementen.
+\cor{Waarom zijn er n! elementen?}{
+	Het is eigenlijk enorm simpel en de cursus is wederom onduidelijk. Je mapt $A\to A$, dus eigenlijk het enige dat je doet is je schrijft de elemnten in een verschillende volgorde en noemt de nieuwe groep een permutatiegroep.
+}
+de manier waarop je de permutatiegroep schrijft is niet echt een matrix, cyclusnotaties wordt gehanteerd. Stel
+\[
+	P &= \begin{pmatrix} 1&2&3&4&5 \\ 
+		3&2&4&1&5
+	\end{pmatrix}  	
+.\]
+Dan schrijf je de cycli op als volgt:
+\[
+	\left( 134 \right) 
+.\] 
+Dit is de cyclusnotatie. Omdat de 5 en de 2 naar zichzelf gaan schrijf ik die niet op. Je kan eigenlijk ook zeggen \[
+\left( 134 \right) \left( 2 \right) \left( 5 \right) 
+.\] 
+
+\subsection{twee binaire gewerkingen}
+
+\end{document}
+Footer
+
