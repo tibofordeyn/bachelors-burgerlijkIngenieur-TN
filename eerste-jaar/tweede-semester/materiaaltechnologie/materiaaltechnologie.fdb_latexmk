@@ -1,13 +1,16 @@
 # Fdb version 3
-["pdflatex"] 1676766165 "materiaaltechnologie.tex" "materiaaltechnologie.pdf" "materiaaltechnologie" 1676766165
+["pdflatex"] 1676767562 "materiaaltechnologie.tex" "materiaaltechnologie.pdf" "materiaaltechnologie" 1676767562
   "/home/tibo/school/textemplates/notestemplate/afkortingen/letterfonts.tex" 1676327704 8525 72886e661d31d8a8c2f4d2fe46f75ceb ""
   "/home/tibo/school/textemplates/notestemplate/afkortingen/macros.tex" 1676327704 3390 593b4794f82a0e0a44e3ec0902116186 ""
   "/home/tibo/school/textemplates/notestemplate/afkortingen/preamble.tex" 1676327704 20242 31841a6d38989502dad4a28769e5a42d ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1650183167 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1650183167 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1650183167 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1650183167 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1650183167 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1650183167 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1650183167 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1650183167 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1650183167 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1650183167 1288 655e228510b4c2a1abe905c368440826 ""
@@ -20,6 +23,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/newpx/zplsy.tfm" 1650179560 2004 f492482278fad9bc8554be763ab874ea ""
   "/usr/share/texmf-dist/fonts/tfm/public/newpx/zplsyc.tfm" 1650179560 1028 21e15ab4b85747ec39bbc16f585cbee8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/newpx/zplsym.tfm" 1650179560 1572 bcb12adf2427f3408055786fa60ac08c ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1650183167 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1650183167 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1650183167 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1650183167 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -241,8 +245,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1676326433 4408072 42ceaa83bae76aebad711d3f3dd7f55f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1676326412 2927658 7b9a950907097a52d9e8f0866cecf25b ""
-  "materiaaltechnologie.aux" 1676766165 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "materiaaltechnologie.tex" 1676766159 600 75054ee38e9458720a471fcde4244901 ""
+  "materiaaltechnologie.aux" 1676766166 2354 7840cb8a27c74e68fde8874d25e4dd4c "pdflatex"
+  "materiaaltechnologie.tex" 1676767560 616 5cc6562a454fb1154c07151e8ccab8d2 ""
+  "materiaaltechnologie.toc" 0 -1 0 "pdflatex"
   (generated)
   "materiaaltechnologie.aux"
   "materiaaltechnologie.log"
