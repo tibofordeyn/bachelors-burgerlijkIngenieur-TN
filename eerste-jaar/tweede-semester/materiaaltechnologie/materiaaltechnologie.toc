@@ -1,4 +1,7 @@
 \babel@toc {dutch}{}\relax 
 \contentsline {chapter}{\numberline {1}Atomic structure and interatomic bonding}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Atomic structure}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Bindingsenergie en}{2}{section.1.2}%
+\contentsline {chapter}{\numberline {2}The structure of crystalline Solids}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}fundamentele concepten}{3}{section.2.1}%
 \contentsfinish 

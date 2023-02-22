@@ -21,6 +21,242 @@
 
 \chapter{Naam van hoofdstuk}
 \section{Voortbrengend}
+\ex{}{
+	uit ruite $V &= \mathbb{R}^{3x}$
+	standaardruimte:
+	\[
+	B &= \left[ 1,x,x^2,x^3 \right] 
+	.\] 
+	We zeggen  \[
+	e_{1} &= 1, e_{2} &= x, e_{3} &= x^2
+	.\] 
+	We zeggen
+	\[
+	B'&= \left( 1,1-x,2x^2-3,x^3-x^2+x \right) 
+	.\] 
+	We controlern of dit een nieuwe basis is:
+	We kijken of de vectoren lineair onafhankelijk en voortbrengend zijn. (theoretisch)
+
+	We kunnen ook kijken of de determinant van de matrix verschillend is van nul.
+	Als we de oude elementen kunnen schrijven in fucnctie van de nieuwe kun je de oud vervangen door een lineaire combinatie van de nieuwe, maar dat is veel werk, dus je kunt kijken of ze lineair onafhankelijk zijn.
+
+}
+
+\cor{niet vergeten}{
+In een n-dimensionale ruimte, als je een verzameling S met n elementen hebt die lineair onafhankelijk zijn, dan weet je al dat de verzameling S voortbrengend is. JE CONTROLEERT 1 VAN DE 2.	
+}
+Dus je stelt de matrix, dit is een bovendriehoeksmatrix. En je zult direct zien dat de determinant verschillend is van nul.
+
+
+\ex{}{
+	Beschouw:
+	\[
+	P(x)&= -2 + 3x +5x^3
+	.\] 
+	(in die ruimte)
+}
+We weten gemakkelijk de coördinaten tov de oude basis:
+\[
+	(-2,0,3,5)
+.\] 
+We willen nu de nieuwe coördinaten voor den nieuwe ruimte.
+
+We weten
+\[
+\begin{pmatrix}
+	-2  \\
+	3  \\
+	0  \\
+	  
+\end{pmatrix} &= \begin{pmatrix}
+	1 & _1 & -3 & 0\\
+	0 & 1 & 0&1 \\
+	0 &0& 2 & 1 \\
+	0 &0& 0 & 1 & 
+\end{pmatrix} \begin{pmatrix}
+	a'  \\
+	b'  \\
+	c'  \\
+	d'  
+\end{pmatrix} 
+.\] 
+Je vind:
+\[
+d'&= 5, c'&= \frac{5}{2}, b' &= -2,a'&= \frac{7}{2}
+.\] 
+\subsubsection{conrole}%
+\label{ssub:conrole}
+\[
+a'e_{1} '+b'e_{2} '+c'e_{3} '+d'e_{4} '&= P(x)
+.\] 
+
+\[
+\frac{7}{2}1 - 2(x-1)+\frac{5}{2}(2x^2-3) +5(x^3-x^2+x)&= -2 +3x +5x^3
+.\] 
+klopt volgens hennie
+
+
+\section{deelruimten}
+We bekijken of je een nieuwe deelruimte verkrijgt als je de bewerking gaat uitvoeren.
+\ex{}{
+	\[
+	V_{F} , V_{1} \text{ en } V_{2} 
+	.\] 
+	doorsnede \[
+	V_{1} \cap V_{2} &= \left[ v\in V | v \in V_{1} \text{ en } V_{2}   \right] 
+	.\] 
+	is dus de vraag. 
+
+}
+\begin{itemize}
+	\item unie: $V_{1} \cup V_{2} &= \left\{ v \in V | v \in V_{1} , \vee v \in V_{2}  \right\}  $
+\end{itemize}
+Is geen deelruimte.
+\clm{dimensiestelling}{}{
+	\[
+	V_{2} , V_{1} 
+	.\] 
+	geld voor eindig dimensionale grote ruimenten.
+}
+\ex{}{
+	als grote ruimte $\mathbb{R}^{3x3}$ 
+
+	symmetrische 3x3 matrix:
+	\[
+		\begin{pmatrix}
+			a & d & e\\
+			d & b & f\\
+			e & f & c
+		\end{pmatrix} 
+	.\] 
+}
+klopt het dat elke 3 bi 3 matrix geschreven kan worden als een symmetrisch en een antisymeetrisch deel.
+Alle elementen op de hoofddiagonaal moeten in het symmetrisch stuk zitten, en voor alle andere elmenetne 
+
+\chapter{}
+\ex{}{
+	2 punten
+	\[
+	P &= (P_{1} , P_{2} , P_{3} )
+	.\] 
+	\[
+	Q &= (Q_{1} ,Q_{2} ,Q_{3} )
+	.\] 
+	Beschouw:
+	\[
+	\begin{pmatrix}
+		Q_{1} - P_{1}   \\
+		Q_{2} - P_{2}   \\
+		Q_{3} -P_{3} 
+	\end{pmatrix}
+	.\] 
+	Je trekt eigenlijk twee plaatsvectoren van elkaar af.
+
+}
+	 vetoren is de vrije vector die loopt van eindpunt naar begintpunt. 
+	 \[
+	 \vec{v} &= Q-P 
+	 .\] 
+	 \[
+	 \iff P + \vec{v} &= Q
+	 .\] 
+	 
+Er is dus geen puntenruimte als lineaire ruimte. Want het verschil tussen 2 punten is een vector.
+	 
+\ex{}{
+	Beschouw 2 punten:
+	\[
+	P &= (P_{1} ,P_{2} ,P_{3} )
+	.\] 
+	\[
+	Q &= (Q_{1} ,Q_{2} ,Q_{3} )
+	.\] 
+	We bekijken P+Q:
+	\[
+	\begin{pmatrix}
+		P_{1} +Q_{1}   \\
+		P_{2} +Q_{2}   \\
+		P_{3} +Q_{3} 
+	\end{pmatrix}
+	.\] 
+}
+\[
+\vec{OP} + \vec{OQ} &= \vec{OR} 
+.\] 
+We noemen dat punt R, vandaar OR.
+
+Wanneer de som van 
+\[
+\begin{cases}
+	P_{0} , \ldots, P_{n} \in E\\ 
+	\alpha_{0} , \ldots , \alpha_{n} \in \mathbb{R}
+\end{cases}
+.\] 
+waarbij
+\[
+\sum_{i=0}^{n} \alpha_{i} &= 1\text{ levert nieuw punt Q op dat goed gedefinieerd is (onafhankelijk van zelfgemaakte keuzes)} 
+.\] 
+\[
+\sum_{i=0}^{n} \alpha_{i} P_{i} 
+.\] 
+\ex{}{
+	Beschouw:
+	\[
+	\frac{1}{2}P_{0} +\frac{1}{3}P_{1} + \frac{1}{6}P_{2} 
+	.\] 
+}
+\[
+\left( 1-\frac{1}{3}-\frac{1}{6}  \right) &= \frac{1}{2}
+.\] 
+Bemerk:
+\[
+P_{0} + \frac{1}{3}\left( P_{1} -P_{0}  \right) + \frac{1}{6}\left( P_{2} -P_{0}  \right) 
+.\] 
+Bemerk de vectors die het oplevert.
+Er staat een lineaire combinatie van 2 vectoren, noem
+deze $\vec{v} $ 
+\[
+\vec{v} &= \frac{1}{3}(\vec{P_{0} P_{1} }  ) + \frac{1}{6} (\vec{P_{0} P_{2} } )
+.\] 
+
+algemeen:
+\[
+\sum_{i=0}^{n} \alpha_{i} P_{i} &= \alpha_{0} P_{0} + \sum_{i=1}^{n} \alpha_{1} P_{1} 
+.\] 
+\[
+\implies P_{0} + \sum_{i=1}^{n} \alpha_{1} \left( P_{1} -P_{0}  \right) &= Q
+.\] 
+\cor{Kleine opmerking}{
+	\[
+	\sum_{i=0}^{n} \alpha_{i} &= 0 \implies \sum_{i=0}^{n} \alpha_{i} P_{i} &= \vec{v} 
+	.\] 
+}
+\ex{}{
+	toepassing 1
+	Rechte bepaald door 2 verschillende punen of 1 punt en een richtingsvector u die kan samenvallen met de vector $\vec{P_{1} P_{2} } $
+Wanneer is een punt op die rechte gelegen?
+\[
+\iff \vec{P_{1} P }  \text{ moet evenwijdig zijn met } \vec{P_{1} P_{2} } 
+.\] 
+}
+\[
+\exists t \in \mathbb{R}: P &= (1-t)P_{1} + P_{2} 
+.\] 
+We zien een baricentrische combinatie.
+\cor{}{	
+De meetkundige betekenis van t is de verhouding van de 
+	 vectoren, als deze positief is an hebben de 
+	 	 vectoren dezelfde zin. Als t kleiner is dan 1 dan is de lengte van $P_{1} Psugt$ \\	 	 
+}
+\[
+P&= P_{1} + t\vec{u} 
+.\] 
+\ex{}{
+	
+}
+
+
+
 
 \end{document}
 Footer

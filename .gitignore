@@ -1,0 +1,6 @@
+# negeert alle bash scripts
+*.sh
+
+# voeg hier toe als je een bash script hebt dat niet genegeerd mag worden.
+
+

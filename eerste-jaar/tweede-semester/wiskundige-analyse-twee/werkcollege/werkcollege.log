@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.13)  20 FEB 2023 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.13)  21 FEB 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**materiaaltechnologie.tex
-(./materiaaltechnologie.tex
+**werkcollege.tex
+(./werkcollege.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-10> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -1121,202 +1121,62 @@ File: tikzlibraryshadows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (/usr/share/texmf-dist/tex/latex/titlesec/titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen330
-)) (/home/tibo/school/textemplates/notestemplate/afkortingen/macros.tex) (/home/tibo/school/textemplates/notestemplate/afkortingen/letterfonts.tex) (./materiaaltechnologie.aux)
-\openout1 = `materiaaltechnologie.aux'.
+)) (/home/tibo/school/textemplates/notestemplate/afkortingen/macros.tex) (/home/tibo/school/textemplates/notestemplate/afkortingen/letterfonts.tex)
+./werkcollege.tex:12: Undefined control sequence.
+\tcb@startbox ...x }{\tcb@w@upper }\tcb@lua@color 
+                                                  {tcbcolupper}\kvtcb@fontup...
+l.12 }
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 11.
-LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 11.
- (/usr/share/texmf-dist/tex/latex/newpx/omlnpxmi.fd
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 12.
+
+LaTeX Font Info:    Trying to load font information for OML+npxmi on input line 12.
+(/usr/share/texmf-dist/tex/latex/newpx/omlnpxmi.fd
 File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for U+npxexa on input line 11.
- (/usr/share/texmf-dist/tex/latex/newpx/unpxexa.fd
-File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
-)
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 11.
+LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line 12.
  (/usr/share/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
 File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 11.
-LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 11.
+LaTeX Font Info:    Trying to load font information for LMX+npxexx on input line 12.
  (/usr/share/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
 File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(61.42993pt, 491.43513pt, 61.42993pt)
-* v-part:(T,H,B)=(61.42993pt, 676.63455pt, 56.9055pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=491.43513pt
-* \textheight=676.63455pt
-* \oddsidemargin=-10.84006pt
-* \evensidemargin=-10.84006pt
-* \topmargin=-47.84006pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=14.45377pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count461
-\scratchdimen=\dimen331
-\scratchbox=\box142
-\nofMPsegments=\count462
-\nofMParguments=\count463
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count464
-\MPscratchDim=\dimen332
-\MPnumerator=\count465
-\makeMPintoPDFobject=\count466
-\everyMPtoPDFconversion=\toks54
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-Package hyperref Info: Link coloring ON on input line 11.
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
-\c@lstlisting=\count467
- (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks55
-\inpenc@posthook=\toks56
-) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
- (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+npxmia on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxmia on input line 12.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxmia.fd
 File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsym on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxsym on input line 12.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsym.fd
 File: unpxsym.fd 2015/03/21 Fontinst v1.933 font definitions for U/npxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 14.
+LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 12.
  (/usr/share/texmf-dist/tex/latex/newpx/unpxsyc.fd
 File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
-) [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 19.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-(./materiaaltechnologie.toc
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 3.
-
-
-Overfull \hbox (5.00002pt too wide) detected at line 3
- []\OT1/cmr/m/n/10 2
- []
-
-
-Overfull \hbox (5.00002pt too wide) detected at line 4
- []\OT1/cmr/m/n/10 2
- []
-
-
-Overfull \hbox (5.00002pt too wide) detected at line 6
- []\OT1/cmr/m/n/10 3
- []
-
 )
-\tf@toc=\write5
-\openout5 = `materiaaltechnologie.toc'.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 
-      [1
-
-]
-Hoofdstuk 1.
-./materiaaltechnologie.tex:26: Misplaced alignment tab character &.
-l.26 1eV&
-         = 1,602 \cdot 10^{19} J
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./materiaaltechnologie.tex:36: Misplaced alignment tab character &.
-l.36 F_{N} &
-            = F_{A} + F_{R}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./materiaaltechnologie.tex:42: Misplaced alignment tab character &.
-<argument>  \[ E_{p} &
-                      = \int _{ }^{ } F dr .\] 
-l.42 }
+LaTeX Font Info:    Trying to load font information for U+npxexa on input line 12.
+ (/usr/share/texmf-dist/tex/latex/newpx/unpxexa.fd
+File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
+)
+./werkcollege.tex:12: Misplaced alignment tab character &.
+<argument>  Beschouw: \[ f(x,y)&
+                                = \frac {x\cdot y^2}{x^2+y^{4}} .\] 
+l.12 }
       
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1325,9 +1185,57 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./materiaaltechnologie.tex:45: Misplaced alignment tab character &.
-l.45 E_{N}  &
-             = \int_{r}^{+ \infty} F_{N} dr &= \int_{r}^{+ \infty} F_{A} + F...
+
+./werkcollege.tex:12: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 }
+      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./werkcollege.tex:12: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 }
+      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./werkcollege.tex:13: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 B
+      emerk dat de functie slecht gedefinieerd is in x en y nul.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./werkcollege.tex:15: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 A
+      ls we hier een
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./werkcollege.tex:18: Misplaced alignment tab character &.
+l.18 	\item Stel $x&
+                    = 0$
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1335,9 +1243,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./materiaaltechnologie.tex:45: Misplaced alignment tab character &.
-l.45 E_{N}  &= \int_{r}^{+ \infty} F_{N} dr &
-                                             = \int_{r}^{+ \infty} F_{A} + F...
+./werkcollege.tex:20: Misplaced alignment tab character &.
+l.20 		 \lim_{y \to 0} \frac{0y^2}{0+y^{4}} &
+                                             = \lim_{y \to 0} \frac{0}{y^{4}...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1345,9 +1253,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./materiaaltechnologie.tex:48: Misplaced alignment tab character &.
-l.48 \implies E_{A} + E_{R} &
-                             = E_{N}
+./werkcollege.tex:20: Misplaced alignment tab character &.
+l.20 ...+y^{4}} &= \lim_{y \to 0} \frac{0}{y^{4}}&
+                                                  = 0
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1355,9 +1263,30 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./materiaaltechnologie.tex:53: Misplaced alignment tab character &.
-l.53 F_{N} &
-            = \frac{dE_{A} }{dr} + \frac{dE_{R} }{dr}
+./werkcollege.tex:26: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.26 \hline
+           
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./werkcollege.tex:32: Undefined control sequence.
+\tcb@startbox ...x }{\tcb@w@upper }\tcb@lua@color 
+                                                  {tcbcolupper}\kvtcb@fontup...
+l.32 }
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./werkcollege.tex:32: Misplaced alignment tab character &.
+<argument>  oefening 5 \[ f(x,y)&
+                                 = \frac {x^2+y^2}{x-y} .\] 
+l.32 }
+      
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1365,34 +1294,77 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[2
+./werkcollege.tex:37: Misplaced alignment tab character &.
+l.37 y&
+       = x^2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-]
-Hoofdstuk 2.
-[3
+./werkcollege.tex:48: Misplaced alignment tab character &.
+l.48 \end{pmatrix} &
+                    = \ldots
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-] (./materiaaltechnologie.aux)
+./werkcollege.tex:59: Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \end{document}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./werkcollege.tex:59: Undefined control sequence.
+\set@color ...\@pdfcolorstack push{\current@color 
+                                                  }\aftergroup \reset@color 
+l.59 \end{document}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+
+\providecommand \oddpage@label [2]{}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+\ttl@finishall
+\gdef \@abspage@last{1}
+(./werkcollege.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 37658 strings out of 478238
- 746517 string characters out of 5850456
- 1126872 words of memory out of 5000000
- 55198 multiletter control sequences out of 15000+600000
- 498189 words of font info for 110 fonts, out of 8000000 for 9000
+ 36818 strings out of 478238
+ 733211 string characters out of 5850456
+ 1123419 words of memory out of 5000000
+ 54402 multiletter control sequences out of 15000+600000
+ 484383 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,7n,102p,593b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb>
-Output written on materiaaltechnologie.pdf (4 pages, 126071 bytes).
+ 96i,12n,102p,512b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb>
+Output written on werkcollege.pdf (1 page, 75698 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 12 named destinations out of 1000 (max. 500000)
- 205 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,5 @@
+\babel@toc {dutch}{}\relax 
+\contentsline {chapter}{\numberline {1}Duurzaamheid, een complex maatschappelijk vraagstuk}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Prof Verbeken}{2}{section.1.1}%
+\contentsline {subsubsection}{Kernfusie}{2}{section*.2}%
+\contentsfinish 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.13)  15 FEB 2023 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.2.13)  21 FEB 2023 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1270,6 +1270,11 @@ Overfull \hbox (5.00002pt too wide) detected at line 3
  []\OT1/cmr/m/n/10 2
  []
 
+
+Overfull \hbox (5.00002pt too wide) detected at line 5
+ []\OT1/cmr/m/n/10 3
+ []
+
 )
 \tf@toc=\write5
 \openout5 = `meetkunde-lineaireAlgebra.toc'.
@@ -1283,9 +1288,376 @@ l.21
 
 ]
 Hoofdstuk 1.
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<argument>  uit ruite $V &
+                          = \mathbb {R}^{3x}$ standaardruimte: \[ B &= \left...
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<argument> ...bb {R}^{3x}$ standaardruimte: \[ B &
+                                                  = \left [ 1,x,x^2,x^3 \rig...
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<argument> ...^3 \right ] .\] We zeggen \[ e_{1} &
+                                                  = 1, e_{2} &= x, e_{3} &= ...
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<argument> ....\] We zeggen \[ e_{1} &= 1, e_{2} &
+                                                  = x, e_{3} &= x^2 .\] We z...
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<argument> ...n \[ e_{1} &= 1, e_{2} &= x, e_{3} &
+                                                  = x^2 .\] We zeggen \[ B'&...
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:43: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.43 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:57: Misplaced alignment tab character &.
+<argument>  Beschouw: \[ P(x)&
+                              = -2 + 3x +5x^3 .\] (in die ruimte) 
+l.57 }
+      
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:71: Misplaced alignment tab character &.
+l.71 \end{pmatrix} &
+                    = \begin{pmatrix}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:85: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.85 d'&
+        = 5, c'&= \frac{5}{2}, b' &= -2,a'&= \frac{7}{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:85: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.85 d'&= 5, c'&
+                = \frac{5}{2}, b' &= -2,a'&= \frac{7}{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:85: Misplaced alignment tab character &.
+l.85 d'&= 5, c'&= \frac{5}{2}, b' &
+                                   = -2,a'&= \frac{7}{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:85: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.85 d'&= 5, c'&= \frac{5}{2}, b' &= -2,a'&
+                                           = \frac{7}{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 [2
 
-] (./meetkunde-lineaireAlgebra.aux)
+]
+./meetkunde-lineaireAlgebra.tex:90: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.90 a'e_{1} '+b'e_{2} '+c'e_{3} '+d'e_{4} '&
+                                             = P(x)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:94: Misplaced alignment tab character &.
+l.94 ... 2(x-1)+\frac{5}{2}(2x^2-3) +5(x^3-x^2+x)&
+                                                  = -2 +3x +5x^3
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:110: Misplaced alignment tab character &.
+<argument> ... .\] doorsnede \[ V_{1} \cap V_{2} &
+                                                  = \left [ v\in V | v \in V...
+l.110 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:112: Misplaced alignment tab character &.
+l.112 	\item unie: $V_{1} \cup V_{2} &
+                                      = \left\{ v \in V | v \in V_{1} , \vee...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[3]
+Hoofdstuk 2.
+./meetkunde-lineaireAlgebra.tex:155: Misplaced alignment tab character &.
+<argument>  2 punten \[ P &
+                           = (P_{1} , P_{2} , P_{3} ) .\] \[ Q &= (Q_{1} ,Q_...
+l.155 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:155: Misplaced alignment tab character &.
+<argument> ... (P_{1} , P_{2} , P_{3} ) .\] \[ Q &
+                                                  = (Q_{1} ,Q_{2} ,Q_{3} ) ....
+l.155 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:158: Misplaced alignment tab character &.
+l.158 	 \vec{v} &
+                 = Q-P
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:161: Misplaced alignment tab character &.
+l.161 	 \iff P + \vec{v} &
+                          = Q
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:182: Misplaced alignment tab character &.
+<argument>  Beschouw 2 punten: \[ P &
+                                     = (P_{1} ,P_{2} ,P_{3} ) .\] \[ Q &= (Q...
+l.182 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:182: Misplaced alignment tab character &.
+<argument> ...&= (P_{1} ,P_{2} ,P_{3} ) .\] \[ Q &
+                                                  = (Q_{1} ,Q_{2} ,Q_{3} ) ....
+l.182 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:184: Misplaced alignment tab character &.
+l.184 \vec{OP} + \vec{OQ} &
+                           = \vec{OR}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:197: Misplaced alignment tab character &.
+l.197 \sum_{i=0}^{n} \alpha_{i} &
+                                 = 1\text{ levert nieuw punt Q op dat goed g...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[4
+
+]
+./meetkunde-lineaireAlgebra.tex:209: Misplaced alignment tab character &.
+l.209 \left( 1-\frac{1}{3}-\frac{1}{6}  \right) &
+                                                 = \frac{1}{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:219: Misplaced alignment tab character &.
+l.219 \vec{v} &
+               = \frac{1}{3}(\vec{P_{0} P_{1} }  ) + \frac{1}{6} (\vec{P_{0}...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:224: Misplaced alignment tab character &.
+l.224 \sum_{i=0}^{n} \alpha_{i} P_{i} &
+                                       = \alpha_{0} P_{0} + \sum_{i=1}^{n} \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:227: Misplaced alignment tab character &.
+l.227 ...\alpha_{1} \left( P_{1} -P_{0}  \right) &
+                                                  = Q
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:233: Misplaced alignment tab character &.
+<argument>  \[ \sum _{i=0}^{n} \alpha _{i} &
+                                            = 0 \implies \sum _{i=0}^{n} \al...
+l.233 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:233: Misplaced alignment tab character &.
+<argument> ... \sum _{i=0}^{n} \alpha _{i} P_{i} &
+                                                  = \vec {v} .\] 
+l.233 }
+       
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./meetkunde-lineaireAlgebra.tex:243: Misplaced alignment tab character &.
+l.243 \exists t \in \mathbb{R}: P &
+                                   = (1-t)P_{1} + P_{2}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
+
+ []
+
+./meetkunde-lineaireAlgebra.tex:252: Misplaced alignment tab character &.
+l.252 P&
+        = P_{1} + t\vec{u}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[5] (./meetkunde-lineaireAlgebra.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
@@ -1295,18 +1667,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 37569 strings out of 478238
- 745063 string characters out of 5850456
- 1122891 words of memory out of 5000000
- 55131 multiletter control sequences out of 15000+600000
- 492977 words of font info for 93 fonts, out of 8000000 for 9000
+ 37696 strings out of 478238
+ 747283 string characters out of 5850456
+ 1135924 words of memory out of 5000000
+ 55220 multiletter control sequences out of 15000+600000
+ 498808 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,7n,102p,526b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on meetkunde-lineaireAlgebra.pdf (3 pages, 54861 bytes).
+ 96i,8n,102p,526b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></usr/share/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb>
+Output written on meetkunde-lineaireAlgebra.pdf (6 pages, 147490 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 
